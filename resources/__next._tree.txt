@@ -1,0 +1,3 @@
+:HL["/reaimweb/_next/static/chunks/17l3dmszvbtmr.css","style"]
+:HL["/reaimweb/_next/static/chunks/03w-vcfqu_caw.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"resources","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"iPCD2_fEtEh7jyqhPeBDK"}
