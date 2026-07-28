@@ -3,762 +3,2493 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>REAIM 2027 Official Summit App Simulator</title>
+  <title>REAIM 2027 — Official Delegate App</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
   <style>
+    /* ============================
+       DESIGN TOKENS – MATCH WEBSITE
+    ============================ */
     :root {
-      --bg-dark: #070e1e;
-      --navy-main: #0B1B3D;
-      --navy-light: #162B57;
-      --gold-accent: #C59B27;
-      --kenya-green: #007A3D;
-      --maasai-red: #C8102E;
-      --text-main: #ffffff;
-      --text-muted: #a0aec0;
-      --glass: rgba(22, 43, 87, 0.75);
-      --glass-border: rgba(197, 155, 39, 0.3);
+      --navy:        #0B1B3D;
+      --navy-light:  #162B57;
+      --navy-mid:    #1a3366;
+      --gold:        #C59B27;
+      --gold-light:  #E8BF50;
+      --gold-muted:  rgba(197,155,39,0.15);
+      --green:       #007A3D;
+      --green-muted: rgba(0,122,61,0.15);
+      --red:         #C8102E;
+      --red-muted:   rgba(200,16,46,0.12);
+      --ivory:       #FDFBF7;
+      --sand:        #F4EFE6;
+      --muted:       rgba(255,255,255,0.5);
+      --border:      rgba(255,255,255,0.09);
+      --border-gold: rgba(197,155,39,0.35);
+      --glass:       rgba(22,43,87,0.85);
+      --glass-light: rgba(22,43,87,0.5);
+      --font-h:      'Outfit', sans-serif;
+      --font-b:      'Inter', sans-serif;
+      --r-sm:        8px;
+      --r-md:        14px;
+      --r-lg:        20px;
+      --r-xl:        28px;
+      --shadow-gold: 0 8px 32px rgba(197,155,39,0.2);
+      --shadow-nav:  0 -1px 24px rgba(0,0,0,0.5);
+      --t:           cubic-bezier(0.25, 1, 0.5, 1);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      -webkit-tap-highlight-color: transparent;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background-color: var(--bg-dark);
-      background-image: 
-        radial-gradient(circle at 10% 20%, rgba(197, 155, 39, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(0, 122, 61, 0.15) 0%, transparent 40%);
+      background: #070e1e;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 15% 20%, rgba(197,155,39,0.1) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 60% at 85% 80%, rgba(0,122,61,0.12) 0%, transparent 60%);
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 20px;
-      color: var(--text-main);
+      padding: 24px 16px;
+      font-family: var(--font-b);
+      overflow-x: hidden;
     }
 
-    .simulator-container {
+    /* ============================
+       SIMULATOR WRAPPER
+    ============================ */
+    .scene {
       display: flex;
-      flex-direction: column;
+      gap: 48px;
       align-items: center;
-      max-width: 1200px;
+      max-width: 1100px;
       width: 100%;
     }
 
-    .sim-header {
-      text-align: center;
-      margin-bottom: 25px;
+    .info-panel {
+      flex: 1;
+      max-width: 340px;
     }
 
-    .sim-header h1 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--text-main);
-      margin-bottom: 8px;
+    .info-panel h1 {
+      font-family: var(--font-h);
+      font-size: 2.4rem;
+      font-weight: 900;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 1rem;
     }
 
-    .sim-header h1 span {
-      color: var(--gold-accent);
+    .info-panel h1 em { color: var(--gold); font-style: normal; }
+
+    .info-panel p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
     }
 
-    .sim-header p {
-      color: var(--text-muted);
-      font-size: 1rem;
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    /* Phone Shell Styling */
-    .phone-shell {
-      width: 390px;
-      height: 800px;
-      background: #000;
-      border-radius: 50px;
-      padding: 12px;
-      box-shadow: 
-        0 25px 50px -12px rgba(0, 0, 0, 0.7),
-        0 0 0 2px #2d3748,
-        0 0 30px rgba(197, 155, 39, 0.2);
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.85rem;
+    }
+
+    .feat-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .feat-icon svg { width: 14px; height: 14px; }
+
+    .feat-icon.gold  { background: var(--gold-muted); color: var(--gold); }
+    .feat-icon.green { background: var(--green-muted); color: var(--green); }
+    .feat-icon.red   { background: var(--red-muted); color: var(--red); }
+
+    /* ============================
+       PHONE SHELL
+    ============================ */
+    .phone-wrap {
       position: relative;
-      overflow: hidden;
     }
 
-    /* Dynamic Island / Screen Header */
+    .phone {
+      width: 380px;
+      height: 820px;
+      background: #0a0a0f;
+      border-radius: 54px;
+      padding: 12px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.1),
+        0 0 0 6px rgba(255,255,255,0.03),
+        0 40px 80px rgba(0,0,0,0.8),
+        0 0 60px rgba(197,155,39,0.12);
+      position: relative;
+    }
+
+    /* Side buttons */
+    .phone::before {
+      content: '';
+      position: absolute;
+      right: -4px;
+      top: 120px;
+      width: 4px;
+      height: 60px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 0 4px 4px 0;
+    }
+
+    .phone::after {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 100px;
+      width: 4px;
+      height: 36px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 4px 0 0 4px;
+      box-shadow: 0 48px 0 rgba(255,255,255,0.12), 0 90px 0 rgba(255,255,255,0.12);
+    }
+
     .screen {
       width: 100%;
       height: 100%;
-      background: var(--navy-main);
-      border-radius: 40px;
+      background: var(--navy);
+      border-radius: 44px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       position: relative;
     }
 
+    /* ============================
+       STATUS BAR
+    ============================ */
     .status-bar {
-      height: 44px;
+      height: 50px;
       padding: 0 24px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      font-size: 0.85rem;
-      font-weight: 600;
-      z-index: 100;
-      background: rgba(11, 27, 61, 0.9);
-      backdrop-filter: blur(10px);
+      justify-content: space-between;
+      font-size: 0.8rem;
+      font-weight: 700;
+      font-family: var(--font-h);
+      color: #fff;
+      position: relative;
+      z-index: 50;
+      flex-shrink: 0;
     }
 
-    .dynamic-island {
-      width: 110px;
-      height: 25px;
-      background: #000;
-      border-radius: 20px;
+    .island {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: 8px;
+      top: 10px;
+      width: 115px;
+      height: 30px;
+      background: #000;
+      border-radius: 18px;
+      z-index: 10;
+      transition: width 0.4s var(--t), height 0.4s var(--t), border-radius 0.4s var(--t);
     }
 
-    /* Top App Header */
-    .app-header {
-      padding: 12px 18px;
-      background: var(--navy-main);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      display: flex;
-      justify-content: space-between;
+    .island.expanded {
+      width: 240px;
+      height: 80px;
+      border-radius: 28px;
+    }
+
+    .island-content {
+      display: none;
       align-items: center;
+      gap: 10px;
+      padding: 16px;
+      height: 100%;
+    }
+
+    .island.expanded .island-content { display: flex; }
+
+    .island-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .island-icon svg { width: 18px; height: 18px; color: #fff; }
+
+    .island-text p { font-size: 0.65rem; color: rgba(255,255,255,0.6); }
+    .island-text strong { font-size: 0.75rem; color: #fff; font-weight: 600; }
+
+    .status-right {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .battery {
+      width: 22px;
+      height: 11px;
+      border: 1.5px solid rgba(255,255,255,0.6);
+      border-radius: 3px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 1.5px;
+    }
+
+    .battery::after {
+      content: '';
+      position: absolute;
+      right: -5px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 6px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 0 2px 2px 0;
+    }
+
+    .battery-fill {
+      background: #4ade80;
+      border-radius: 2px;
+      height: 100%;
+      width: 75%;
+    }
+
+    /* ============================
+       APP HEADER
+    ============================ */
+    .app-header {
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      background: rgba(11,27,61,0.95);
+      backdrop-filter: blur(20px);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 40;
     }
 
     .app-brand {
       display: flex;
       align-items: center;
+      gap: 8px;
+    }
+
+    .app-logo-box {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--gold), #8B6914);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .app-logo-box svg { width: 16px; height: 16px; color: #fff; }
+
+    .app-title {
+      font-family: var(--font-h);
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: #fff;
+    }
+
+    .app-title span { color: var(--gold); }
+
+    .header-right {
+      display: flex;
+      align-items: center;
       gap: 10px;
     }
 
-    .app-brand img {
-      height: 28px;
-      object-fit: contain;
-    }
-
-    .app-brand-text {
-      font-family: 'Outfit', sans-serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: #fff;
-    }
-
-    .notif-btn {
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      color: var(--gold-accent);
-      cursor: pointer;
+    .icon-btn {
+      width: 34px;
+      height: 34px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
+      color: rgba(255,255,255,0.7);
+      transition: all 0.25s var(--t);
       position: relative;
     }
 
-    .notif-badge {
+    .icon-btn:hover { background: rgba(255,255,255,0.1); color: var(--gold); }
+    .icon-btn svg { width: 16px; height: 16px; }
+
+    .notif-dot {
       position: absolute;
-      top: 4px;
-      right: 4px;
-      width: 8px;
-      height: 8px;
-      background: var(--maasai-red);
+      top: 6px;
+      right: 6px;
+      width: 7px;
+      height: 7px;
+      background: var(--red);
       border-radius: 50%;
+      border: 1.5px solid var(--navy);
+      animation: pulse-dot 2s infinite;
     }
 
-    /* Content Area */
+    @keyframes pulse-dot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.7; }
+    }
+
+    /* ============================
+       SCROLLABLE CONTENT AREA
+    ============================ */
     .app-content {
       flex: 1;
       overflow-y: auto;
-      padding: 16px;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
       position: relative;
     }
 
-    /* Hide scrollbars */
-    .app-content::-webkit-scrollbar {
-      display: none;
-    }
+    .app-content::-webkit-scrollbar { display: none; }
 
-    /* Notification Banner Popup */
-    .push-banner {
-      background: linear-gradient(135deg, rgba(200, 16, 46, 0.9), rgba(11, 27, 61, 0.95));
-      border: 1px solid var(--gold-accent);
-      padding: 12px 16px;
-      border-radius: 14px;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      animation: slideDown 0.4s ease;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    }
-
-    .push-banner p {
-      font-size: 0.8rem;
-      line-height: 1.3;
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    /* App Tab Views */
+    /* ============================
+       TAB VIEWS
+    ============================ */
     .tab-view {
       display: none;
+      padding: 16px;
+      min-height: 100%;
+      animation: fadeSlideUp 0.35s var(--t) forwards;
     }
 
-    .tab-view.active {
-      display: block;
-      animation: fadeIn 0.3s ease;
+    .tab-view.active { display: block; }
+
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    /* Days Filter */
-    .day-selector {
+    /* ============================
+       BOTTOM NAV
+    ============================ */
+    .bottom-nav {
+      height: 72px;
+      padding: 0 8px 10px;
+      background: rgba(7,14,30,0.97);
+      border-top: 1px solid var(--border);
       display: flex;
-      gap: 8px;
-      margin-bottom: 16px;
+      align-items: center;
+      justify-content: space-around;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 50;
     }
 
-    .day-chip {
+    .nav-btn {
       flex: 1;
-      padding: 10px 6px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 4px;
+      border: none;
+      background: none;
+      color: rgba(255,255,255,0.35);
       cursor: pointer;
-      transition: all 0.2s;
+      border-radius: var(--r-md);
+      transition: all 0.25s var(--t);
+      position: relative;
     }
 
-    .day-chip.active {
-      background: var(--gold-accent);
-      color: #0B1B3D;
-      border-color: var(--gold-accent);
-      font-weight: 700;
-    }
+    .nav-btn svg { width: 20px; height: 20px; transition: all 0.25s var(--t); }
 
-    /* Session Card */
-    .session-card {
-      background: var(--navy-light);
-      border: 1px solid var(--glass-border);
-      border-radius: 16px;
-      padding: 14px;
-      margin-bottom: 12px;
-      transition: transform 0.2s;
-    }
-
-    .session-time {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.75rem;
-      color: var(--gold-accent);
+    .nav-btn span {
+      font-size: 0.6rem;
       font-weight: 600;
-      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+      font-family: var(--font-h);
     }
 
-    .session-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.95rem;
+    .nav-btn.active { color: var(--gold); }
+
+    .nav-btn.active svg { filter: drop-shadow(0 0 6px rgba(197,155,39,0.6)); }
+
+    .nav-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 0 0 4px 4px;
+      transition: width 0.3s var(--t);
+    }
+
+    .nav-btn.active::before { width: 24px; }
+
+    /* ============================
+       SHARED COMPONENTS
+    ============================ */
+
+    /* Section label */
+    .sec-label {
+      font-family: var(--font-h);
+      font-size: 0.6rem;
       font-weight: 700;
-      margin-bottom: 6px;
-      color: #fff;
-    }
-
-    .session-desc {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      line-height: 1.4;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
       margin-bottom: 10px;
-    }
-
-    .session-meta {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      font-size: 0.75rem;
-      color: #cbd5e0;
+      gap: 6px;
     }
 
-    .tag-live {
-      background: var(--maasai-red);
-      color: #fff;
-      padding: 2px 8px;
-      border-radius: 10px;
-      font-size: 0.65rem;
+    .sec-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, var(--border-gold), transparent);
+    }
+
+    /* Cards */
+    .card {
+      background: linear-gradient(135deg, rgba(22,43,87,0.8) 0%, rgba(11,27,61,0.9) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 14px;
+      margin-bottom: 10px;
+      transition: border-color 0.25s, transform 0.25s var(--t);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: transparent;
+      transition: background 0.25s;
+    }
+
+    .card.gold-top::before { background: linear-gradient(90deg, var(--gold), transparent); }
+    .card.green-top::before { background: linear-gradient(90deg, var(--green), transparent); }
+    .card.red-top::before { background: linear-gradient(90deg, var(--red), transparent); }
+
+    /* Tags / badges */
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.6rem;
       font-weight: 700;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
     }
 
-    /* Badge Pass Tab */
-    .badge-card {
-      background: linear-gradient(145deg, #162B57, #0B1B3D);
-      border: 2px solid var(--gold-accent);
-      border-radius: 20px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    .tag svg { width: 10px; height: 10px; }
+    .tag-gold   { background: var(--gold-muted);  color: var(--gold); border: 1px solid rgba(197,155,39,0.3); }
+    .tag-green  { background: var(--green-muted); color: #4ade80; border: 1px solid rgba(0,122,61,0.3); }
+    .tag-red    { background: var(--red-muted);   color: #f87171; border: 1px solid rgba(200,16,46,0.3); }
+    .tag-blue   { background: rgba(59,130,246,0.15); color: #93c5fd; border: 1px solid rgba(59,130,246,0.3); }
+    .tag-live   { background: var(--red); color: #fff; animation: live-blink 1.5s infinite; }
+
+    @keyframes live-blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.75; }
     }
 
-    .badge-avatar {
-      width: 80px;
-      height: 80px;
+    /* Section heading */
+    .sec-h {
+      font-family: var(--font-h);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .sec-sub {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    /* Divider */
+    .divider { height: 1px; background: var(--border); margin: 14px 0; }
+
+    /* Horizontal scroll row */
+    .hscroll {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+
+    .hscroll::-webkit-scrollbar { display: none; }
+
+    /* Avatar circle */
+    .avatar {
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
-      border: 3px solid var(--gold-accent);
-      margin: 0 auto 12px;
-      background: #070e1e;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      background: var(--navy-mid);
+      flex-shrink: 0;
+    }
+
+    /* Pills */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 11px;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      border: 1px solid;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+
+    .pill svg { width: 12px; height: 12px; }
+    .pill-outline { border-color: var(--border); color: var(--muted); background: transparent; }
+    .pill-outline.active { border-color: var(--gold); color: var(--gold); background: var(--gold-muted); }
+    .pill-gold { border-color: var(--gold); color: #fff; background: var(--gold); }
+    .pill-green { border-color: var(--green); color: #fff; background: var(--green); }
+
+    /* Progress bar */
+    .progress-bar {
+      height: 4px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transition: width 1s var(--t);
+    }
+
+    /* ============================
+       HOME TAB
+    ============================ */
+    .hero-card {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      position: relative;
+      height: 160px;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
+      border: 1px solid var(--border-gold);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        url('https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&q=80') center/cover no-repeat;
+      opacity: 0.25;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(11,27,61,0.9) 0%, rgba(22,43,87,0.6) 100%);
+    }
+
+    .hero-body {
+      position: relative;
+      padding: 18px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero-title {
+      font-family: var(--font-h);
+      font-weight: 900;
+      font-size: 1.3rem;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    .hero-title em { color: var(--gold); font-style: normal; }
+
+    .hero-meta {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.65);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .hero-meta svg { width: 11px; height: 11px; color: var(--gold); }
+
+    /* Countdown row */
+    .countdown {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .cd-block {
+      flex: 1;
+      background: var(--glass);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--r-sm);
+      text-align: center;
+      padding: 10px 4px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cd-block::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .cd-num {
+      font-family: var(--font-h);
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+    }
+
+    .cd-label {
+      font-size: 0.55rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-top: 3px;
+    }
+
+    /* Quick action buttons */
+    .quick-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .quick-btn {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.25s var(--t);
+      text-align: left;
+    }
+
+    .quick-btn:hover { border-color: var(--gold); transform: translateY(-2px); }
+
+    .quick-btn-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.2rem;
     }
 
-    .badge-name {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.2rem;
+    .quick-btn-icon svg { width: 16px; height: 16px; }
+
+    .quick-btn strong {
+      font-family: var(--font-h);
+      font-size: 0.8rem;
       font-weight: 700;
       color: #fff;
     }
 
-    .badge-role {
-      color: var(--gold-accent);
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 16px;
+    .quick-btn p {
+      font-size: 0.65rem;
+      color: var(--muted);
+      margin: 0;
     }
 
-    .qr-box {
-      background: #fff;
-      padding: 14px;
-      border-radius: 14px;
-      width: 140px;
-      height: 140px;
-      margin: 0 auto 16px;
+    /* Alert banner */
+    .alert-banner {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px;
+      background: linear-gradient(135deg, rgba(200,16,46,0.15), rgba(11,27,61,0.8));
+      border: 1px solid rgba(200,16,46,0.3);
+      border-radius: var(--r-md);
+      margin-bottom: 10px;
+      animation: slideDown 0.4s var(--t);
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-10px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .alert-icon-box {
+      width: 32px;
+      height: 32px;
+      background: rgba(200,16,46,0.3);
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
 
-    .qr-box img {
-      width: 100%;
-      height: 100%;
-    }
+    .alert-icon-box svg { width: 15px; height: 15px; color: #f87171; }
+    .alert-body strong { font-size: 0.75rem; color: #fff; display: block; margin-bottom: 2px; }
+    .alert-body p { font-size: 0.68rem; color: rgba(255,255,255,0.6); margin: 0; line-height: 1.4; }
 
-    .discount-pill {
-      background: rgba(0, 122, 61, 0.2);
-      border: 1px solid var(--kenya-green);
-      color: #00ff66;
-      padding: 8px 12px;
-      border-radius: 10px;
-      font-size: 0.75rem;
-      font-weight: 600;
-    }
-
-    /* Venue Map Canvas simulation */
-    .map-canvas {
-      width: 100%;
-      height: 280px;
-      background: #0f2347;
-      border: 1px solid var(--glass-border);
-      border-radius: 16px;
-      position: relative;
-      overflow: hidden;
+    /* ============================
+       SCHEDULE TAB
+    ============================ */
+    .day-tabs {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 10px;
       margin-bottom: 14px;
     }
 
-    .map-pin {
-      position: absolute;
-      background: var(--gold-accent);
-      color: #0B1B3D;
-      padding: 4px 8px;
-      border-radius: 8px;
-      font-size: 0.7rem;
-      font-weight: 700;
+    .day-tabs::-webkit-scrollbar { display: none; }
+
+    .day-tab {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: all 0.25s var(--t);
     }
 
-    /* Directory Card */
+    .day-tab .day-n {
+      font-family: var(--font-h);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.3);
+      line-height: 1;
+      transition: color 0.25s;
+    }
+
+    .day-tab .day-m {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .day-tab.active {
+      background: var(--gold-muted);
+      border-color: var(--border-gold);
+    }
+
+    .day-tab.active .day-n { color: var(--gold); }
+    .day-tab.active .day-m { color: var(--gold); opacity: 0.7; }
+
+    /* Timeline session */
+    .session-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+
+    .timeline-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      flex-shrink: 0;
+      width: 44px;
+    }
+
+    .tl-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid var(--navy);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .tl-dot.green { background: var(--green); }
+    .tl-dot.red { background: var(--red); }
+    .tl-dot.live { background: var(--red); animation: live-pulse 1.5s infinite; }
+
+    @keyframes live-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(200,16,46,0.6); }
+      50% { box-shadow: 0 0 0 6px rgba(200,16,46,0); }
+    }
+
+    .tl-line {
+      width: 2px;
+      flex: 1;
+      background: var(--border);
+      min-height: 20px;
+    }
+
+    .tl-time {
+      font-size: 0.6rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-top: 3px;
+      text-align: right;
+      width: 100%;
+      white-space: nowrap;
+    }
+
+    .session-card {
+      flex: 1;
+      margin-bottom: 10px;
+    }
+
+    .session-card .card {
+      margin-bottom: 0;
+    }
+
+    .sess-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 6px;
+    }
+
+    .sess-title {
+      font-family: var(--font-h);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fff;
+      flex: 1;
+      margin-right: 8px;
+      line-height: 1.3;
+    }
+
+    .sess-meta {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.68rem;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .sess-meta svg { width: 11px; height: 11px; color: var(--gold); }
+
+    .sess-speaker {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 8px;
+    }
+
+    .sess-speaker img {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border-gold);
+    }
+
+    .sess-speaker span { font-size: 0.68rem; color: rgba(255,255,255,0.7); }
+
+    .bookmark-btn {
+      width: 28px;
+      height: 28px;
+      background: rgba(255,255,255,0.06);
+      border: none;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--muted);
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+
+    .bookmark-btn.saved { color: var(--gold); background: var(--gold-muted); }
+    .bookmark-btn svg { width: 13px; height: 13px; }
+
+    /* ============================
+       VENUE / MAP TAB
+    ============================ */
+    .map-card {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      height: 220px;
+      position: relative;
+      margin-bottom: 12px;
+      border: 1px solid var(--border-gold);
+    }
+
+    .map-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: hue-rotate(180deg) saturate(0.8) brightness(0.55);
+    }
+
+    .map-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(11,27,61,0.95) 100%);
+    }
+
+    .map-pins { position: absolute; inset: 0; }
+
+    .map-pin {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .map-pin:hover { transform: scale(1.15); }
+
+    .map-pin-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .map-pin-dot svg { transform: rotate(45deg); width: 13px; height: 13px; color: #fff; }
+
+    .map-pin-label {
+      font-size: 0.58rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      margin-top: 4px;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+      background: rgba(11,27,61,0.8);
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    .venue-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: border-color 0.25s;
+    }
+
+    .venue-list-item:hover { border-color: var(--border-gold); }
+
+    .venue-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .venue-icon svg { width: 17px; height: 17px; }
+
+    .venue-title { font-family: var(--font-h); font-size: 0.82rem; font-weight: 700; color: #fff; margin-bottom: 2px; }
+    .venue-sub { font-size: 0.68rem; color: var(--muted); }
+
+    /* ============================
+       DELEGATES TAB
+    ============================ */
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 10px 12px;
+      margin-bottom: 14px;
+      transition: border-color 0.25s;
+    }
+
+    .search-box:focus-within { border-color: var(--border-gold); }
+    .search-box svg { width: 15px; height: 15px; color: var(--muted); flex-shrink: 0; }
+
+    .search-input {
+      flex: 1;
+      background: none;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: 0.8rem;
+      font-family: var(--font-b);
+    }
+
+    .search-input::placeholder { color: rgba(255,255,255,0.3); }
+
     .delegate-item {
       display: flex;
       align-items: center;
       gap: 12px;
-      padding: 10px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 12px;
-      margin-bottom: 8px;
+      padding: 11px 12px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      margin-bottom: 7px;
+      transition: border-color 0.25s, transform 0.2s;
+      cursor: pointer;
     }
 
-    .delegate-flag {
-      width: 32px;
+    .delegate-item:hover { border-color: var(--border-gold); transform: translateX(2px); }
+
+    .del-flag {
+      width: 34px;
       height: 22px;
       border-radius: 4px;
       object-fit: cover;
+      flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
 
-    /* Q&A Input */
-    .qa-box {
+    .del-info { flex: 1; min-width: 0; }
+
+    .del-name {
+      font-family: var(--font-h);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .del-role { font-size: 0.65rem; color: var(--muted); }
+
+    .connect-btn {
+      padding: 5px 10px;
+      background: var(--gold-muted);
+      border: 1px solid var(--border-gold);
+      border-radius: 8px;
+      color: var(--gold);
+      font-size: 0.65rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: var(--font-h);
+      transition: all 0.2s;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .connect-btn svg { width: 10px; height: 10px; }
+    .connect-btn:hover { background: var(--gold); color: var(--navy); }
+    .connect-btn.sent { background: var(--green-muted); border-color: var(--green); color: #4ade80; }
+
+    /* ============================
+       DIGITAL PASS TAB
+    ============================ */
+    .pass-card {
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      background: linear-gradient(145deg, #162B57 0%, #0B1B3D 50%, #111827 100%);
+      border: 1px solid var(--border-gold);
+      box-shadow: var(--shadow-gold), 0 0 0 1px rgba(197,155,39,0.15);
+      padding: 22px 20px;
+      text-align: center;
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    .pass-card::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(197,155,39,0.12) 0%, transparent 70%);
+    }
+
+    .pass-card::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: -40px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,122,61,0.1) 0%, transparent 70%);
+    }
+
+    .pass-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      position: relative;
+    }
+
+    .pass-logo {
+      height: 20px;
+      object-fit: contain;
+    }
+
+    .pass-type {
+      margin-left: auto;
+    }
+
+    .pass-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid var(--gold);
+      margin: 0 auto 12px;
+      background: var(--navy-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .pass-avatar svg { width: 38px; height: 38px; color: var(--gold); }
+
+    .pass-avatar .verified {
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 22px;
+      height: 22px;
+      background: var(--green);
+      border-radius: 50%;
+      border: 2px solid var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pass-avatar .verified svg { width: 11px; height: 11px; color: #fff; }
+
+    .pass-name {
+      font-family: var(--font-h);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 3px;
+    }
+
+    .pass-role { font-size: 0.72rem; color: var(--gold); font-weight: 600; margin-bottom: 16px; }
+
+    /* QR Code (SVG) */
+    .qr-wrapper {
+      background: #fff;
+      padding: 14px;
+      border-radius: 16px;
+      width: 130px;
+      height: 130px;
+      margin: 0 auto 14px;
+      position: relative;
+    }
+
+    .qr-wrapper svg { width: 100%; height: 100%; }
+
+    .pass-access-row {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+
+    .access-chip {
+      padding: 5px 10px;
+      border-radius: 100px;
+      font-size: 0.62rem;
+      font-weight: 700;
+      border: 1px solid;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .access-chip svg { width: 10px; height: 10px; }
+    .access-chip.gold { border-color: var(--gold); color: var(--gold); background: var(--gold-muted); }
+    .access-chip.green { border-color: var(--green); color: #4ade80; background: var(--green-muted); }
+
+    .pass-perk {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      background: rgba(0,122,61,0.12);
+      border: 1px solid rgba(0,122,61,0.25);
+      border-radius: var(--r-md);
+      margin-bottom: 8px;
+    }
+
+    .pass-perk svg { width: 15px; height: 15px; color: #4ade80; flex-shrink: 0; }
+    .pass-perk strong { font-size: 0.75rem; color: #fff; display: block; }
+    .pass-perk span { font-size: 0.65rem; color: var(--muted); }
+
+    /* ============================
+       LIVE Q&A TAB
+    ============================ */
+    .live-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .viewer-count {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .viewer-count svg { width: 13px; height: 13px; }
+
+    .qa-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 12px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .qa-feed::-webkit-scrollbar { display: none; }
+
+    .qa-item {
+      padding: 10px 12px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      animation: fadeSlideUp 0.3s var(--t);
+    }
+
+    .qa-item-header {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 5px;
+    }
+
+    .qa-item-header img {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border-gold);
+    }
+
+    .qa-sender { font-size: 0.72rem; font-weight: 700; color: var(--gold); }
+    .qa-time { font-size: 0.62rem; color: var(--muted); margin-left: auto; }
+    .qa-text { font-size: 0.78rem; color: rgba(255,255,255,0.85); line-height: 1.45; }
+
+    .qa-upvote {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.62rem;
+      color: var(--muted);
+      margin-top: 6px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 3px 8px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+
+    .qa-upvote:hover { background: var(--gold-muted); color: var(--gold); }
+    .qa-upvote svg { width: 11px; height: 11px; }
+
+    .qa-compose {
       display: flex;
       gap: 8px;
-      margin-top: 14px;
+      align-items: flex-end;
     }
 
-    .qa-input {
+    .qa-input-box {
       flex: 1;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 10px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
       padding: 10px 12px;
       color: #fff;
       font-size: 0.8rem;
+      font-family: var(--font-b);
+      resize: none;
+      outline: none;
+      min-height: 40px;
+      max-height: 80px;
+      transition: border-color 0.2s;
     }
 
-    .qa-btn {
-      background: var(--gold-accent);
-      color: #0B1B3D;
+    .qa-input-box:focus { border-color: var(--border-gold); }
+    .qa-input-box::placeholder { color: rgba(255,255,255,0.25); }
+
+    .send-btn {
+      width: 40px;
+      height: 40px;
+      background: var(--gold);
       border: none;
-      padding: 0 14px;
-      border-radius: 10px;
-      font-weight: 700;
-      font-size: 0.8rem;
-      cursor: pointer;
-    }
-
-    /* Bottom Navigation Bar */
-    .bottom-nav {
-      height: 65px;
-      background: rgba(11, 27, 61, 0.98);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--r-md);
       display: flex;
-      justify-content: space-around;
       align-items: center;
-      padding-bottom: 10px;
-    }
-
-    .nav-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 3px;
-      color: var(--text-muted);
-      font-size: 0.65rem;
-      font-weight: 600;
+      justify-content: center;
       cursor: pointer;
-      transition: color 0.2s;
-      background: none;
-      border: none;
+      color: var(--navy);
+      transition: all 0.2s;
+      flex-shrink: 0;
     }
 
-    .nav-item.active {
-      color: var(--gold-accent);
+    .send-btn:hover { background: var(--gold-light); }
+    .send-btn svg { width: 16px; height: 16px; }
+
+    /* ============================
+       POPUP / TOAST
+    ============================ */
+    .toast-area {
+      position: fixed;
+      bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 380px;
+      padding: 0 16px 90px;
+      pointer-events: none;
+      z-index: 200;
     }
 
-    .nav-icon {
-      font-size: 1.2rem;
+    .toast {
+      background: linear-gradient(135deg, rgba(22,43,87,0.97), rgba(11,27,61,0.98));
+      border: 1px solid var(--border-gold);
+      border-radius: var(--r-md);
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+      pointer-events: all;
+      transition: all 0.4s var(--t);
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .toast-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: var(--gold-muted);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .toast-icon svg { width: 14px; height: 14px; color: var(--gold); }
+    .toast strong { font-size: 0.75rem; color: #fff; display: block; }
+    .toast p { font-size: 0.68rem; color: var(--muted); margin: 0; }
+
+    /* ============================
+       NOTIFICATION POPUP
+    ============================ */
+    .notif-panel {
+      position: absolute;
+      top: 50px;
+      left: 0; right: 0;
+      background: rgba(7,14,30,0.97);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 14px;
+      z-index: 200;
+      backdrop-filter: blur(20px);
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: all 0.4s var(--t);
+    }
+
+    .notif-panel.open {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .notif-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .notif-item:last-child { border-bottom: none; }
+
+    .notif-ib {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .notif-ib svg { width: 13px; height: 13px; }
+
+    .notif-time { font-size: 0.6rem; color: var(--muted); margin-left: auto; white-space: nowrap; }
+    .notif-strong { font-size: 0.75rem; color: #fff; font-weight: 600; display: block; margin-bottom: 1px; }
+    .notif-txt { font-size: 0.68rem; color: var(--muted); line-height: 1.4; }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 800px) {
+      .scene { flex-direction: column; align-items: center; gap: 30px; }
+      .info-panel { max-width: 380px; width: 100%; }
     }
   </style>
 </head>
 <body>
 
-  <div class="simulator-container">
-    <div class="sim-header">
-      <h1>RE<span>AI</span>M 2027 Summit App</h1>
-      <p>Interactive Mobile Delegate & Security Pass Simulator</p>
-    </div>
+<div class="scene">
 
-    <div class="phone-shell">
+  <!-- Info Panel -->
+  <div class="info-panel">
+    <h1>Official<br>Summit<br><em>Event App</em></h1>
+    <p>The REAIM 2027 delegate companion — your real-time access to sessions, venues, networking, and your official digital pass. Try the interactive features below.</p>
+    <ul class="feature-list">
+      <li>
+        <div class="feat-icon gold"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        Live session timeline with real-time updates
+      </li>
+      <li>
+        <div class="feat-icon green"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        Interactive venue map & navigation
+      </li>
+      <li>
+        <div class="feat-icon red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        Delegate directory & meeting requests
+      </li>
+      <li>
+        <div class="feat-icon gold"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        QR digital pass & access credentials
+      </li>
+      <li>
+        <div class="feat-icon green"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        Live Q&A with plenary moderators
+      </li>
+    </ul>
+  </div>
+
+  <!-- Phone Shell -->
+  <div class="phone-wrap">
+    <div class="phone">
       <div class="screen">
+
         <!-- Status Bar -->
         <div class="status-bar">
-          <span>09:41</span>
-          <div class="dynamic-island"></div>
-          <span>5G 🔋 100%</span>
+          <span id="clock">09:41</span>
+          <div class="island" id="island">
+            <div class="island-content">
+              <div class="island-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+              <div class="island-text">
+                <p>Session Starting Now</p>
+                <strong>Plenary 1: State of Play</strong>
+              </div>
+            </div>
+          </div>
+          <div class="status-right">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 8.5L3 10c2.5-2.5 5.8-4 9-4s6.5 1.5 9 4l1.5-1.5C19.5 6 16 4 12 4s-7.5 2-10.5 4.5z"/><path d="M5 12l1.5 1.5c1.5-1.5 3.4-2.5 5.5-2.5s4 1 5.5 2.5L19 12c-2-2-4.7-3-7-3s-5 1-7 3z"/><path d="M8.5 15.5L10 17c.5-.5 1.3-1 2-1s1.5.5 2 1l1.5-1.5C14.5 15 13.3 14 12 14s-2.5 1-3.5 1.5z"/><circle cx="12" cy="20" r="1"/></svg>
+            <div class="battery">
+              <div class="battery-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notification Panel -->
+        <div class="notif-panel" id="notifPanel">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
+            <strong style="font-size:0.75rem; color:#fff; font-family:var(--font-h);">Notifications</strong>
+            <button onclick="toggleNotif()" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:0.65rem;">Clear all</button>
+          </div>
+          <div class="notif-item">
+            <div class="notif-ib" style="background:var(--red-muted);color:#f87171;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div style="flex:1;">
+              <span class="notif-strong">🔴 LIVE NOW — Plenary Session 1</span>
+              <span class="notif-txt">Opening address by H.E. President William Ruto has begun. Main Auditorium.</span>
+            </div>
+            <span class="notif-time">2m ago</span>
+          </div>
+          <div class="notif-item">
+            <div class="notif-ib" style="background:var(--gold-muted);color:var(--gold);">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div style="flex:1;">
+              <span class="notif-strong">Meeting Request Accepted</span>
+              <span class="notif-txt">Netherlands delegation confirmed your 14:00 bilateral meeting slot.</span>
+            </div>
+            <span class="notif-time">18m ago</span>
+          </div>
+          <div class="notif-item">
+            <div class="notif-ib" style="background:var(--green-muted);color:#4ade80;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div style="flex:1;">
+              <span class="notif-strong">Accreditation Confirmed</span>
+              <span class="notif-txt">Your delegate badge is cleared for all access zones.</span>
+            </div>
+            <span class="notif-time">1h ago</span>
+          </div>
         </div>
 
         <!-- App Header -->
         <div class="app-header">
           <div class="app-brand">
-            <img src="/logo.png" alt="REAIM 2027">
-            <span class="app-brand-text">REAIM 2027</span>
+            <div class="app-logo-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div>
+              <div class="app-title">RE<span>AI</span>M <span style="color:rgba(255,255,255,0.4);">2027</span></div>
+            </div>
           </div>
-          <button class="notif-btn" onclick="togglePushNotif()">
-            🔔
-            <div class="notif-badge"></div>
-          </button>
+          <div class="header-right">
+            <button class="icon-btn" onclick="toggleNotif()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              <div class="notif-dot"></div>
+            </button>
+            <button class="icon-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
+          </div>
         </div>
 
-        <!-- App Content Area -->
+        <!-- Content -->
         <div class="app-content">
 
-          <!-- Push Notification Alert (Toggleable) -->
-          <div class="push-banner" id="pushNotif">
-            <span style="font-size: 1.2rem">📢</span>
-            <div>
-              <strong style="font-size: 0.8rem; color: #fff;">Official Announcement</strong>
-              <p>President Ruto's Welcome Address begins in 15 mins at Main Auditorium.</p>
+          <!-- ===== HOME ===== -->
+          <div class="tab-view active" id="tab-home">
+
+            <!-- Alert Banner -->
+            <div class="alert-banner">
+              <div class="alert-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="alert-body">
+                <strong>Plenary 1 starts in 15 minutes</strong>
+                <p>State of Play — Main Auditorium, Bomas of Kenya. Make your way to the venue.</p>
+              </div>
+            </div>
+
+            <!-- Hero Card -->
+            <div class="hero-card">
+              <div class="hero-bg"></div>
+              <div class="hero-overlay"></div>
+              <div class="hero-body">
+                <div>
+                  <div class="tag tag-live" style="margin-bottom:8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                    Live Now
+                  </div>
+                  <div class="hero-title">RE<em>AI</em>M 2027<br>Nairobi Summit</div>
+                </div>
+                <div class="hero-meta">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Bomas of Kenya, Nairobi
+                  <span style="margin-left:10px; display:flex; align-items:center; gap:3px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    7–8 April 2027
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Countdown -->
+            <div class="sec-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Summit Countdown
+            </div>
+            <div class="countdown">
+              <div class="cd-block"><span class="cd-num" id="cd-days">--</span><span class="cd-label">Days</span></div>
+              <div class="cd-block"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">Hours</span></div>
+              <div class="cd-block"><span class="cd-num" id="cd-mins">--</span><span class="cd-label">Mins</span></div>
+              <div class="cd-block"><span class="cd-num" id="cd-secs">--</span><span class="cd-label">Secs</span></div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="sec-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+              Quick Access
+            </div>
+            <div class="quick-grid">
+              <div class="quick-btn" onclick="switchTab('schedule')">
+                <div class="quick-btn-icon" style="background:var(--gold-muted); color:var(--gold);">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <strong>Schedule</strong>
+                <p>7–8 Apr 2027</p>
+              </div>
+              <div class="quick-btn" onclick="switchTab('pass')">
+                <div class="quick-btn-icon" style="background:rgba(59,130,246,0.15); color:#93c5fd;">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <strong>My Pass</strong>
+                <p>Gold Access</p>
+              </div>
+              <div class="quick-btn" onclick="switchTab('venue')">
+                <div class="quick-btn-icon" style="background:var(--green-muted); color:#4ade80;">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <strong>Venue Map</strong>
+                <p>Bomas, Karen</p>
+              </div>
+              <div class="quick-btn" onclick="switchTab('qa')">
+                <div class="quick-btn-icon" style="background:var(--red-muted); color:#f87171;">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <strong>Live Q&A</strong>
+                <p>412 watching</p>
+              </div>
+            </div>
+
+            <!-- Today's highlights -->
+            <div class="sec-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Today's Highlights
+            </div>
+            <div class="hscroll">
+              <div style="min-width:180px; background:var(--glass); border:1px solid var(--border-gold); border-radius:var(--r-md); padding:12px; cursor:pointer;" onclick="switchTab('schedule')">
+                <div class="tag tag-live" style="margin-bottom:8px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                  Live
+                </div>
+                <div style="font-family:var(--font-h); font-size:0.82rem; font-weight:700; color:#fff; line-height:1.3;">State of Play in Military AI</div>
+                <div style="font-size:0.65rem; color:var(--gold); margin-top:5px;">09:30 — Main Auditorium</div>
+              </div>
+              <div style="min-width:180px; background:var(--glass); border:1px solid var(--border); border-radius:var(--r-md); padding:12px; cursor:pointer;" onclick="switchTab('schedule')">
+                <div class="tag tag-gold" style="margin-bottom:8px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Upcoming
+                </div>
+                <div style="font-family:var(--font-h); font-size:0.82rem; font-weight:700; color:#fff; line-height:1.3;">Norms, Rules & IHL Panel</div>
+                <div style="font-size:0.65rem; color:var(--gold); margin-top:5px;">11:15 — Hall B</div>
+              </div>
+              <div style="min-width:180px; background:var(--glass); border:1px solid var(--border); border-radius:var(--r-md); padding:12px; cursor:pointer;" onclick="switchTab('qa')">
+                <div class="tag tag-green" style="margin-bottom:8px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  Q&A Open
+                </div>
+                <div style="font-family:var(--font-h); font-size:0.82rem; font-weight:700; color:#fff; line-height:1.3;">Submit Your Question Now</div>
+                <div style="font-size:0.65rem; color:#4ade80; margin-top:5px;">412 delegates watching</div>
+              </div>
             </div>
           </div>
 
-          <!-- TAB 1: SCHEDULE -->
-          <div class="tab-view active" id="tab-schedule">
-            <div class="day-selector">
-              <div class="day-chip" onclick="switchDay(this, 'day0')">6 Apr (Pre-Summit)</div>
-              <div class="day-chip active" onclick="switchDay(this, 'day1')">7 Apr (Day 1)</div>
-              <div class="day-chip" onclick="switchDay(this, 'day2')">8 Apr (Day 2)</div>
+          <!-- ===== SCHEDULE ===== -->
+          <div class="tab-view" id="tab-schedule">
+            <div class="sec-h">Official Programme</div>
+            <p class="sec-sub">7–8 April 2027 · Nairobi, Kenya</p>
+
+            <div class="day-tabs">
+              <div class="day-tab" onclick="switchDay(this, 'day0')">
+                <div class="day-n">6</div>
+                <div class="day-m">Apr</div>
+              </div>
+              <div class="day-tab active" onclick="switchDay(this, 'day1')">
+                <div class="day-n">7</div>
+                <div class="day-m">Apr</div>
+              </div>
+              <div class="day-tab" onclick="switchDay(this, 'day2')">
+                <div class="day-n">8</div>
+                <div class="day-m">Apr</div>
+              </div>
             </div>
 
             <div id="schedule-content">
-              <!-- Day 1 Items -->
-              <div class="session-card">
-                <div class="session-time">
-                  <span>09:00 - 09:30 EAT</span>
-                  <span class="tag-live">LIVE NOW</span>
-                </div>
-                <div class="session-title">Opening Ceremony & State Welcome</div>
-                <div class="session-desc">H.E. William Ruto, President of Kenya & CS Ministry of Defence welcome global delegates.</div>
-                <div class="session-meta">
-                  <span>📍 Bomas Auditorium</span>
-                  <span>⭐ Bookmarked</span>
-                </div>
-              </div>
-
-              <div class="session-card">
-                <div class="session-time">
-                  <span>09:30 - 10:45 EAT</span>
-                  <span>Plenary 1</span>
-                </div>
-                <div class="session-title">State of Play in Military AI Capabilities</div>
-                <div class="session-desc">Global review of autonomous capabilities, near-term projections, and ethical imperatives.</div>
-                <div class="session-meta">
-                  <span>📍 Main Plenary Hall</span>
-                  <span>👥 800+ Expected</span>
-                </div>
-              </div>
-
-              <div class="session-card">
-                <div class="session-time">
-                  <span>11:15 - 12:30 EAT</span>
-                  <span>Plenary 2</span>
-                </div>
-                <div class="session-title">Norms, Rules & International Law Compliance</div>
-                <div class="session-desc">Panel on upholding International Humanitarian Law and human control mechanisms.</div>
-                <div class="session-meta">
-                  <span>📍 Plenary Hall B</span>
-                  <span>📑 Briefing Attached</span>
-                </div>
-              </div>
+              <!-- Filled by JS -->
             </div>
           </div>
 
-          <!-- TAB 2: VENUE MAP -->
-          <div class="tab-view" id="tab-map">
-            <h3 style="font-family:'Outfit'; font-size: 1rem; margin-bottom: 10px; color: var(--gold-accent);">Bomas of Kenya Interactive Floorplan</h3>
-            <div class="map-canvas">
-              <div class="map-pin" style="top: 30%; left: 20%;" onclick="alert('Main Plenary Auditorium - Opening & High Level Sessions')">📍 Main Plenary</div>
-              <div class="map-pin" style="top: 60%; left: 55%;" onclick="alert('Moran AI Center Advisory Lounge & Demo Hub')">🧠 Moran AI Hub</div>
-              <div class="map-pin" style="top: 20%; left: 65%;" onclick="alert('Media & Broadcast Center - Press Accreditation')">🎥 Media Center</div>
-              <div class="map-pin" style="top: 75%; left: 25%;" onclick="alert('Delegate Dining & Cultural Village')">🍽️ Dining Village</div>
+          <!-- ===== VENUE ===== -->
+          <div class="tab-view" id="tab-venue">
+            <div class="sec-h">Venue & Navigation</div>
+            <p class="sec-sub">All sessions at Bomas of Kenya • Karen overflow</p>
+
+            <div class="map-card">
+              <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69c904?w=800&q=70" class="map-img" alt="Nairobi Map">
+              <div class="map-overlay"></div>
+              <div class="map-pins">
+                <div class="map-pin" style="top:30%; left:22%;" onclick="showToast('Main Plenary Auditorium', 'Opening ceremony & high-level plenaries. Seating capacity: 1,200.')">
+                  <div class="map-pin-dot" style="background:var(--gold);">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <div class="map-pin-label">Main Plenary</div>
+                </div>
+                <div class="map-pin" style="top:55%; left:60%;" onclick="showToast('Moran AI Hub', 'Kenya Defence Forces Moran AI & Cybersecurity Center of Excellence showcase. Demo stations available.')">
+                  <div class="map-pin-dot" style="background:var(--green);">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  </div>
+                  <div class="map-pin-label">Moran AI Hub</div>
+                </div>
+                <div class="map-pin" style="top:18%; left:68%;" onclick="showToast('Media & Press Centre', 'Full broadcast setup, press accreditation desk, and filming areas.')">
+                  <div class="map-pin-dot" style="background:var(--red);">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                  </div>
+                  <div class="map-pin-label">Media Centre</div>
+                </div>
+                <div class="map-pin" style="top:72%; left:30%;" onclick="showToast('Delegate Lounge', 'Kenyan cultural village, dining, bilateral meeting rooms, and reception area.')">
+                  <div class="map-pin-dot" style="background:var(--navy-mid);">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 2 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                  </div>
+                  <div class="map-pin-label">Delegate Lounge</div>
+                </div>
+              </div>
             </div>
-            <div class="session-card">
-              <div class="session-title">Venue Security & Shuttle Transport</div>
-              <div class="session-desc">Continuous shuttles run between recommended Karen hotels & Bomas of Kenya every 15 minutes.</div>
+
+            <div class="sec-label" style="margin-bottom:10px;">Venues & Facilities</div>
+
+            <div class="venue-list-item" onclick="showToast('Bomas of Kenya', 'Primary summit venue. Forest Edge Road, Lang\'ata, Nairobi. 18km from JKIA.')">
+              <div class="venue-icon" style="background:var(--gold-muted); color:var(--gold);">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div>
+                <div class="venue-title">Bomas of Kenya</div>
+                <div class="venue-sub">Main Summit Venue · Forest Edge Rd, Lang'ata</div>
+              </div>
+              <span class="tag tag-green">18km JKIA</span>
+            </div>
+
+            <div class="venue-list-item" onclick="showToast('Hemingways Nairobi', 'Ministerial Roundtable venue for Day 2 closed sessions. Karen, Nairobi.')">
+              <div class="venue-icon" style="background:var(--gold-muted); color:var(--gold);">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </div>
+              <div>
+                <div class="venue-title">Hemingways Nairobi</div>
+                <div class="venue-sub">Ministerial Roundtable · Karen, Nairobi</div>
+              </div>
+              <span class="tag tag-gold">Day 2</span>
+            </div>
+
+            <div class="venue-list-item" onclick="showToast('Shuttle Services', 'Official shuttles run every 15 minutes between recommended hotels and Bomas of Kenya. VIP transfer for Ministers.')">
+              <div class="venue-icon" style="background:var(--green-muted); color:#4ade80;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </div>
+              <div>
+                <div class="venue-title">Official Shuttle Services</div>
+                <div class="venue-sub">Every 15 mins · Karen hotels ↔ Bomas</div>
+              </div>
+              <span class="tag tag-green">Running</span>
+            </div>
+
+            <div class="venue-list-item" onclick="showToast('JKIA - Jomo Kenyatta International Airport', 'Nairobi\'s main international airport. 18km from Bomas of Kenya. Uber/Bolt available. VIP lounge for ministers.')">
+              <div class="venue-icon" style="background:rgba(59,130,246,0.15); color:#93c5fd;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21 4 19.5 2.5A3.54 3.54 0 0 0 16 1c-.8 0-2 .5-3.5 2L5 6l-8.2 1.8-1.4 4.1 5.9 1.7-1 3.5 3.5 3.5 3.5-1-1 5.9 4.1-1.4L17.8 19.2z"/></svg>
+              </div>
+              <div>
+                <div class="venue-title">JKIA International Airport</div>
+                <div class="venue-sub">Arrival & Departure · 18km to Bomas</div>
+              </div>
+              <span class="tag tag-blue">eTA Req.</span>
             </div>
           </div>
 
-          <!-- TAB 3: DELEGATES DIRECTORY -->
+          <!-- ===== DELEGATES ===== -->
           <div class="tab-view" id="tab-delegates">
-            <h3 style="font-family:'Outfit'; font-size: 1rem; margin-bottom: 10px; color: var(--gold-accent);">Participating Delegations</h3>
-            
-            <div class="delegate-item">
-              <img src="https://flagcdn.com/ke.svg" class="delegate-flag" alt="Kenya">
-              <div style="flex:1">
-                <strong style="font-size:0.85rem; color:#fff;">Kenya Delegation</strong>
-                <p style="font-size:0.75rem; color:var(--text-muted);">Ministry of Defence & Moran AI Center</p>
-              </div>
-              <button class="qa-btn" style="padding:4px 8px; font-size:0.7rem;" onclick="alert('Meeting Request Sent to Kenya Delegation Liaison')">Connect</button>
+            <div class="sec-h">Delegations Directory</div>
+            <p class="sec-sub">130+ countries registered · Connect & arrange bilaterals</p>
+
+            <div class="search-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" class="search-input" placeholder="Search delegations..." oninput="filterDelegates(this.value)">
             </div>
 
-            <div class="delegate-item">
-              <img src="https://flagcdn.com/kr.svg" class="delegate-flag" alt="Korea">
-              <div style="flex:1">
-                <strong style="font-size:0.85rem; color:#fff;">Republic of Korea</strong>
-                <p style="font-size:0.75rem; color:var(--text-muted);">Ministry of National Defense (Co-Host)</p>
-              </div>
-              <button class="qa-btn" style="padding:4px 8px; font-size:0.7rem;" onclick="alert('Meeting Request Sent')">Connect</button>
+            <div class="hscroll" style="margin-bottom:14px;">
+              <div class="pill pill-gold">All Nations</div>
+              <div class="pill pill-outline">Africa</div>
+              <div class="pill pill-outline">Asia-Pacific</div>
+              <div class="pill pill-outline">Europe</div>
+              <div class="pill pill-outline">Americas</div>
             </div>
 
-            <div class="delegate-item">
-              <img src="https://flagcdn.com/nl.svg" class="delegate-flag" alt="Netherlands">
-              <div style="flex:1">
-                <strong style="font-size:0.85rem; color:#fff;">The Netherlands</strong>
-                <p style="font-size:0.75rem; color:var(--text-muted);">Ministry of Foreign Affairs (Co-Host)</p>
-              </div>
-              <button class="qa-btn" style="padding:4px 8px; font-size:0.7rem;" onclick="alert('Meeting Request Sent')">Connect</button>
-            </div>
-
-            <div class="delegate-item">
-              <img src="https://flagcdn.com/es.svg" class="delegate-flag" alt="Spain">
-              <div style="flex:1">
-                <strong style="font-size:0.85rem; color:#fff;">Spain Delegation</strong>
-                <p style="font-size:0.75rem; color:var(--text-muted);">Ministry of Defence (Co-Host)</p>
-              </div>
-              <button class="qa-btn" style="padding:4px 8px; font-size:0.7rem;" onclick="alert('Meeting Request Sent')">Connect</button>
+            <div id="delegates-list">
+              <!-- Filled by JS -->
             </div>
           </div>
 
-          <!-- TAB 4: DIGITAL PASS -->
-          <div class="tab-view" id="tab-badge">
-            <div class="badge-card">
-              <div class="badge-avatar">🎖️</div>
-              <div class="badge-name">Official Delegate Pass</div>
-              <div class="badge-role">State Delegate • High-Level Accreditation</div>
-              
-              <div class="qr-box">
-                <!-- SVG QR Code Simulation -->
-                <svg viewBox="0 0 100 100" width="100" height="100">
-                  <path fill="#0B1B3D" d="M0,0 h30 v30 h-30 z M40,0 h20 v10 h-20 z M70,0 h30 v30 h-30 z M0,40 h10 v20 h-10 z M30,30 h30 v30 h-30 z M70,40 h30 v10 h-30 z M0,70 h30 v30 h-30 z M40,70 h20 v20 h-20 z M80,80 h20 v20 h-20 z"/>
+          <!-- ===== PASS ===== -->
+          <div class="tab-view" id="tab-pass">
+            <div class="sec-h">Digital Delegate Pass</div>
+            <p class="sec-sub">Present QR code at all access checkpoints</p>
+
+            <div class="pass-card">
+              <div class="pass-header">
+                <div style="display:flex; align-items:center; gap:5px;">
+                  <div style="width:20px;height:20px;background:var(--gold);border-radius:5px;display:flex;align-items:center;justify-content:center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                  </div>
+                  <span style="font-family:var(--font-h); font-size:0.75rem; font-weight:800; color:#fff;">REAIM 2027</span>
+                </div>
+                <div class="pass-type">
+                  <div class="tag tag-gold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    Gold — Full Access
+                  </div>
+                </div>
+              </div>
+
+              <div class="pass-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <div class="verified">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+              </div>
+
+              <div class="pass-name">Official Delegate</div>
+              <div class="pass-role">Ministry of Defence · Republic of Kenya</div>
+
+              <div class="qr-wrapper">
+                <!-- QR Code SVG -->
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="200" height="200" fill="white"/>
+                  <!-- Top-left finder -->
+                  <rect x="10" y="10" width="60" height="60" fill="none" stroke="#0B1B3D" stroke-width="8"/>
+                  <rect x="24" y="24" width="32" height="32" fill="#0B1B3D"/>
+                  <!-- Top-right finder -->
+                  <rect x="130" y="10" width="60" height="60" fill="none" stroke="#0B1B3D" stroke-width="8"/>
+                  <rect x="144" y="24" width="32" height="32" fill="#0B1B3D"/>
+                  <!-- Bottom-left finder -->
+                  <rect x="10" y="130" width="60" height="60" fill="none" stroke="#0B1B3D" stroke-width="8"/>
+                  <rect x="24" y="144" width="32" height="32" fill="#0B1B3D"/>
+                  <!-- Data modules -->
+                  <rect x="86" y="10" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="98" y="10" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="86" y="22" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="110" y="22" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="10" y="86" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="22" y="86" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="10" y="98" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="34" y="98" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="86" y="86" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="98" y="86" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="110" y="86" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="122" y="86" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="134" y="86" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="146" y="86" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="158" y="86" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="86" y="98" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="110" y="98" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="134" y="98" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="86" y="110" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="98" y="110" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="122" y="110" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="146" y="110" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="86" y="122" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="110" y="122" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="134" y="122" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="158" y="122" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="86" y="134" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="98" y="134" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="122" y="134" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="86" y="158" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="110" y="158" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="146" y="146" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="158" y="146" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="134" y="158" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="146" y="158" width="10" height="10" fill="#0B1B3D"/>
+                  <rect x="158" y="158" width="10" height="10" fill="#0B1B3D"/>
+                  <!-- Center logo hint -->
+                  <rect x="88" y="88" width="24" height="24" rx="4" fill="#C59B27"/>
                 </svg>
               </div>
 
-              <div class="discount-pill">
-                🌿 KWS National Park Pass: 30% Entry Discount Active
+              <div class="pass-access-row">
+                <div class="access-chip gold">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  Full Access
+                </div>
+                <div class="access-chip green">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Accredited
+                </div>
+              </div>
+            </div>
+
+            <div class="sec-label">Delegate Perks & Benefits</div>
+            <div class="pass-perk">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <div>
+                <strong>30% KWS National Park Entry Discount</strong>
+                <span>Nairobi National Park, Orphanage & Safari Walk</span>
+              </div>
+            </div>
+            <div class="pass-perk">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              <div>
+                <strong>Official Shuttle Transfer</strong>
+                <span>Hotels to Bomas & Karen venues — free of charge</span>
+              </div>
+            </div>
+            <div class="pass-perk">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <div>
+                <strong>Bilateral Meeting Request Access</strong>
+                <span>Schedule 1-on-1 side meetings with any delegation</span>
               </div>
             </div>
           </div>
 
-          <!-- TAB 5: LIVE Q&A -->
+          <!-- ===== Q&A ===== -->
           <div class="tab-view" id="tab-qa">
-            <h3 style="font-family:'Outfit'; font-size: 1rem; margin-bottom: 10px; color: var(--gold-accent);">Live Session Audience Q&A</h3>
-            <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 12px;">Submit your question directly to the Plenary Moderator:</p>
-
-            <div id="qa-feed">
-              <div class="session-card">
-                <strong style="font-size: 0.75rem; color: var(--gold-accent);">Delegate from Singapore:</strong>
-                <p style="font-size: 0.8rem; margin: 4px 0;">How can verification protocols account for rapid software-defined AI upgrades?</p>
+            <div class="live-header">
+              <div>
+                <div class="sec-h" style="margin-bottom:2px;">Live Audience Q&A</div>
+                <div class="tag tag-live" style="display:inline-flex;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                  Plenary Session 1 — Live
+                </div>
+              </div>
+              <div class="viewer-count">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span id="viewer-count">412</span> watching
               </div>
             </div>
 
-            <div class="qa-box">
-              <input type="text" id="userQuestion" class="qa-input" placeholder="Type your question to panel...">
-              <button class="qa-btn" onclick="submitQuestion()">Send</button>
+            <div class="progress-bar" style="margin-bottom:14px;">
+              <div class="progress-fill" style="width:38%"></div>
+            </div>
+
+            <div id="qa-feed" class="qa-feed"></div>
+
+            <div class="qa-compose">
+              <textarea id="qa-input" class="qa-input-box" rows="1" placeholder="Ask the panel a question..."></textarea>
+              <button class="send-btn" onclick="submitQuestion()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
             </div>
           </div>
 
-        </div>
+        </div><!-- /app-content -->
 
-        <!-- Bottom Tab Bar Navigation -->
+        <!-- Bottom Navigation -->
         <div class="bottom-nav">
-          <button class="nav-item active" onclick="switchTab('schedule', this)">
-            <span class="nav-icon">📅</span>
+          <button class="nav-btn active" id="nav-home" onclick="switchTab('home')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>Home</span>
+          </button>
+          <button class="nav-btn" id="nav-schedule" onclick="switchTab('schedule')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             <span>Schedule</span>
           </button>
-          <button class="nav-item" onclick="switchTab('map', this)">
-            <span class="nav-icon">🗺️</span>
-            <span>Map</span>
+          <button class="nav-btn" id="nav-venue" onclick="switchTab('venue')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Venue</span>
           </button>
-          <button class="nav-item" onclick="switchTab('delegates', this)">
-            <span class="nav-icon">🤝</span>
+          <button class="nav-btn" id="nav-delegates" onclick="switchTab('delegates')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             <span>Delegates</span>
           </button>
-          <button class="nav-item" onclick="switchTab('badge', this)">
-            <span class="nav-icon">🆔</span>
-            <span>Pass</span>
+          <button class="nav-btn" id="nav-pass" onclick="switchTab('pass')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <span>My Pass</span>
           </button>
-          <button class="nav-item" onclick="switchTab('qa', this)">
-            <span class="nav-icon">💬</span>
-            <span>Live Q&A</span>
+          <button class="nav-btn" id="nav-qa" onclick="switchTab('qa')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>Q&A</span>
           </button>
         </div>
-      </div>
+
+      </div><!-- /screen -->
+    </div><!-- /phone -->
+  </div><!-- /phone-wrap -->
+
+</div><!-- /scene -->
+
+<!-- Toast notification area -->
+<div class="toast-area">
+  <div class="toast" id="toast">
+    <div class="toast-icon">
+      <svg id="toast-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    </div>
+    <div>
+      <strong id="toast-title">Venue Info</strong>
+      <p id="toast-msg">Tap a pin to learn more.</p>
     </div>
   </div>
+</div>
 
-  <script>
-    function switchTab(tabId, element) {
-      document.querySelectorAll('.tab-view').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
-      document.getElementById('tab-' + tabId).classList.add('active');
-      element.classList.add('active');
+<script>
+/* ============================
+   DATA
+============================ */
+const scheduleData = {
+  day0: [
+    { time: '09:00', end: '17:00', title: 'African Regional Consultation & Academic Forum', desc: 'Pre-summit multi-stakeholder consultation with 17+ African nations, researchers, and Moran AI Center advisors.', location: 'Bomas of Kenya (Pavilion)', type: 'breakout', bookmarked: false },
+    { time: '14:00', end: '17:00', title: 'Youth & Emerging Leaders in AI Governance', desc: 'Global South youth delegates and emerging leaders help shape the summit's outcome document.', location: 'Pavilion Hall B', type: 'breakout', bookmarked: false },
+  ],
+  day1: [
+    { time: '09:00', end: '09:30', title: 'Official Opening Ceremony & Presidential Welcome', desc: 'H.E. William Ruto, President of Kenya, CS Ministry of Defence, and Co-Host Ministers open the summit.', location: 'Main Auditorium', speaker: 'H.E. President William Ruto', type: 'plenary', live: true, bookmarked: true },
+    { time: '09:30', end: '10:45', title: 'Plenary 1 — State of Play in Military AI', desc: 'A comprehensive global overview of current military AI capabilities, ethical challenges, and autonomous systems landscape.', location: 'Main Auditorium', speaker: 'High-Level Panel', type: 'plenary', bookmarked: false },
+    { time: '11:15', end: '12:30', title: 'Plenary 2 — Norms, Rules & Principles', desc: 'Evaluating adherence to International Humanitarian Law, human control requirements, and normative governance frameworks.', location: 'Plenary Hall B', type: 'plenary', bookmarked: true },
+    { time: '13:30', end: '15:00', title: 'Plenary 3 — Operationalizing Responsible AI', desc: 'Translating principles into verifiable compliance, explainability standards, and operational accountability mechanisms.', location: 'Main Auditorium', speaker: 'High-Level Panel', type: 'plenary', bookmarked: false },
+    { time: '15:30', end: '17:00', title: 'Plenary 4 — Global Cooperation & Capacity Building', desc: 'Building inclusive governance frameworks, technical assistance programs, and Global South equity in AI security norms.', location: 'Main Auditorium', type: 'plenary', bookmarked: false },
+    { time: '19:00', end: '22:00', title: 'State Dinner & Cultural Evening', desc: 'Official dinner hosted by the Government of Kenya. Featuring traditional Kenyan cultural performances.', location: 'Bomas Cultural Village', type: 'social', bookmarked: true },
+  ],
+  day2: [
+    { time: '09:00', end: '12:00', title: 'Ministerial Roundtable (Closed Session)', desc: 'Ministers of Defence and Foreign Affairs convene for confidential deliberations on key outcome documents.', location: 'Hemingways Nairobi, Karen', speaker: 'Ministers of Defence', type: 'ministerial', bookmarked: false },
+    { time: '12:30', end: '14:00', title: 'Industry & Innovation Showcase', desc: 'Moran AI Center of Excellence demo and global tech leaders present responsible AI defence solutions.', location: 'Moran AI Hub, Bomas', type: 'breakout', bookmarked: false },
+    { time: '14:30', end: '16:00', title: 'Plenary 5 — Humanitarian Safeguards & Accountability', desc: 'Strengthening human-centred controls, accountability mechanisms, and meaningful human judgement in autonomous systems.', location: 'Main Auditorium', type: 'plenary', bookmarked: false },
+    { time: '16:30', end: '17:30', title: 'Closing Ceremony & Blueprint Adoption', desc: 'Formal adoption of the REAIM 2027 Nairobi Blueprint for Action. Closing remarks by Host and Co-Host nations.', location: 'Main Auditorium', type: 'closing', bookmarked: true },
+  ]
+};
+
+const delegates = [
+  { name: 'Republic of Kenya', role: 'Host Nation · Ministry of Defence & Moran AI Center', flag: 'ke', type: 'host' },
+  { name: 'Republic of Korea', role: 'Co-Host · Ministry of National Defence', flag: 'kr', type: 'cohost' },
+  { name: 'The Netherlands', role: 'Co-Host · Ministry of Foreign Affairs', flag: 'nl', type: 'cohost' },
+  { name: 'Spain', role: 'Co-Host · Ministry of Defence', flag: 'es', type: 'cohost' },
+  { name: 'Singapore', role: 'Co-Host · Ministry of Defence', flag: 'sg', type: 'cohost' },
+  { name: 'United Kingdom', role: 'Co-Host · Foreign, Commonwealth & Dev. Office', flag: 'gb', type: 'cohost' },
+  { name: 'United States', role: 'Official Delegation · Dept. of Defense', flag: 'us', type: 'delegate' },
+  { name: 'France', role: 'Official Delegation · Ministère des Armées', flag: 'fr', type: 'delegate' },
+  { name: 'Germany', role: 'Official Delegation · Federal Ministry of Defence', flag: 'de', type: 'delegate' },
+  { name: 'Japan', role: 'Official Delegation · Ministry of Defence', flag: 'jp', type: 'delegate' },
+  { name: 'Canada', role: 'Official Delegation · Department of National Defence', flag: 'ca', type: 'delegate' },
+  { name: 'Australia', role: 'Official Delegation · Dept. of Defence', flag: 'au', type: 'delegate' },
+  { name: 'Ethiopia', role: 'Official Delegation · Ministry of National Defence', flag: 'et', type: 'delegate' },
+  { name: 'Nigeria', role: 'Official Delegation · Ministry of Defence', flag: 'ng', type: 'delegate' },
+  { name: 'South Africa', role: 'Official Delegation · Dept. of Defence', flag: 'za', type: 'delegate' },
+  { name: 'United Nations (UNIDIR)', role: 'Multilateral · UN Institute for Disarmament Research', flag: 'un', type: 'multilateral' },
+  { name: 'African Union', role: 'Multilateral · Peace & Security Council', flag: 'tz', type: 'multilateral' },
+];
+
+const qaMessages = [
+  { sender: 'Netherlands Delegation', country: 'nl', time: '09:38', text: 'How can confidence-building measures account for rapid software-defined AI upgrades in autonomous systems?', votes: 42 },
+  { sender: 'Korean Delegation', country: 'kr', time: '09:41', text: 'What specific verification mechanisms are being proposed to ensure compliance with IHL in AI-enabled weapon systems?', votes: 38 },
+  { sender: 'Kenya Civil Society', country: 'ke', time: '09:44', text: 'How does REAIM intend to ensure meaningful African representation in the governance norms that emerge from this summit?', votes: 67 },
+  { sender: 'UNIDIR Representative', country: 'un', time: '09:46', text: 'Is there consensus on the definition of "meaningful human control" and how it applies to threshold decisions in AI-assisted targeting?', votes: 55 },
+];
+
+/* ============================
+   STATE
+============================ */
+let currentTab = 'home';
+let notifOpen = false;
+let currentDay = 'day1';
+let connectSent = {};
+let toastTimer = null;
+
+/* ============================
+   INIT
+============================ */
+document.addEventListener('DOMContentLoaded', () => {
+  startClock();
+  startCountdown();
+  renderSchedule('day1');
+  renderDelegates('');
+  renderQA();
+  animateIsland();
+  simulateViewerCount();
+  simulateAutoQA();
+});
+
+/* ============================
+   CLOCK
+============================ */
+function startClock() {
+  function tick() {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2,'0');
+    const m = String(now.getMinutes()).padStart(2,'0');
+    document.getElementById('clock').textContent = `${h}:${m}`;
+  }
+  tick();
+  setInterval(tick, 30000);
+}
+
+/* ============================
+   COUNTDOWN
+============================ */
+function startCountdown() {
+  function tick() {
+    const target = new Date('2027-04-07T09:00:00+03:00');
+    const now = new Date();
+    const diff = target - now;
+    if (diff <= 0) {
+      ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id => {
+        document.getElementById(id).textContent = '00';
+      });
+      return;
     }
+    const days  = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins  = Math.floor((diff % 3600000) / 60000);
+    const secs  = Math.floor((diff % 60000) / 1000);
+    document.getElementById('cd-days').textContent  = String(days).padStart(2,'0');
+    document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
+    document.getElementById('cd-mins').textContent  = String(mins).padStart(2,'0');
+    document.getElementById('cd-secs').textContent  = String(secs).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick, 1000);
+}
 
-    function togglePushNotif() {
-      const banner = document.getElementById('pushNotif');
-      banner.style.display = banner.style.display === 'none' ? 'flex' : 'none';
-    }
+/* ============================
+   DYNAMIC ISLAND ANIMATION
+============================ */
+function animateIsland() {
+  const island = document.getElementById('island');
+  setTimeout(() => {
+    island.classList.add('expanded');
+    setTimeout(() => { island.classList.remove('expanded'); }, 4000);
+  }, 2000);
+}
 
-    function submitQuestion() {
-      const input = document.getElementById('userQuestion');
-      if (!input.value.trim()) return;
-      
+/* ============================
+   TAB SWITCHING
+============================ */
+function switchTab(tab) {
+  // Close notif
+  if (notifOpen) { notifOpen = false; document.getElementById('notifPanel').classList.remove('open'); }
+
+  document.querySelectorAll('.tab-view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+
+  document.getElementById('tab-' + tab).classList.add('active');
+  document.getElementById('nav-' + tab).classList.add('active');
+  currentTab = tab;
+
+  if (tab === 'schedule') renderSchedule(currentDay);
+  if (tab === 'delegates') renderDelegates('');
+  if (tab === 'qa') scrollQAFeed();
+}
+
+/* ============================
+   NOTIFICATION PANEL
+============================ */
+function toggleNotif() {
+  notifOpen = !notifOpen;
+  document.getElementById('notifPanel').classList.toggle('open', notifOpen);
+}
+
+/* ============================
+   SCHEDULE RENDERING
+============================ */
+function switchDay(el, day) {
+  document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  currentDay = day;
+  renderSchedule(day);
+}
+
+function typeColor(type) {
+  const map = { plenary: 'gold', breakout: 'green', ministerial: 'red', closing: 'gold', social: 'green' };
+  return map[type] || 'gold';
+}
+
+function typeLabel(type) {
+  const map = { plenary: 'Plenary', breakout: 'Side Event', ministerial: 'Ministerial', closing: 'Closing', social: 'Social' };
+  return map[type] || 'Session';
+}
+
+function renderSchedule(day) {
+  const sessions = scheduleData[day] || [];
+  const container = document.getElementById('schedule-content');
+  if (!sessions.length) {
+    container.innerHTML = `<div class="card" style="text-align:center; padding:2rem; color:var(--muted);">No sessions scheduled for this day.</div>`;
+    return;
+  }
+
+  let html = '';
+  sessions.forEach((s, i) => {
+    const color = typeColor(s.type);
+    const colorVar = color === 'gold' ? 'var(--gold)' : color === 'green' ? 'var(--green)' : 'var(--red)';
+    const last = i === sessions.length - 1;
+    html += `
+      <div class="session-item">
+        <div class="timeline-col">
+          <div class="tl-dot ${s.live ? 'live' : color}" style="${color === 'gold' ? '' : ''}"></div>
+          ${!last ? '<div class="tl-line"></div>' : ''}
+          <span class="tl-time">${s.time}</span>
+        </div>
+        <div class="session-card">
+          <div class="card ${color}-top">
+            <div class="sess-header">
+              <div class="sess-title">${s.title}</div>
+              <button class="bookmark-btn ${s.bookmarked ? 'saved' : ''}" onclick="toggleBookmark(${i}, '${day}')" id="bm-${day}-${i}">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="${s.bookmarked ? 'var(--gold)' : 'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+              </button>
+            </div>
+            ${s.live ? `<div class="tag tag-live" style="margin-bottom:6px;"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> Live Now</div>` : ''}
+            <p style="font-size:0.72rem; color:var(--muted); line-height:1.5; margin-bottom:8px;">${s.desc}</p>
+            <div class="sess-meta">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              ${s.location || '—'}
+              <span style="margin-left:auto; color:${colorVar};">${s.time} – ${s.end}</span>
+            </div>
+            ${s.speaker ? `
+              <div class="sess-speaker">
+                <img src="https://ui-avatars.com/api/?name=${encodeURIComponent(s.speaker)}&background=162B57&color=C59B27&size=52" alt="${s.speaker}">
+                <span>${s.speaker}</span>
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      </div>
+    `;
+  });
+  container.innerHTML = html;
+}
+
+function toggleBookmark(idx, day) {
+  scheduleData[day][idx].bookmarked = !scheduleData[day][idx].bookmarked;
+  const bookmarked = scheduleData[day][idx].bookmarked;
+  const btn = document.getElementById(`bm-${day}-${idx}`);
+  if (btn) {
+    btn.classList.toggle('saved', bookmarked);
+    btn.querySelector('svg').setAttribute('fill', bookmarked ? 'var(--gold)' : 'none');
+  }
+  showToast(bookmarked ? 'Session Bookmarked' : 'Bookmark Removed', scheduleData[day][idx].title);
+}
+
+/* ============================
+   DELEGATES
+============================ */
+let filteredDelegates = [...delegates];
+
+function renderDelegates(query) {
+  const q = query.toLowerCase();
+  const filtered = delegates.filter(d =>
+    d.name.toLowerCase().includes(q) || d.role.toLowerCase().includes(q)
+  );
+  const container = document.getElementById('delegates-list');
+  if (!filtered.length) {
+    container.innerHTML = `<div class="card" style="text-align:center; color:var(--muted); padding:2rem;">No delegations found.</div>`;
+    return;
+  }
+  container.innerHTML = filtered.map((d, i) => {
+    const tagHtml = d.type === 'host'
+      ? '<span class="tag tag-gold" style="font-size:0.55rem;">Host</span>'
+      : d.type === 'cohost'
+      ? '<span class="tag tag-green" style="font-size:0.55rem;">Co-Host</span>'
+      : d.type === 'multilateral'
+      ? '<span class="tag tag-blue" style="font-size:0.55rem;">Multilateral</span>'
+      : '';
+
+    const btnSent = connectSent[d.flag];
+
+    return `
+      <div class="delegate-item">
+        <img src="https://flagcdn.com/${d.flag}.svg" class="del-flag" alt="${d.name}" onerror="this.style.background='var(--navy-mid)'; this.src=''">
+        <div class="del-info">
+          <div class="del-name">${d.name} ${tagHtml}</div>
+          <div class="del-role">${d.role}</div>
+        </div>
+        <button class="connect-btn ${btnSent ? 'sent' : ''}" onclick="sendConnect('${d.flag}', '${d.name}', this)">
+          ${btnSent ? `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Sent` 
+          : `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Connect`}
+        </button>
+      </div>
+    `;
+  }).join('');
+}
+
+function filterDelegates(val) {
+  renderDelegates(val);
+}
+
+function sendConnect(flag, name, btn) {
+  if (connectSent[flag]) return;
+  connectSent[flag] = true;
+  btn.classList.add('sent');
+  btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Sent`;
+  showToast('Meeting Request Sent', `Your delegation request was sent to ${name}.`);
+}
+
+/* ============================
+   Q&A
+============================ */
+function renderQA() {
+  const feed = document.getElementById('qa-feed');
+  feed.innerHTML = qaMessages.map(q => buildQAItem(q)).join('');
+}
+
+function buildQAItem(q) {
+  return `
+    <div class="qa-item">
+      <div class="qa-item-header">
+        <img src="https://flagcdn.com/${q.country}.svg" style="width:22px; height:15px; border-radius:3px; object-fit:cover;" alt="${q.sender}" onerror="this.style.display='none'">
+        <span class="qa-sender">${q.sender}</span>
+        <span class="qa-time">${q.time}</span>
+      </div>
+      <div class="qa-text">${q.text}</div>
+      <button class="qa-upvote" onclick="upvote(this, ${q.votes})">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+        <span>${q.votes}</span>
+      </button>
+    </div>
+  `;
+}
+
+function submitQuestion() {
+  const input = document.getElementById('qa-input');
+  const text = input.value.trim();
+  if (!text) return;
+
+  const now = new Date();
+  const time = `${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+
+  const newQ = { sender: 'Kenyan Delegation', country: 'ke', time, text, votes: 0 };
+  qaMessages.push(newQ);
+
+  const feed = document.getElementById('qa-feed');
+  const el = document.createElement('div');
+  el.innerHTML = buildQAItem(newQ);
+  feed.appendChild(el.firstElementChild);
+  input.value = '';
+  scrollQAFeed();
+  showToast('Question Submitted', 'Your question is visible to the moderator.');
+}
+
+function upvote(btn, base) {
+  const count = btn.querySelector('span');
+  const current = parseInt(count.textContent);
+  count.textContent = current + 1;
+  btn.style.color = 'var(--gold)';
+  btn.style.background = 'var(--gold-muted)';
+}
+
+function scrollQAFeed() {
+  const feed = document.getElementById('qa-feed');
+  if (feed) setTimeout(() => { feed.scrollTop = feed.scrollHeight; }, 100);
+}
+
+/* ============================
+   AUTO Q&A SIMULATION
+============================ */
+const autoQAs = [
+  { sender: 'Singapore Delegation', country: 'sg', text: 'What role do small states play in shaping REAIM norms when facing asymmetric AI capabilities?', votes: 24 },
+  { sender: 'African Union Rep.', country: 'tz', text: 'How can the Moran AI Center of Excellence become a regional model for responsible AI adoption across Africa?', votes: 31 },
+  { sender: 'German Delegation', country: 'de', text: 'What is the proposed timeline for developing binding verification frameworks under the next REAIM cycle?', votes: 19 },
+  { sender: 'Japan Delegation', country: 'jp', text: 'How does this blueprint address AI systems that are dual-use — civilian and military — such as commercial satellite AI?', votes: 28 },
+];
+
+let autoIdx = 0;
+
+function simulateAutoQA() {
+  setInterval(() => {
+    if (autoIdx < autoQAs.length) {
+      const now = new Date();
+      const time = `${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+      const q = { ...autoQAs[autoIdx], time };
+      qaMessages.push(q);
+
       const feed = document.getElementById('qa-feed');
-      const card = document.createElement('div');
-      card.className = 'session-card';
-      card.innerHTML = `<strong style="font-size: 0.75rem; color: var(--gold-accent);">You (Kenyan Delegation):</strong><p style="font-size: 0.8rem; margin: 4px 0;">${input.value}</p>`;
-      feed.appendChild(card);
-      input.value = '';
-    }
-
-    function switchDay(chip, dayKey) {
-      document.querySelectorAll('.day-chip').forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      
-      const sched = document.getElementById('schedule-content');
-      if (dayKey === 'day0') {
-        sched.innerHTML = `
-          <div class="session-card">
-            <div class="session-time"><span>09:00 - 17:00 EAT</span><span>Pre-Summit</span></div>
-            <div class="session-title">African Regional Consultation & Academic Forum</div>
-            <div class="session-desc">Multi-stakeholder consultation with African delegates, researchers & Moran AI Center advisors.</div>
-          </div>
-        `;
-      } else if (dayKey === 'day1') {
-        sched.innerHTML = `
-          <div class="session-card">
-            <div class="session-time"><span>09:00 - 09:30 EAT</span><span class="tag-live">LIVE NOW</span></div>
-            <div class="session-title">Opening Ceremony & State Welcome</div>
-            <div class="session-desc">H.E. William Ruto, President of Kenya & CS Ministry of Defence welcome global delegates.</div>
-          </div>
-          <div class="session-card">
-            <div class="session-time"><span>09:30 - 10:45 EAT</span><span>Plenary 1</span></div>
-            <div class="session-title">State of Play in Military AI Capabilities</div>
-            <div class="session-desc">Global review of autonomous capabilities, near-term projections, and ethical imperatives.</div>
-          </div>
-        `;
-      } else if (dayKey === 'day2') {
-        sched.innerHTML = `
-          <div class="session-card">
-            <div class="session-time"><span>09:00 - 12:00 EAT</span><span>Ministerial</span></div>
-            <div class="session-title">Ministerial Roundtable (Closed Session)</div>
-            <div class="session-desc">Ministers of Defence and Foreign Affairs convene at Hemingways Nairobi.</div>
-          </div>
-          <div class="session-card">
-            <div class="session-time"><span>15:30 - 16:30 EAT</span><span>Closing</span></div>
-            <div class="session-title">Closing Ceremony & Blueprint Adoption</div>
-            <div class="session-desc">Formal adoption of the REAIM 2027 Nairobi Blueprint for Action.</div>
-          </div>
-        `;
+      if (feed) {
+        const el = document.createElement('div');
+        el.innerHTML = buildQAItem(q);
+        feed.appendChild(el.firstElementChild);
+        if (currentTab === 'qa') { scrollQAFeed(); }
       }
+
+      // Show notification for Q&A
+      if (currentTab !== 'qa') {
+        showToast('New Question', q.sender + ' asked a question in the live panel.');
+      }
+
+      autoIdx++;
     }
-  </script>
+  }, 18000);
+}
+
+/* ============================
+   VIEWER COUNT SIMULATION
+============================ */
+function simulateViewerCount() {
+  setInterval(() => {
+    const el = document.getElementById('viewer-count');
+    if (!el) return;
+    const current = parseInt(el.textContent);
+    const change = Math.floor(Math.random() * 15) - 5;
+    el.textContent = Math.max(350, current + change);
+  }, 4000);
+}
+
+/* ============================
+   TOAST
+============================ */
+function showToast(title, msg) {
+  const toast = document.getElementById('toast');
+  document.getElementById('toast-title').textContent = title;
+  document.getElementById('toast-msg').textContent = msg;
+  toast.classList.add('show');
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { toast.classList.remove('show'); }, 3500);
+}
+</script>
 </body>
 </html>
