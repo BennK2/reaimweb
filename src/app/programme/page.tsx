@@ -3,7 +3,6 @@ import { Timeline, TimelineItem } from '@/components/ui/Timeline';
 import { Mic, Users, Monitor, BookOpen, Target, Globe, Calendar, Presentation, Download } from 'lucide-react';
 import Link from 'next/link';
 import styles from './page.module.css';
-import sideEventsStyles from '../side-events/page.module.css';
 
 export default function Programme() {
   return (
@@ -147,43 +146,43 @@ export default function Programme() {
               <p className="text-muted" style={{maxWidth: '600px', margin: '0 auto'}}>A multi-stakeholder approach fostering deep-dives into specific topics.</p>
             </div>
             
-            <div className={sideEventsStyles?.eventsList || "grid-3"} style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem'}}>
-              <div className={sideEventsStyles?.eventCard || "glass-panel"} style={{padding: '1.5rem', display: 'flex', gap: '1rem'}}>
-                <div className={sideEventsStyles?.eventIcon || ""}>
+            <div className="grid-3" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem'}}>
+              <div className="glass-panel" style={{padding: '1.5rem', display: 'flex', gap: '1rem'}}>
+                <div>
                   <BookOpen size={24} className="text-accent" />
                 </div>
-                <div className={sideEventsStyles?.eventContent || ""}>
+                <div>
                   <h3 style={{marginBottom: '0.5rem', fontSize: '1.2rem', color: 'var(--color-primary)'}}>Academic Symposium on AI Ethics</h3>
                   <p className="text-muted" style={{marginBottom: '1rem', fontSize: '0.9rem'}}>A dedicated forum for researchers and ethicists to present peer-reviewed papers on the moral implications of autonomous systems in warfare.</p>
-                  <div className={sideEventsStyles?.eventMeta || ""} style={{display: 'flex', gap: '1rem', fontSize: '0.85rem', color: 'var(--color-accent-gold)'}}>
+                  <div style={{display: 'flex', gap: '1rem', fontSize: '0.85rem', color: 'var(--color-accent-gold)'}}>
                     <span style={{display: 'flex', alignItems: 'center', gap: '0.25rem'}}><Calendar size={14} /> 14 April</span>
                     <span style={{display: 'flex', alignItems: 'center', gap: '0.25rem'}}><Users size={14} /> 150+ Attendees</span>
                   </div>
                 </div>
               </div>
 
-              <div className={sideEventsStyles?.eventCard || "glass-panel"} style={{padding: '1.5rem', display: 'flex', gap: '1rem'}}>
-                <div className={sideEventsStyles?.eventIcon || ""}>
+              <div className="glass-panel" style={{padding: '1.5rem', display: 'flex', gap: '1rem'}}>
+                <div>
                   <Target size={24} className="text-accent" />
                 </div>
-                <div className={sideEventsStyles?.eventContent || ""}>
+                <div>
                   <h3 style={{marginBottom: '0.5rem', fontSize: '1.2rem', color: 'var(--color-primary)'}}>Industry Innovation Showcase</h3>
                   <p className="text-muted" style={{marginBottom: '1rem', fontSize: '0.9rem'}}>Leading defense contractors and civilian tech firms demonstrate dual-use AI technologies that emphasize human-machine teaming.</p>
-                  <div className={sideEventsStyles?.eventMeta || ""} style={{display: 'flex', gap: '1rem', fontSize: '0.85rem', color: 'var(--color-accent-gold)'}}>
+                  <div style={{display: 'flex', gap: '1rem', fontSize: '0.85rem', color: 'var(--color-accent-gold)'}}>
                     <span style={{display: 'flex', alignItems: 'center', gap: '0.25rem'}}><Calendar size={14} /> 14-15 April</span>
                     <span style={{display: 'flex', alignItems: 'center', gap: '0.25rem'}}><Presentation size={14} /> Bomas Expo</span>
                   </div>
                 </div>
               </div>
 
-              <div className={sideEventsStyles?.eventCard || "glass-panel"} style={{padding: '1.5rem', display: 'flex', gap: '1rem'}}>
-                <div className={sideEventsStyles?.eventIcon || ""}>
+              <div className="glass-panel" style={{padding: '1.5rem', display: 'flex', gap: '1rem'}}>
+                <div>
                   <Globe size={24} className="text-accent" />
                 </div>
-                <div className={sideEventsStyles?.eventContent || ""}>
+                <div>
                   <h3 style={{marginBottom: '0.5rem', fontSize: '1.2rem', color: 'var(--color-primary)'}}>Global South Perspectives</h3>
                   <p className="text-muted" style={{marginBottom: '1rem', fontSize: '0.9rem'}}>A closed-door session focusing on capacity building, technology transfer, and unique defense challenges for developing nations.</p>
-                  <div className={sideEventsStyles?.eventMeta || ""} style={{display: 'flex', gap: '1rem', fontSize: '0.85rem', color: 'var(--color-accent-gold)'}}>
+                  <div style={{display: 'flex', gap: '1rem', fontSize: '0.85rem', color: 'var(--color-accent-gold)'}}>
                     <span style={{display: 'flex', alignItems: 'center', gap: '0.25rem'}}><Calendar size={14} /> 15 April</span>
                     <span style={{display: 'flex', alignItems: 'center', gap: '0.25rem'}}><Users size={14} /> Invite Only</span>
                   </div>
