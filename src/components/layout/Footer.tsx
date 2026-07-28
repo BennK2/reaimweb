@@ -9,13 +9,10 @@ export default function Footer() {
       <div className={styles.footerTop}>
         <div className={`container ${styles.footerContainer}`}>
           <div className={styles.brand}>
-            <div className={styles.logoGroup}>
-              <div className={styles.logoImages}>
-                <Image src="/coat-of-arms.webp" alt="Kenya Coat of Arms" width={60} height={60} />
-                <div className={styles.logoDivider}></div>
-                <Image src="/kdf-logo.webp" alt="KDF Logo" width={48} height={60} style={{objectFit: 'contain'}} />
-              </div>
-              <h2>RE<span className="text-accent">AI</span>M <span className="text-accent">2027</span></h2>
+            <div className={styles.logoGroup} style={{ background: 'rgba(255,255,255,0.05)', padding: '1rem', borderRadius: '8px', marginBottom: '1.5rem', display: 'inline-flex', alignItems: 'center', gap: '1rem' }}>
+              <Image src="/coat-of-arms.webp" alt="Kenya Coat of Arms" width={55} height={55} />
+              <div className={styles.logoDivider}></div>
+              <Image src="/logo.png" alt="REAIM 2027 Logo" width={180} height={60} style={{ objectFit: 'contain' }} />
             </div>
             <p className={styles.brandDesc}>
               The premier global platform addressing the opportunities, risks, and governance challenges of artificial intelligence in the military domain.

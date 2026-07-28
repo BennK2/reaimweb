@@ -32,9 +32,10 @@ export default function Home() {
                 Summit Upcoming
               </div>
             </div>
-            <h1>RE<span className="text-accent">AI</span>M <span className="text-accent">2027</span></h1>
+            <div style={{marginBottom: '1.5rem'}}>
+              <Image src="/logo.png" alt="REAIM 2027 Responsible AI in the Military Domain Summit Logo" width={420} height={180} style={{ objectFit: 'contain', maxWidth: '100%', height: 'auto', filter: 'drop-shadow(0 4px 15px rgba(0,0,0,0.15))' }} priority />
+            </div>
             <p className={styles.subtitle}>
-              Responsible AI in the Military Domain Summit<br/>
               Nairobi, Republic of Kenya • 14–15 April 2027<br/>
               <span style={{fontSize: '1rem', color: 'var(--color-primary)', marginTop: '0.5rem', display: 'block', fontWeight: 600}}>
                 Hosted by the Ministry of Defence, Republic of Kenya

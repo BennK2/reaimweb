@@ -46,13 +46,10 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.headerContainer}`}>
-        <Link href="/" className={styles.logo}>
-          <div className={styles.logoImages}>
-            <Image src="/coat-of-arms.webp" alt="Kenya Coat of Arms" width={40} height={40} className={styles.logoImage} />
-            <div className={styles.logoDivider}></div>
-            <Image src="/kdf-logo.webp" alt="KDF Logo" width={32} height={40} className={styles.logoImage} style={{ objectFit: 'contain' }} />
-          </div>
-          REAIM <span className="text-accent">2027</span>
+        <Link href="/" className={styles.logo} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <Image src="/coat-of-arms.webp" alt="Kenya Coat of Arms" width={38} height={38} className={styles.logoImage} />
+          <div className={styles.logoDivider}></div>
+          <Image src="/logo.png" alt="REAIM 2027 Summit Logo" width={140} height={45} style={{ objectFit: 'contain' }} />
         </Link>
 
         <nav className={`${styles.nav} ${mobileMenuOpen ? styles.navOpen : ''}`}>
