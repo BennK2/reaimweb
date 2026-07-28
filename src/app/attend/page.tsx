@@ -100,7 +100,7 @@ export default function Attend() {
           <div className="glass-panel" style={{padding: '3rem', maxWidth: '800px', margin: '0 auto', marginBottom: '5rem'}}>
             <div style={{marginBottom: '2rem'}}>
               <h3 className="text-primary" style={{marginBottom: '0.5rem', fontSize: '1.2rem'}}>When and where is the Summit?</h3>
-              <p className="text-muted">The REAIM Summit takes place on 14-15 April 2027 in Nairobi, Kenya. The main plenary sessions are at the Bomas of Kenya, and the Ministerial Roundtable is at Hemingways Nairobi. Pre-summit side events occur on 13 April.</p>
+              <p className="text-muted">The REAIM Summit takes place on 7–8 April 2027 in Nairobi, Kenya. The main plenary sessions are hosted at the Bomas of Kenya, and the Ministerial Roundtable is at Hemingways Nairobi. Pre-summit regional consultations occur on 6 April 2027.</p>
             </div>
             
             <div style={{marginBottom: '2rem'}}>

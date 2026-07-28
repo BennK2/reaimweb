@@ -9,10 +9,12 @@ export default function Footer() {
       <div className={styles.footerTop}>
         <div className={`container ${styles.footerContainer}`}>
           <div className={styles.brand}>
-            <div className={styles.logoGroup} style={{ background: 'rgba(255,255,255,0.05)', padding: '1rem', borderRadius: '8px', marginBottom: '1.5rem', display: 'inline-flex', alignItems: 'center', gap: '1rem' }}>
-              <Image src="/coat-of-arms.webp" alt="Kenya Coat of Arms" width={55} height={55} />
+            <div className={styles.logoGroup} style={{ background: 'rgba(255,255,255,0.05)', padding: '0.75rem 1.25rem', borderRadius: '8px', marginBottom: '1.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.75rem' }}>
+              <Image src="/coat-of-arms.webp" alt="Kenya Coat of Arms" width={45} height={45} />
               <div className={styles.logoDivider}></div>
-              <Image src="/logo.png" alt="REAIM 2027 Logo" width={180} height={60} style={{ objectFit: 'contain' }} />
+              <Image src="/kdf-logo.webp" alt="KDF Logo" width={36} height={45} style={{ objectFit: 'contain' }} />
+              <div className={styles.logoDivider}></div>
+              <Image src="/logo.png" alt="REAIM 2027 Logo" width={160} height={50} style={{ objectFit: 'contain' }} />
             </div>
             <p className={styles.brandDesc}>
               The premier global platform addressing the opportunities, risks, and governance challenges of artificial intelligence in the military domain.
@@ -30,6 +32,7 @@ export default function Footer() {
               <li><Link href="/programme">Programme</Link></li>
               <li><Link href="/speakers">Speakers</Link></li>
               <li><Link href="/resources">Resources</Link></li>
+              <li><a href="/app-simulator.html" target="_blank" rel="noopener noreferrer" style={{color: 'var(--color-accent-gold)', fontWeight: 600}}>📱 Mobile Event App</a></li>
             </ul>
           </div>
 

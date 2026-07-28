@@ -46,10 +46,12 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.headerContainer}`}>
-        <Link href="/" className={styles.logo} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <Image src="/coat-of-arms.webp" alt="Kenya Coat of Arms" width={38} height={38} className={styles.logoImage} />
+        <Link href="/" className={styles.logo} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+          <Image src="/coat-of-arms.webp" alt="Kenya Coat of Arms" width={32} height={32} className={styles.logoImage} />
           <div className={styles.logoDivider}></div>
-          <Image src="/logo.png" alt="REAIM 2027 Summit Logo" width={140} height={45} style={{ objectFit: 'contain' }} />
+          <Image src="/kdf-logo.webp" alt="KDF Logo" width={28} height={34} style={{ objectFit: 'contain' }} />
+          <div className={styles.logoDivider}></div>
+          <Image src="/logo.png" alt="REAIM 2027 Summit Logo" width={125} height={40} style={{ objectFit: 'contain' }} />
         </Link>
 
         <nav className={`${styles.nav} ${mobileMenuOpen ? styles.navOpen : ''}`}>
@@ -77,9 +79,12 @@ export default function Header() {
           <Link href="/resources" className={styles.navLink} onClick={() => setMobileMenuOpen(false)}>
             <span>Resources</span>
           </Link>
+          <a href="/app-simulator.html" target="_blank" rel="noopener noreferrer" className={styles.navLink} onClick={() => setMobileMenuOpen(false)} style={{color: 'var(--color-accent-gold)', fontWeight: 700}}>
+            <span>📱 Event App</span>
+          </a>
 
           <div className={styles.mobileActions}>
-            <Link href="/registration" className="btn btn-primary btn-sm" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/attend" className="btn btn-primary btn-sm" onClick={() => setMobileMenuOpen(false)}>
               <User size={18} /> Register
             </Link>
           </div>
@@ -106,7 +111,7 @@ export default function Header() {
               ))}
             </div>
           </div>
-          <Link href="/registration" className="btn btn-primary btn-sm">
+          <Link href="/attend" className="btn btn-primary btn-sm">
             <User size={18} /> Register
           </Link>
           <button

@@ -19,13 +19,13 @@ export default function Programme() {
           <div className="grid-2">
             <div>
               <div style={{marginBottom: '3rem'}}>
-                <h2 className="text-primary" style={{marginBottom: '1rem'}}>13 April 2027 (Pre-Event)</h2>
-                <div className="badge" style={{marginBottom: '2rem'}}>Side Events & Forums</div>
+                <h2 className="text-primary" style={{marginBottom: '1rem'}}>6 April 2027 (Pre-Summit)</h2>
+                <div className="badge" style={{marginBottom: '2rem'}}>Side Events & Regional Consultations</div>
                 <Timeline>
                   <TimelineItem 
                     time="09:00 - 17:00" 
-                    title="CSO & Academic Forum" 
-                    description="A dedicated pre-summit day for civil society organizations, academia, and independent researchers."
+                    title="African Regional Consultation & Academic Forum" 
+                    description="A pre-summit consultation bringing together regional delegates, civil society, researchers, and Moran AI Center advisors."
                     location="Bomas of Kenya (Pavilion)"
                     type="breakout"
                     icon={BookOpen}
@@ -33,8 +33,8 @@ export default function Programme() {
                   />
                   <TimelineItem 
                     time="14:00 - 17:00" 
-                    title="Youth in AI Governance" 
-                    description="Special consultation session ensuring next-generation voices are integrated into the summit's outcomes."
+                    title="Youth & Emerging Leaders in AI Governance" 
+                    description="Special consultation session ensuring next-generation voices from Africa and the Global South shape the summit."
                     type="breakout"
                     icon={Users}
                     delay={0.2}
@@ -43,7 +43,7 @@ export default function Programme() {
               </div>
 
               <div>
-                <h2 className="text-primary" style={{marginBottom: '1rem'}}>14 April 2027 (Day 1)</h2>
+                <h2 className="text-primary" style={{marginBottom: '1rem'}}>7 April 2027 (Day 1)</h2>
                 <div className="badge" style={{marginBottom: '2rem'}}>Plenary Sessions</div>
                 <Timeline>
                   <TimelineItem 
@@ -57,8 +57,8 @@ export default function Programme() {
                   />
                   <TimelineItem 
                     time="09:30 - 10:45" 
-                    title="Plenary Session 1: State of Play" 
-                    description="A comprehensive overview of current military AI capabilities and near-term projections."
+                    title="Plenary Session 1: State of Play in Military AI" 
+                    description="A comprehensive overview of current military AI capabilities, near-term projections, and ethical challenges."
                     speaker="High-Level Panel"
                     type="plenary"
                     icon={Monitor}
@@ -66,8 +66,8 @@ export default function Programme() {
                   />
                   <TimelineItem 
                     time="11:15 - 12:30" 
-                    title="Plenary Session 2: Norms & Governance" 
-                    description="Debating the effectiveness of current international frameworks."
+                    title="Plenary Session 2: Norms, Rules & Principles" 
+                    description="Evaluating international frameworks, adherence to IHL, and normative governance principles."
                     type="plenary"
                     icon={BookOpen}
                     delay={0.3}
@@ -75,7 +75,7 @@ export default function Programme() {
                   <TimelineItem 
                     time="13:30 - 15:00" 
                     title="Plenary Session 3: Operationalizing Responsible AI" 
-                    description="Translating political principles into concrete military verification and compliance mechanisms."
+                    description="Translating principles into verification, explainability, human control, and operational compliance mechanisms."
                     speaker="High-Level Panel"
                     type="plenary"
                     icon={Monitor}
@@ -83,8 +83,8 @@ export default function Programme() {
                   />
                   <TimelineItem 
                     time="15:30 - 17:00" 
-                    title="Plenary Session 4: Global Cooperation & Strategic Stability" 
-                    description="Building international consensus and confidence-building measures across regions."
+                    title="Plenary Session 4: Global Cooperation & Capacity Building" 
+                    description="Building international consensus, technical assistance, and equity for developing nations."
                     type="plenary"
                     icon={Users}
                     delay={0.5}
@@ -95,7 +95,7 @@ export default function Programme() {
             
             <div>
               <div style={{marginBottom: '3rem'}}>
-                <h2 className="text-primary" style={{marginBottom: '1rem'}}>15 April 2027 (Day 2)</h2>
+                <h2 className="text-primary" style={{marginBottom: '1rem'}}>8 April 2027 (Day 2)</h2>
                 <div className="badge" style={{marginBottom: '2rem'}}>Ministerial & High-Level</div>
                 <Timeline>
                   <TimelineItem 

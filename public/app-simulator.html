@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REAIM 2027 Official Summit App Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #070e1e;
+      --navy-main: #0B1B3D;
+      --navy-light: #162B57;
+      --gold-accent: #C59B27;
+      --kenya-green: #007A3D;
+      --maasai-red: #C8102E;
+      --text-main: #ffffff;
+      --text-muted: #a0aec0;
+      --glass: rgba(22, 43, 87, 0.75);
+      --glass-border: rgba(197, 155, 39, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(197, 155, 39, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 122, 61, 0.15) 0%, transparent 40%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: var(--text-main);
+    }
+
+    .simulator-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .sim-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .sim-header h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .sim-header h1 span {
+      color: var(--gold-accent);
+    }
+
+    .sim-header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* Phone Shell Styling */
+    .phone-shell {
+      width: 390px;
+      height: 800px;
+      background: #000;
+      border-radius: 50px;
+      padding: 12px;
+      box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.7),
+        0 0 0 2px #2d3748,
+        0 0 30px rgba(197, 155, 39, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Dynamic Island / Screen Header */
+    .screen {
+      width: 100%;
+      height: 100%;
+      background: var(--navy-main);
+      border-radius: 40px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .status-bar {
+      height: 44px;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+      z-index: 100;
+      background: rgba(11, 27, 61, 0.9);
+      backdrop-filter: blur(10px);
+    }
+
+    .dynamic-island {
+      width: 110px;
+      height: 25px;
+      background: #000;
+      border-radius: 20px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 8px;
+    }
+
+    /* Top App Header */
+    .app-header {
+      padding: 12px 18px;
+      background: var(--navy-main);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .app-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .app-brand img {
+      height: 28px;
+      object-fit: contain;
+    }
+
+    .app-brand-text {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    .notif-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: var(--gold-accent);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .notif-badge {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 8px;
+      height: 8px;
+      background: var(--maasai-red);
+      border-radius: 50%;
+    }
+
+    /* Content Area */
+    .app-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      position: relative;
+    }
+
+    /* Hide scrollbars */
+    .app-content::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Notification Banner Popup */
+    .push-banner {
+      background: linear-gradient(135deg, rgba(200, 16, 46, 0.9), rgba(11, 27, 61, 0.95));
+      border: 1px solid var(--gold-accent);
+      padding: 12px 16px;
+      border-radius: 14px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      animation: slideDown 0.4s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .push-banner p {
+      font-size: 0.8rem;
+      line-height: 1.3;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* App Tab Views */
+    .tab-view {
+      display: none;
+    }
+
+    .tab-view.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Days Filter */
+    .day-selector {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .day-chip {
+      flex: 1;
+      padding: 10px 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .day-chip.active {
+      background: var(--gold-accent);
+      color: #0B1B3D;
+      border-color: var(--gold-accent);
+      font-weight: 700;
+    }
+
+    /* Session Card */
+    .session-card {
+      background: var(--navy-light);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 14px;
+      margin-bottom: 12px;
+      transition: transform 0.2s;
+    }
+
+    .session-time {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--gold-accent);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .session-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+
+    .session-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .session-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: #cbd5e0;
+    }
+
+    .tag-live {
+      background: var(--maasai-red);
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    /* Badge Pass Tab */
+    .badge-card {
+      background: linear-gradient(145deg, #162B57, #0B1B3D);
+      border: 2px solid var(--gold-accent);
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .badge-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid var(--gold-accent);
+      margin: 0 auto 12px;
+      background: #070e1e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+    }
+
+    .badge-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .badge-role {
+      color: var(--gold-accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .qr-box {
+      background: #fff;
+      padding: 14px;
+      border-radius: 14px;
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qr-box img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .discount-pill {
+      background: rgba(0, 122, 61, 0.2);
+      border: 1px solid var(--kenya-green);
+      color: #00ff66;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    /* Venue Map Canvas simulation */
+    .map-canvas {
+      width: 100%;
+      height: 280px;
+      background: #0f2347;
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    .map-pin {
+      position: absolute;
+      background: var(--gold-accent);
+      color: #0B1B3D;
+      padding: 4px 8px;
+      border-radius: 8px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    /* Directory Card */
+    .delegate-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      margin-bottom: 8px;
+    }
+
+    .delegate-flag {
+      width: 32px;
+      height: 22px;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    /* Q&A Input */
+    .qa-box {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .qa-input {
+      flex: 1;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 10px 12px;
+      color: #fff;
+      font-size: 0.8rem;
+    }
+
+    .qa-btn {
+      background: var(--gold-accent);
+      color: #0B1B3D;
+      border: none;
+      padding: 0 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+
+    /* Bottom Navigation Bar */
+    .bottom-nav {
+      height: 65px;
+      background: rgba(11, 27, 61, 0.98);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-bottom: 10px;
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      color: var(--text-muted);
+      font-size: 0.65rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: color 0.2s;
+      background: none;
+      border: none;
+    }
+
+    .nav-item.active {
+      color: var(--gold-accent);
+    }
+
+    .nav-icon {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="simulator-container">
+    <div class="sim-header">
+      <h1>RE<span>AI</span>M 2027 Summit App</h1>
+      <p>Interactive Mobile Delegate & Security Pass Simulator</p>
+    </div>
+
+    <div class="phone-shell">
+      <div class="screen">
+        <!-- Status Bar -->
+        <div class="status-bar">
+          <span>09:41</span>
+          <div class="dynamic-island"></div>
+          <span>5G 🔋 100%</span>
+        </div>
+
+        <!-- App Header -->
+        <div class="app-header">
+          <div class="app-brand">
+            <img src="/logo.png" alt="REAIM 2027">
+            <span class="app-brand-text">REAIM 2027</span>
+          </div>
+          <button class="notif-btn" onclick="togglePushNotif()">
+            🔔
+            <div class="notif-badge"></div>
+          </button>
+        </div>
+
+        <!-- App Content Area -->
+        <div class="app-content">
+
+          <!-- Push Notification Alert (Toggleable) -->
+          <div class="push-banner" id="pushNotif">
+            <span style="font-size: 1.2rem">📢</span>
+            <div>
+              <strong style="font-size: 0.8rem; color: #fff;">Official Announcement</strong>
+              <p>President Ruto's Welcome Address begins in 15 mins at Main Auditorium.</p>
+            </div>
+          </div>
+
+          <!-- TAB 1: SCHEDULE -->
+          <div class="tab-view active" id="tab-schedule">
+            <div class="day-selector">
+              <div class="day-chip" onclick="switchDay(this, 'day0')">6 Apr (Pre-Summit)</div>
+              <div class="day-chip active" onclick="switchDay(this, 'day1')">7 Apr (Day 1)</div>
+              <div class="day-chip" onclick="switchDay(this, 'day2')">8 Apr (Day 2)</div>
+            </div>
+
+            <div id="schedule-content">
+              <!-- Day 1 Items -->
+              <div class="session-card">
+                <div class="session-time">
+                  <span>09:00 - 09:30 EAT</span>
+                  <span class="tag-live">LIVE NOW</span>
+                </div>
+                <div class="session-title">Opening Ceremony & State Welcome</div>
+                <div class="session-desc">H.E. William Ruto, President of Kenya & CS Ministry of Defence welcome global delegates.</div>
+                <div class="session-meta">
+                  <span>📍 Bomas Auditorium</span>
+                  <span>⭐ Bookmarked</span>
+                </div>
+              </div>
+
+              <div class="session-card">
+                <div class="session-time">
+                  <span>09:30 - 10:45 EAT</span>
+                  <span>Plenary 1</span>
+                </div>
+                <div class="session-title">State of Play in Military AI Capabilities</div>
+                <div class="session-desc">Global review of autonomous capabilities, near-term projections, and ethical imperatives.</div>
+                <div class="session-meta">
+                  <span>📍 Main Plenary Hall</span>
+                  <span>👥 800+ Expected</span>
+                </div>
+              </div>
+
+              <div class="session-card">
+                <div class="session-time">
+                  <span>11:15 - 12:30 EAT</span>
+                  <span>Plenary 2</span>
+                </div>
+                <div class="session-title">Norms, Rules & International Law Compliance</div>
+                <div class="session-desc">Panel on upholding International Humanitarian Law and human control mechanisms.</div>
+                <div class="session-meta">
+                  <span>📍 Plenary Hall B</span>
+                  <span>📑 Briefing Attached</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: VENUE MAP -->
+          <div class="tab-view" id="tab-map">
+            <h3 style="font-family:'Outfit'; font-size: 1rem; margin-bottom: 10px; color: var(--gold-accent);">Bomas of Kenya Interactive Floorplan</h3>
+            <div class="map-canvas">
+              <div class="map-pin" style="top: 30%; left: 20%;" onclick="alert('Main Plenary Auditorium - Opening & High Level Sessions')">📍 Main Plenary</div>
+              <div class="map-pin" style="top: 60%; left: 55%;" onclick="alert('Moran AI Center Advisory Lounge & Demo Hub')">🧠 Moran AI Hub</div>
+              <div class="map-pin" style="top: 20%; left: 65%;" onclick="alert('Media & Broadcast Center - Press Accreditation')">🎥 Media Center</div>
+              <div class="map-pin" style="top: 75%; left: 25%;" onclick="alert('Delegate Dining & Cultural Village')">🍽️ Dining Village</div>
+            </div>
+            <div class="session-card">
+              <div class="session-title">Venue Security & Shuttle Transport</div>
+              <div class="session-desc">Continuous shuttles run between recommended Karen hotels & Bomas of Kenya every 15 minutes.</div>
+            </div>
+          </div>
+
+          <!-- TAB 3: DELEGATES DIRECTORY -->
+          <div class="tab-view" id="tab-delegates">
+            <h3 style="font-family:'Outfit'; font-size: 1rem; margin-bottom: 10px; color: var(--gold-accent);">Participating Delegations</h3>
+            
+            <div class="delegate-item">
+              <img src="https://flagcdn.com/ke.svg" class="delegate-flag" alt="Kenya">
+              <div style="flex:1">
+                <strong style="font-size:0.85rem; color:#fff;">Kenya Delegation</strong>
+                <p style="font-size:0.75rem; color:var(--text-muted);">Ministry of Defence & Moran AI Center</p>
+              </div>
+              <button class="qa-btn" style="padding:4px 8px; font-size:0.7rem;" onclick="alert('Meeting Request Sent to Kenya Delegation Liaison')">Connect</button>
+            </div>
+
+            <div class="delegate-item">
+              <img src="https://flagcdn.com/kr.svg" class="delegate-flag" alt="Korea">
+              <div style="flex:1">
+                <strong style="font-size:0.85rem; color:#fff;">Republic of Korea</strong>
+                <p style="font-size:0.75rem; color:var(--text-muted);">Ministry of National Defense (Co-Host)</p>
+              </div>
+              <button class="qa-btn" style="padding:4px 8px; font-size:0.7rem;" onclick="alert('Meeting Request Sent')">Connect</button>
+            </div>
+
+            <div class="delegate-item">
+              <img src="https://flagcdn.com/nl.svg" class="delegate-flag" alt="Netherlands">
+              <div style="flex:1">
+                <strong style="font-size:0.85rem; color:#fff;">The Netherlands</strong>
+                <p style="font-size:0.75rem; color:var(--text-muted);">Ministry of Foreign Affairs (Co-Host)</p>
+              </div>
+              <button class="qa-btn" style="padding:4px 8px; font-size:0.7rem;" onclick="alert('Meeting Request Sent')">Connect</button>
+            </div>
+
+            <div class="delegate-item">
+              <img src="https://flagcdn.com/es.svg" class="delegate-flag" alt="Spain">
+              <div style="flex:1">
+                <strong style="font-size:0.85rem; color:#fff;">Spain Delegation</strong>
+                <p style="font-size:0.75rem; color:var(--text-muted);">Ministry of Defence (Co-Host)</p>
+              </div>
+              <button class="qa-btn" style="padding:4px 8px; font-size:0.7rem;" onclick="alert('Meeting Request Sent')">Connect</button>
+            </div>
+          </div>
+
+          <!-- TAB 4: DIGITAL PASS -->
+          <div class="tab-view" id="tab-badge">
+            <div class="badge-card">
+              <div class="badge-avatar">🎖️</div>
+              <div class="badge-name">Official Delegate Pass</div>
+              <div class="badge-role">State Delegate • High-Level Accreditation</div>
+              
+              <div class="qr-box">
+                <!-- SVG QR Code Simulation -->
+                <svg viewBox="0 0 100 100" width="100" height="100">
+                  <path fill="#0B1B3D" d="M0,0 h30 v30 h-30 z M40,0 h20 v10 h-20 z M70,0 h30 v30 h-30 z M0,40 h10 v20 h-10 z M30,30 h30 v30 h-30 z M70,40 h30 v10 h-30 z M0,70 h30 v30 h-30 z M40,70 h20 v20 h-20 z M80,80 h20 v20 h-20 z"/>
+                </svg>
+              </div>
+
+              <div class="discount-pill">
+                🌿 KWS National Park Pass: 30% Entry Discount Active
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 5: LIVE Q&A -->
+          <div class="tab-view" id="tab-qa">
+            <h3 style="font-family:'Outfit'; font-size: 1rem; margin-bottom: 10px; color: var(--gold-accent);">Live Session Audience Q&A</h3>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 12px;">Submit your question directly to the Plenary Moderator:</p>
+
+            <div id="qa-feed">
+              <div class="session-card">
+                <strong style="font-size: 0.75rem; color: var(--gold-accent);">Delegate from Singapore:</strong>
+                <p style="font-size: 0.8rem; margin: 4px 0;">How can verification protocols account for rapid software-defined AI upgrades?</p>
+              </div>
+            </div>
+
+            <div class="qa-box">
+              <input type="text" id="userQuestion" class="qa-input" placeholder="Type your question to panel...">
+              <button class="qa-btn" onclick="submitQuestion()">Send</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Tab Bar Navigation -->
+        <div class="bottom-nav">
+          <button class="nav-item active" onclick="switchTab('schedule', this)">
+            <span class="nav-icon">📅</span>
+            <span>Schedule</span>
+          </button>
+          <button class="nav-item" onclick="switchTab('map', this)">
+            <span class="nav-icon">🗺️</span>
+            <span>Map</span>
+          </button>
+          <button class="nav-item" onclick="switchTab('delegates', this)">
+            <span class="nav-icon">🤝</span>
+            <span>Delegates</span>
+          </button>
+          <button class="nav-item" onclick="switchTab('badge', this)">
+            <span class="nav-icon">🆔</span>
+            <span>Pass</span>
+          </button>
+          <button class="nav-item" onclick="switchTab('qa', this)">
+            <span class="nav-icon">💬</span>
+            <span>Live Q&A</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(tabId, element) {
+      document.querySelectorAll('.tab-view').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+      document.getElementById('tab-' + tabId).classList.add('active');
+      element.classList.add('active');
+    }
+
+    function togglePushNotif() {
+      const banner = document.getElementById('pushNotif');
+      banner.style.display = banner.style.display === 'none' ? 'flex' : 'none';
+    }
+
+    function submitQuestion() {
+      const input = document.getElementById('userQuestion');
+      if (!input.value.trim()) return;
+      
+      const feed = document.getElementById('qa-feed');
+      const card = document.createElement('div');
+      card.className = 'session-card';
+      card.innerHTML = `<strong style="font-size: 0.75rem; color: var(--gold-accent);">You (Kenyan Delegation):</strong><p style="font-size: 0.8rem; margin: 4px 0;">${input.value}</p>`;
+      feed.appendChild(card);
+      input.value = '';
+    }
+
+    function switchDay(chip, dayKey) {
+      document.querySelectorAll('.day-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      
+      const sched = document.getElementById('schedule-content');
+      if (dayKey === 'day0') {
+        sched.innerHTML = `
+          <div class="session-card">
+            <div class="session-time"><span>09:00 - 17:00 EAT</span><span>Pre-Summit</span></div>
+            <div class="session-title">African Regional Consultation & Academic Forum</div>
+            <div class="session-desc">Multi-stakeholder consultation with African delegates, researchers & Moran AI Center advisors.</div>
+          </div>
+        `;
+      } else if (dayKey === 'day1') {
+        sched.innerHTML = `
+          <div class="session-card">
+            <div class="session-time"><span>09:00 - 09:30 EAT</span><span class="tag-live">LIVE NOW</span></div>
+            <div class="session-title">Opening Ceremony & State Welcome</div>
+            <div class="session-desc">H.E. William Ruto, President of Kenya & CS Ministry of Defence welcome global delegates.</div>
+          </div>
+          <div class="session-card">
+            <div class="session-time"><span>09:30 - 10:45 EAT</span><span>Plenary 1</span></div>
+            <div class="session-title">State of Play in Military AI Capabilities</div>
+            <div class="session-desc">Global review of autonomous capabilities, near-term projections, and ethical imperatives.</div>
+          </div>
+        `;
+      } else if (dayKey === 'day2') {
+        sched.innerHTML = `
+          <div class="session-card">
+            <div class="session-time"><span>09:00 - 12:00 EAT</span><span>Ministerial</span></div>
+            <div class="session-title">Ministerial Roundtable (Closed Session)</div>
+            <div class="session-desc">Ministers of Defence and Foreign Affairs convene at Hemingways Nairobi.</div>
+          </div>
+          <div class="session-card">
+            <div class="session-time"><span>15:30 - 16:30 EAT</span><span>Closing</span></div>
+            <div class="session-title">Closing Ceremony & Blueprint Adoption</div>
+            <div class="session-desc">Formal adoption of the REAIM 2027 Nairobi Blueprint for Action.</div>
+          </div>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>
