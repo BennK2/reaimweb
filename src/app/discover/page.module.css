@@ -3,7 +3,7 @@
 }
 
 .pageHeader {
-  background-image: url('/nairobi-ai-bg.webp');
+  background-image: url('../../../public/nairobi-ai-bg.webp');
   background-color: var(--color-bg-alt);
   background-blend-mode: overlay;
   padding: calc(var(--space-xl) + 2rem) 0 var(--space-xl);

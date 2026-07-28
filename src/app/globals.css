@@ -98,7 +98,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/african-geometric.webp');
+  background-image: url('../../public/african-geometric.webp');
   background-repeat: repeat;
   background-size: 600px;
   background-position: center;
@@ -140,15 +140,35 @@ a:hover {
 .badge {
   display: inline-block;
   padding: 0.4rem 1.2rem;
-  background-color: rgba(196, 146, 62, 0.1);
+  background-color: rgba(197, 155, 39, 0.12);
   color: var(--color-accent-gold);
-  border: 1px solid rgba(196, 146, 62, 0.2);
+  border: 1px solid rgba(197, 155, 39, 0.3);
   border-radius: var(--radius-full);
   font-weight: 600;
   font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: var(--space-md);
+}
+
+.badge-green {
+  background-color: rgba(0, 122, 61, 0.1);
+  color: var(--color-kenya-green);
+  border: 1px solid rgba(0, 122, 61, 0.25);
+}
+
+.badge-red {
+  background-color: rgba(200, 16, 46, 0.1);
+  color: var(--color-maasai-red);
+  border: 1px solid rgba(200, 16, 46, 0.25);
+}
+
+.kenyan-accent-bar {
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(to right, #000000 0%, #C8102E 33%, #007A3D 66%, #C59B27 100%);
+  border-radius: 2px;
+  margin-bottom: 1rem;
 }
 
 .container {

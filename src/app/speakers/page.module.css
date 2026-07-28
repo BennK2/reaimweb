@@ -15,7 +15,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('/african-geometric.webp');
+  background-image: url('../../../public/african-geometric.webp');
   background-size: 800px;
   opacity: 0.03;
   pointer-events: none;

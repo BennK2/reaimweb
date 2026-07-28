@@ -1,5 +1,5 @@
 .pageHeader {
-  background-image: url('/hero-main.webp');
+  background-image: url('../../../public/hero-main.webp');
   background-color: var(--color-bg-alt);
   background-blend-mode: overlay;
   padding: calc(var(--space-xl) + 2rem) 0 var(--space-xl);

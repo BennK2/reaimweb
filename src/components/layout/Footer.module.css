@@ -19,7 +19,7 @@
 
 .footerTop {
   padding: var(--space-2xl) 0 var(--space-xl);
-  background-image: url('/african-geometric.webp');
+  background-image: url('../../../public/african-geometric.webp');
   background-size: 600px;
   background-blend-mode: overlay;
   background-color: rgba(18, 18, 18, 0.95);
