@@ -33,7 +33,7 @@ export default function Home() {
               </div>
             </div>
             <div style={{marginBottom: '1.5rem'}}>
-              <Image src="/logo.png" alt="REAIM 2027 Responsible AI in the Military Domain Summit Logo" width={420} height={180} style={{ objectFit: 'contain', maxWidth: '100%', height: 'auto', filter: 'drop-shadow(0 4px 15px rgba(0,0,0,0.15))' }} priority />
+              <Image src={`\${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.png`} alt="REAIM 2027 Responsible AI in the Military Domain Summit Logo" width={420} height={180} style={{ objectFit: 'contain', maxWidth: '100%', height: 'auto', filter: 'drop-shadow(0 4px 15px rgba(0,0,0,0.15))' }} priority />
             </div>
             <p className={styles.subtitle}>
               Nairobi, Republic of Kenya • 7–8 April 2027<br/>
@@ -132,7 +132,7 @@ export default function Home() {
                 width: '100%',
                 height: '400px',
                 borderRadius: 'var(--radius-lg)',
-                backgroundImage: 'url(/african-print.webp)',
+                backgroundImage: `url(\${process.env.NEXT_PUBLIC_BASE_PATH || ''}/african-print.webp)`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 border: '1px solid var(--color-border)',
@@ -148,7 +148,7 @@ export default function Home() {
                     textAlign: 'center',
                     border: '1px solid var(--color-border-glow)'
                   }}>
-                    <Image src="/coat-of-arms.webp" alt="Kenya Coat of Arms" width={80} height={80} style={{marginBottom: '1rem'}} />
+                    <Image src={`\${process.env.NEXT_PUBLIC_BASE_PATH || ''}/coat-of-arms.webp`} alt="Kenya Coat of Arms" width={80} height={80} style={{marginBottom: '1rem'}} />
                     <h3 className="text-primary" style={{margin: 0}}>Republic of Kenya</h3>
                     <p style={{margin: '0.5rem 0 0', fontWeight: 600, color: 'var(--color-kenya-green)'}}>Official Host 2027</p>
                   </div>
@@ -165,7 +165,7 @@ export default function Home() {
             <div className={styles.welcomeCard}>
               <div style={{flex: '0 0 250px'}}>
                 <div style={{width: '100%', aspectRatio: '1/1', position: 'relative', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '2px solid var(--color-accent-gold)'}}>
-                  <Image src="/placeholder-speaker.webp" alt="Minister of Defence" fill style={{objectFit: 'cover'}} />
+                  <Image src={`\${process.env.NEXT_PUBLIC_BASE_PATH || ''}/placeholder-speaker.webp`} alt="Minister of Defence" fill style={{objectFit: 'cover'}} />
                 </div>
               </div>
               <div>
@@ -221,19 +221,19 @@ export default function Home() {
           </div>
           <div className={styles.homeGallery}>
             <div className={`${styles.galleryItem} ${styles.large}`}>
-              <Image src="/bomas.webp" alt="Bomas of Kenya" fill sizes="(max-width: 768px) 100vw, 50vw" className={styles.galleryImage} />
+              <Image src={`\${process.env.NEXT_PUBLIC_BASE_PATH || ''}/bomas.webp`} alt="Bomas of Kenya" fill sizes="(max-width: 768px) 100vw, 50vw" className={styles.galleryImage} />
               <div className={styles.galleryCaption}>
                 <h3>Main Venue: Bomas of Kenya</h3>
               </div>
             </div>
             <div className={styles.galleryItem}>
-              <Image src="/nairobi-light.webp" alt="Nairobi Skyline" fill sizes="(max-width: 768px) 100vw, 50vw" className={styles.galleryImage} />
+              <Image src={`\${process.env.NEXT_PUBLIC_BASE_PATH || ''}/nairobi-light.webp`} alt="Nairobi Skyline" fill sizes="(max-width: 768px) 100vw, 50vw" className={styles.galleryImage} />
               <div className={styles.galleryCaption}>
                 <h3>Innovation Hub</h3>
               </div>
             </div>
             <div className={styles.galleryItem}>
-              <Image src="/nairobi-park.webp" alt="Nairobi National Park" fill sizes="(max-width: 768px) 100vw, 50vw" className={styles.galleryImage} />
+              <Image src={`\${process.env.NEXT_PUBLIC_BASE_PATH || ''}/nairobi-park.webp`} alt="Nairobi National Park" fill sizes="(max-width: 768px) 100vw, 50vw" className={styles.galleryImage} />
               <div className={styles.galleryCaption}>
                 <h3>Urban Wildlife</h3>
               </div>
