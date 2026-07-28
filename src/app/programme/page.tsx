@@ -74,17 +74,18 @@ export default function Programme() {
                   />
                   <TimelineItem 
                     time="13:30 - 15:00" 
-                    title="Breakout Track A" 
-                    description="Technical deep dive into autonomous targeting systems."
-                    type="breakout"
-                    icon={Users}
+                    title="Plenary Session 3: Operationalizing Responsible AI" 
+                    description="Translating political principles into concrete military verification and compliance mechanisms."
+                    speaker="High-Level Panel"
+                    type="plenary"
+                    icon={Monitor}
                     delay={0.4}
                   />
                   <TimelineItem 
                     time="15:30 - 17:00" 
-                    title="Breakout Track B" 
-                    description="Ethical frameworks and human-machine teaming."
-                    type="breakout"
+                    title="Plenary Session 4: Global Cooperation & Strategic Stability" 
+                    description="Building international consensus and confidence-building measures across regions."
+                    type="plenary"
                     icon={Users}
                     delay={0.5}
                   />

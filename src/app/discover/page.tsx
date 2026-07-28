@@ -86,26 +86,28 @@ export default function DiscoverNairobi() {
           </div>
 
           <div className="grid-2">
-            <div style={{position: 'relative', borderRadius: 'var(--radius-lg)', overflow: 'hidden', minHeight: '300px'}}>
-              <Image src="/nairobi-park.webp" alt="Nairobi National Park" fill style={{objectFit: 'cover'}} />
+            <div style={{position: 'relative', borderRadius: 'var(--radius-lg)', overflow: 'hidden', minHeight: '340px', border: '1px solid var(--color-border)'}}>
+              <Image src="/nairobi-park.webp" alt="Kenya Wildlife Experience Poster" fill style={{objectFit: 'cover'}} />
+              <div style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(11,27,61,0.85) 0%, transparent 60%)', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '2rem'}}>
+                <span className="badge badge-green" style={{alignSelf: 'flex-start', marginBottom: '0.5rem'}}>Magical Kenya Official</span>
+                <h3 style={{color: '#fff', fontSize: '1.5rem', margin: 0}}>Wildlife Experience & Safari Guide</h3>
+              </div>
             </div>
+
             <div>
-              <div className="badge" style={{marginBottom: '1rem'}}>Wildlife Experience</div>
-              <h2 className="text-primary" style={{marginBottom: '1.5rem'}}>Nairobi National Park</h2>
-              <div className="glass-panel" style={{padding: '2rem'}}>
-                <p className="text-muted" style={{marginBottom: '1.5rem'}}>
-                  Nairobi National Park is a unique wildlife destination located just outside Kenya's capital city, offering guests the rare chance to experience an authentic safari without travelling far from Nairobi.
+              <div className="badge" style={{marginBottom: '1rem'}}>Discover Kenya</div>
+              <h2 className="text-primary" style={{marginBottom: '1.5rem'}}>Visitor Brochure & Travel Guide</h2>
+              <div className="glass-panel" style={{padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem'}}>
+                <p className="text-muted" style={{fontSize: '1rem', lineHeight: '1.7', margin: 0}}>
+                  Explore Kenya's world-renowned national parks, pristine beaches, and cultural heritage sites with the official Kenya Tourism Board visitor brochure and safari planner.
                 </p>
-                <p className="text-muted" style={{marginBottom: '2rem'}}>
-                  The park is home to lions, rhinos, giraffes, buffaloes, zebras, antelopes, and many bird species, all set against the striking backdrop of the city skyline.
-                </p>
-                <div style={{background: 'rgba(20, 100, 50, 0.1)', padding: '1.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-kenya-green)'}}>
-                  <strong style={{color: 'var(--color-kenya-green)', display: 'block', fontSize: '1.1rem', marginBottom: '0.5rem'}}>
-                    30% off Park Entry Fees
-                  </strong>
-                  <p className="text-muted" style={{fontSize: '0.9rem', margin: 0}}>
-                    Available at Nairobi National Park, Nairobi Animal Orphanage, and Nairobi Safari Walk with your Summit Badge / ID.
-                  </p>
+                <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
+                  <a href="https://magicalkenya.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{justifyContent: 'center'}}>
+                    Download Visitor Brochure (PDF)
+                  </a>
+                  <a href="https://magicalkenya.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{justifyContent: 'center'}}>
+                    Explore Official Kenya Tourism Guide
+                  </a>
                 </div>
               </div>
             </div>
