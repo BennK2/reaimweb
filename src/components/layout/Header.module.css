@@ -1,0 +1,126 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background-color: transparent;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+.scrolled {
+  background-color: var(--color-bg-glass);
+  backdrop-filter: blur(12px);
+  height: 70px;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  z-index: 101;
+}
+.logoImages {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logoImage {
+  height: 40px;
+  width: auto;
+}
+.logoDivider {
+  height: 24px;
+  width: 1px;
+  background-color: var(--color-border);
+}
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.navLink {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  padding: 0.25rem 0;
+}
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent-gold);
+  transition: width 0.2s;
+}
+.navLink:hover::after {
+  width: 100%;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 101;
+}
+.iconBtn {
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconBtn:hover {
+  color: var(--color-accent-gold);
+}
+.mobileMenuBtn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+.mobileActions {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .mobileMenuBtn { display: flex; }
+  .actions .btn { display: none; }
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(10, 17, 40, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  .navOpen {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+  .navLink {
+    font-size: 1.5rem;
+    color: white;
+  }
+  .mobileActions { display: flex; margin-top: 1rem; }
+}

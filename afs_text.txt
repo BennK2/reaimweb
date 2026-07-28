@@ -1,0 +1,2846 @@
+========== PAGE: HOME ==========
+
+Skip to main content
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+show = true, 100)"
+
+:class="show ? 'opacity-100 tracking-[0.35em]' : 'opacity-0 tracking-[0.15em]'"
+
+class="text-sm md:text-base uppercase text-gray-300 font-medium mb-6 transition-all duration-1000 ease-out">
+
+11 - 12 May 2026 - Nairobi, Kenya
+
+Summit Concluded
+
+### H1:
+
+Africa is not waiting. It is building.
+
+Africa Forward: Africa-France Partnerships for Innovation and Growth
+
+The Africa Forward Summit 2026, hosted jointly by Kenya and France, brought together Heads of State, business leaders, and innovators - concluding with the adoption of the Nairobi Declaration, a framework for a new partnership built on equal ground.
+
+Read the Nairobi Declaration
+
+View Programme
+
+Official Outcome Document
+
+The Africa Forward 2026 Summit Declaration
+
+Read the official outcome document
+
+Two Days. Two Tracks.
+
+## H2: One shared agenda.
+
+DAY 1
+
+11 May 2026
+
+# H3: Business Forum
+
+1,500+ business leaders, entrepreneurs, and investors. B2B matchmaking, workshops, and networking at the University of Nairobi.
+
+Learn More
+
+DAY 2
+
+12 May 2026
+
+# H3: The Summit
+
+Heads of state, the African Union, and 30+ CEOs. Plenaries, roundtables, and a closing communique at KICC, Nairobi.
+
+Learn More
+
+1,500+
+
+Business Forum participants
+
+Including major African and French corporate leaders, SMEs, and young entrepreneurs
+
+30+
+
+Heads of State
+
+African Heads of State and the President of France attending the Summit
+
+7
+
+Themes
+
+Roundtables spanning energy, finance, agriculture, AI, the blue economy, health, and industrialisation
+
+Nairobi, Kenya - Home of Africa Forward 2026
+
+A new chapter in Africa-France partnership
+
+## H2: Historic. Inclusive. Action-Oriented.
+
+The Africa Forward Summit "Africa-France Partnerships for Innovation and Growth" is a Summit of Heads of State and Government to be held on 11-12 May 2026 in Nairobi, Kenya. The Summit is co-hosted by H.E. William Samoei Ruto, C.G.H., President of the Republic of Kenya, and H.E. Emmanuel Macron, President of the French Republic.
+
+The Summit aims to demonstrate the African continent's innovation capacity and affirm a shared commitment to developing common, mutually beneficial solutions based on effective multilateralism and a spirit of transformative partnership.
+
+This Summit represents a significant opportunity for a paradigm shift to a more balanced, equitable, and mutually respectful partnership anchored on shared aspirations of effective multilateralism, transformative partnership, sustainable development and Africa's agency in addressing pressing emerging regional and global challenges.
+
+From the Heads of State
+
+## H2: Welcome Messages
+
+# H3: H.E. Dr. William Samoei Ruto, C.G.H.
+
+President, Republic of Kenya
+
+It is my distinct honour to warmly welcome you to Nairobi, Kenya, for the inaugural Africa Forward Summit, co-hosted by Kenya and France at the Kenyatta International Convention Centre (KICC) and the University of Nairobi on the 11th and 12th of May 2026.
+
+Kenya, the cradle of humankind, is proud to host you once again on African soil, a place where history began, and where the future is being actively shaped.
+
+Karibuni Nyumbani  - Welcome home.
+
+Africa stands at a defining inflection point. Ours is a continent powered by a youthful, rapidly growing population - creative, ambitious, and determined to transform ideas into enterprises, and enterprises into opportunity.
+
+Across our nations, innovation is not a distant aspiration, it is already driving progress. From fintech and artificial intelligence to climate-smart agriculture and renewable energy, African solutions are shaping global conversations.
+
+Yet, alongside this immense potential lies an equally urgent responsibility - to unlock the investments, partnerships, and financing frameworks required to scale these opportunities sustainably and inclusively.
+
+It is within this context of momentum, ambition, and purpose that the Africa Forward Summit convenes. This high-level gathering reflects a renewed and forward-looking partnership between Africa and France, grounded in mutual respect, shared responsibility, and a clear commitment to delivering tangible outcomes.
+
+Together, we are deliberately moving beyond legacy narratives and toward a relationship defined by co-creation, co-investment, and measurable impact. One that recognizes Africa not as a frontier, but as a partner and a driver of global growth.
+
+Africa is no longer content with aspiration alone. We are advancing with clarity and resolve, shifting from dialogue to delivery, from commitments to implementation, and from potential to performance. The true measure of this Summit will not be the conversations we hold, but the outcomes we deliver for our people.
+
+The inaugural Africa Forward Summit brings together leaders from government, business, finance, innovation, youth, and civil society to accelerate actionable solutions across key priority areas, including:
+
+- Peace and security
+
+- Energy transition and green industrialisation
+
+- Reform of international financial architecture
+
+- Sustainable and value-added agriculture
+
+- Artificial intelligence and digital transformation
+
+- Blue economy
+
+- Health systems and sovereignty
+
+Across these sectors, the Summit will prioritize bankable projects, investment pipelines, technology transfer, and skills development, ensuring that partnerships translate into real economic opportunities, jobs, and improved livelihoods for citizens across the continent.
+
+Our shared objective is clear: to unlock capital, scale innovation, deepen trade and investment linkages, and create inclusive growth pathways that are resilient, sustainable, and African-led.
+
+As co-hosts of this Summit, Kenya and France are committed to providing a platform that enables alignment between policy, capital, and innovation. We aim to catalyze partnerships that are not only ambitious in vision, but practical in execution to deliver results that endure beyond the Summit.
+
+We look forward to welcoming you to Nairobi for what promises to be a defining moment in Africa-France cooperation as we set a new standard for partnership, progress, and shared prosperity.
+
+Welcome to Nairobi. Welcome to Africa Forward.
+
+# H3: H.E. Emmanuel Macron
+
+President of the French Republic
+
+Since 2017, we have been working on overhauling the Africa-France relationship. We wish to build partnerships on an equal footing, founded on shared interests and tangible results.
+
+The Africa Forward Summit will be a significant milestone in that endeavour. For the first time, France and an English-speaking African country will co-chair this event, symbolizing an open and future-focused relationship.
+
+This summit will bring together States, businesses, young people, artists and diasporas. Because the relationship between France and Africa cannot merely be declared, it must be built on the ground by innovators, entrepreneurs and creatives.
+
+Our priority is clear: to step up investments and strengthen our cooperation programmes in healthcare, education, food, digital technology, energy and infrastructures. In Nairobi, some 1,500 economic stakeholders will be mobilized to transform ambitions into projects and projects into results.
+
+We are making a strategic choice in ensuring the private sector is the driving force behind this new momentum.
+
+But beyond the economy, there is an essential political message: Africa must be fully involved in global decisions. Peace, climate, technology and prosperity: none of these challenges can be addressed without it. That is why we are spearheading an ambitious reform of international governance, for a fairer, more representative and more effective multilateralism.
+
+The Nairobi summit will be a moment of truth in the lead-up to the G7 Summit in Evian. A moment to welcome a renewed relationship between Africa and France, one that is clear, of a high standard and firmly action-oriented.
+
+Seven Themes
+
+## H2: Structuring the Summit's agenda
+
+visible = true, 0)"
+
+:class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+
+class="group hover:-translate-y-1 transition-all duration-500 ease-out">
+
+# H3: Energy Transition and Green Industrialisation
+
+A joint plenary structured around facilitating trade and investment, promoting bankable projects, and strengthening skills and talent development.
+
+visible = true, 80)"
+
+:class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+
+class="group hover:-translate-y-1 transition-all duration-500 ease-out">
+
+# H3: Reform of the International Financial Architecture
+
+Reforming the financial architecture to better mobilize private capital (both local and international) for the development of the African continent.
+
+visible = true, 160)"
+
+:class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+
+class="group hover:-translate-y-1 transition-all duration-500 ease-out">
+
+# H3: Blue Economy
+
+Three axes: strategic priorities in maritime governance and environmental security; creation of blue jobs; and decarbonisation of maritime transport.
+
+visible = true, 240)"
+
+:class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+
+class="group hover:-translate-y-1 transition-all duration-500 ease-out">
+
+# H3: Sustainable Agriculture
+
+Strengthen multi-stakeholder partnerships to support the transition toward productive, sustainable, and resilient food systems in Africa.
+
+visible = true, 320)"
+
+:class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+
+class="group hover:-translate-y-1 transition-all duration-500 ease-out">
+
+# H3: AI and Digital Technologies
+
+Investment in digital infrastructure, partnerships for open AI, growth of start-ups and talent training, and financing the high-tech sector.
+
+visible = true, 400)"
+
+:class="visible ? 'o
+
+========== PAGE: SUMMIT ==========
+
+Skip to main content
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+'); background-size: 60px 60px;">
+
+The Summit - 12 May 2026 - KICC, Nairobi
+
+### H1:
+
+A new partnership.
+
+Built on equal ground.
+
+The Africa Forward Summit is a landmark gathering of African Heads of State, the President of France, the African Union, international financial institutions, and development partners - convened to produce concrete commitments and a new model of partnership between Africa and France.
+
+Request Accreditation
+
+View Programme
+
+# H3: Head-of-State Authority
+
+Announced at the 79th UN General Assembly by Presidents Ruto and Macron. Closing remarks will be delivered jointly by both presidents.
+
+# H3: From Dialogue to Delivery
+
+The Summit's mandate is concrete commitments - not declarations. Every roundtable is designed to produce bankable, scalable, implementable outcomes.
+
+## H2: Who Participates
+
+# H3: Heads of State and Government
+
+African Heads of State and the President of France, convening at the highest diplomatic level.
+
+# H3: African Union
+
+Continental body ensuring pan-African representation and alignment with Agenda 2063 priorities.
+
+# H3: European Union
+
+Strengthening the Africa-EU partnership through trade, investment, and multilateral cooperation frameworks.
+
+# H3: International Financial Institutions
+
+Development banks and multilateral lenders driving reform of the global financial architecture for Africa.
+
+# H3: Private Sector CEOs
+
+Approximately 30 leading chief executives from Africa and France, driving investment and partnership commitments.
+
+# H3: Civil Society and Youth
+
+Representatives from civil society organisations and youth leaders shaping the future of Africa-France relations.
+
+## H2: Seven Themes. One Agenda.
+
+01
+
+# H3: Energy Transition and Green Industrialisation
+
+A joint plenary structured around facilitating trade and investment, promoting bankable projects, and strengthening skills and talent development.
+
+02
+
+# H3: Reform of the International Financial Architecture
+
+Reforming the financial architecture to better mobilize private capital (both local and international) for the development of the African continent.
+
+03
+
+# H3: Blue Economy
+
+Three axes: strategic priorities in maritime governance and environmental security; creation of blue jobs; and decarbonisation of maritime transport.
+
+04
+
+# H3: Sustainable Agriculture
+
+Strengthen multi-stakeholder partnerships to support the transition toward productive, sustainable, and resilient food systems in Africa.
+
+05
+
+# H3: AI and Digital Technologies
+
+Investment in digital infrastructure, partnerships for open AI, growth of start-ups and talent training, and financing the high-tech sector.
+
+06
+
+# H3: Resilient Health Systems
+
+Health cooperation through partnership and co-construction, strengthened local production of vaccines and medicines, and continental capacity in health.
+
+07
+
+# H3: Peace and Security
+
+Plenary session on peace and security issues in support of African mediation efforts and the actions of the African Union.
+
+## H2: Programme
+
+The detailed Summit programme is being finalised and will be published in due course. The Summit will take place on 12 May 2026 at KICC, Nairobi.
+
+View Programme
+
+Side Event
+
+First Ladies' Programme
+
+## H2:
+
+Building Safer Digital Spaces for Children in Africa
+
+Policy
+
+Partnership
+
+Action — moving child online safety from commitment to implementation in an AI-driven world.
+
+At the sidelines of the Africa Forward Summit,  H.E. Mrs. Rachel Ruto, E.G.H., First Lady of the Republic of Kenya , in collaboration with the Office of the Special Envoy on Technology and World Vision International, will convene a high-level side event focused on one of the defining challenges of our time: protecting children in rapidly evolving digital and artificial intelligence environments.
+
+Across Africa, children are embracing digital technologies at unprecedented speed — connecting, learning, creating, and participating in new ways. Yet the systems shaping their online experiences are often not designed with their safety, dignity, development, or agency in mind.
+
+# H3: A structured roundtable, not a panel
+
+Designed as a structured dialogue rather than a traditional panel, the event brings together First Ladies, senior government representatives, ambassadors, African Union and United Nations actors, technology companies, mobile network operators, civil society, faith-based leaders, development partners, and critically, children and youth themselves.
+
+# H3: Sustainable financing for child protection
+
+A central emphasis is the need for sustainable financing to prevent and respond to online sexual exploitation, abuse, and other technology-facilitated harms. The dialogue will examine practical approaches to fund survivor services, trusted reporting and takedown mechanisms, regulatory and enforcement capacity, digital literacy, and community-based child protection.
+
+Children's voices will  open and close  the session, reinforcing that children are not only subjects of protection but rights-holders and co-architects of the digital world they will inherit. Participation is designed to safeguarding standards — meaningful, age-appropriate, and ethical.
+
+This event reflects a shared commitment to ensure that  digital transformation and AI innovation advance human development  and protect children, rather than expose them to harm — moving from concern to coordinated, financed follow-up.
+
+Detailed Agenda
+
+# H3: Tuesday, 12 May 2026
+
+State House, Nairobi
+
+A high-level dialogue convening First Ladies, ministers, ambassadors, multilateral leaders, technology and civil society partners, alongside the children and youth whose voices anchor the session.
+
+-
+
+08:00
+
+Pre-session
+
+-
+
+10:00
+
+Plenary
+
+-
+
+10:35
+
+Expert Pillars
+
+-
+
+11:20
+
+Keynote
+
+-
+
+12:00
+
+Closing
+
+Pre-session
+
+08:00
+
+Arrival and Networking
+
+Protocol
+
+09:00
+
+Arrival of First Ladies
+
+Protocol
+
+Plenary Session
+
+10:00 - 12:30
+
+10:00
+
+H.E. Rachel Ruto and Visiting First Ladies walk into Plenary
+
+National and East African Anthems
+
+Opening Prayer
+
+Protocol
+
+10:10
+
+Scene Setting: Why we are here
+
+Amb. Philip Thigo, MBS
+
+Special Envoy on Technology, Kenya
+
+10:15
+
+Entertainment
+
+Children's French Poem
+
+State House Choir
+
+10:25
+
+Speeches and Remarks
+
+3 minutes each
+
+-
+
+Ms. Elizabeth Koskei  - Head of Programs, Office of the First Lady
+
+-
+
+Pauline Okumu  - National Director, World Vision Rwanda
+
+-
+
+H.E. Clara Chappaz  - Ambassador for Digital Affairs and Artificial Intelligence, France
+
+Expert Pillar Discussions
+
+10 minutes each
+
+tap to expand
+
+10:35
+
+Pillar I -  From Frontier Risk to Everyday Harm
+
+Lead: Angela Wamola
+
+GSMA
+
+Lead:  Angela Wamola
+
+Head of Sub-Saharan Africa, GSMA; Co-Convener, Africa Taskforce on Child Online Protection
+
+Contributors:  Mercy Ndegwa
+
+Stephen Chege
+
+Tokunbo Ibrahim
+
+Kanga Rasi
+
+Moderator: TBC
+
+10:45
+
+Pillar II -  Education, Digital Literacy and Reality Sovereignty
+
+Lead: Hanan Morsy
+
+UNECA
+
+Lead:  Hanan Morsy
+
+Deputy Executive Secretary (Programme) and Chief Economist, UN Economic Commission for Africa
+
+Contributors:  Michael Murungi (Google)
+
+Helen Clark
+
+Gershon Mwakazi (Director, World Vision Kenya)
+
+Ty Muriithi
+
+Moderator: TBC
+
+10:55
+
+Pillar III -  Red Lines with Reach
+
+Lead: Mary Robinson
+
+The Elders
+
+Lead:  Mary Robinson
+
+Former President of Ireland; Former UN High Commissioner for Human Rights; Member, The Elders
+
+Contributor:  H.E. Juan Manuel Santos Calderón
+
+Former President of Colombia; Nobel Peace Laureate; Chair, The Elders
+
+Moderator: TBC
+
+11:05
+
+Pillar IV -  Families, Schools and Communities
+
+Lead: Graça Machel
+
+The Elders
+
+Lead:  Graça Machel
+
+Founder, Graça Machel Trust; Member, The Elders
+
+Contributors:  Ezekiel Baraza
+
+Faith Jwenge
+
+Moderator: TBC
+
+First Lady's Address and First Ladies' Perspectives
+
+11:15
+
+Children's Intervention
+
+Children's skit on AI
+
+11:20
+
+Keynote Address  by the First Lady of the Republic of Kenya, H.E. Rachel Ruto, E.G.H.
+
+11:30
+
+First Ladies' Perspectives on Child Online Safety
+
+contexts and priorities
+
+Closing Sequence
+
+12:00
+
+Chair's Call to Action, Way Forward and Closing
+
+Amb. Philip Thigo, MBS
+
+Special Envoy on Technology, Kenya
+
+Children's Closing Reflection
+
+12:15
+
+Photo Session
+
+Protocol
+
+12:25
+
+National Anthem
+
+Protocol
+
+12:30
+
+Lunch
+
+#AfricaForwardForChildren
+
+#AllForChildSafety
+
+#EveryChildSafeOnline
+
+#DigitalGovernanceAfrica
+
+Convening Partners
+
+Office of the First Lady, State House
+
+Republic of Kenya
+
+Office of the Special Envoy on Technology
+
+World Vision International
+
+Side Event
+
+Nova Garage
+
+The High-Level Launch
+
+## H2:
+
+Pan-African Innovation, on the Diplomatic Stage
+
+Activate
+
+Connect
+
+Scale
+
+Transform
+
+11 May 2026
+
+3:00 PM
+
+Kenya National Theatre, Nairobi
+
+On the occasion of the Africa Forward Summit,  Nova Garage  launches a high-level platform dedicated to a new generation of African entrepreneurs shaping the continent's economic future — convened under the High Patronage of  H.E. President William Ruto .
+
+More than a showcase, Nova Garage is conceived as a space to  build partnerships, unlock opportunities and accelerate growth trajectories  — placing Africa's next generation of builders at the centre of the diplomatic agenda.
+
+15
+
+Founders
+
+High-growth African innovators, under 35
+
+350+
+
+High-Level Guests
+
+Investors, CEOs, policymakers, Heads of State
+
+200+
+
+Press Corps
+
+Africa Forward Summit-accredited media
+
+3
+
+Programme Pillars
+
+Live demos
+
+high-level dialogue
+
+networking
+
+Enter Nova Garage
+
+Under the High Patronage of
+
+H.E. William Ruto, President of the Republic of Kenya
+
+Hosted by
+
+Autonomous Advancement Initiative (AAI)
+
+In Partnership with
+
+inKenya
+
+State Department for Foreign Affairs
+
+French-African Foundation
+
+Media Partners
+
+Nuvision
+
+Concerto
+
+## H2: Featured Speakers
+
+Announcements Coming Soon
+
+Category
+
+# H3: He
+
+========== PAGE: PROGRAMME ==========
+
+Skip to main content
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+10 - 12 May 2026
+
+### H1: Programme
+
+Africa Forward 2026 unfolds across two days at the University of Nairobi and the Kenyatta International Convention Centre, Nairobi, preceded by a pre-event on 10 May.
+
+Download Official Programme (PDF)
+
+16 pages
+
+1.8 MB
+
+Ministry of Foreign and Diaspora Affairs
+
+Pre-event
+
+10 May 2026 - Nairobi, Kenya
+
+# H3: CSOs Pavilion
+
+Innovation and Social Creation Pavilion
+
+The Innovation and Social Creation Pavilion takes place on 10 May 2026 in Nairobi, ahead of the Africa Forward Summit.
+
+The Pavilion is at once:
+
+-
+
+A multi-stakeholder event supported by around fifty pan-African and French civil society organisations.
+
+-
+
+A space for dialogue and for sharing experiences and solutions.
+
+-
+
+An opportunity to showcase grassroots initiatives that are paving the way for deep transformations in institutions, communities and forms of citizenship.
+
+-
+
+A platform to highlight new ideas and examples of social innovation that contribute to community security, the rule of law and a vibrant civic and cultural life across the continent.
+
+-
+
+A way to support the energy and aspirations of youth and women, while helping to build new shared narratives and to address Africa's major challenges today.
+
+Register for CSOs Pavilion
+
+Day 1
+
+11 May 2026
+
+University of Nairobi
+
+# H3: Africa Forward: Inspire and Connect
+
+Business Forum and high-level sessions on Youth, Creative and Cultural Industries and Sport
+
+Approximately 1,500 high-level participants - business leaders, investors, SMEs, and young entrepreneurs - convene for structured networking, B2B matchmaking, and sector-focused workshops.
+
+View provisional schedule
+
+08:30
+
+Opening speeches  by Kenyan and French Foreign Affairs Ministers
+
+09:30 - 10:30
+
+High-level Youth event
+
+11:30 - 13:00
+
+High-level Cultural and Creative Industries event
+
+12:00 - 14:00
+
+Ministerial Meeting on Peace and Security
+
+14:00 - 15:00
+
+High-level Sport event
+
+17:00 - 17:30
+
+Closing speeches  by President Ruto and President Macron
+
+19:00 - 20:30
+
+State Banquet
+
+Provisional schedule — subject to change.
+
+Visit Business Forum website
+
+Day 2
+
+12 May 2026
+
+KICC, Nairobi
+
+# H3: Africa Forward Summit
+
+Heads of State and Government Plenary
+
+Heads of State and Government convene for the Opening Ceremony, a plenary on Peace and Security, four thematic roundtables and the Closing Ceremony with adoption of the Nairobi Declaration.
+
+View official agenda
+
+09:15 - 10:00
+
+Official Opening Ceremony
+
+Tsavo A
+
+Moderator: Ms. Vivian Onano (Leading Light Initiative)
+
+Opening Statements:  H.E. William Ruto
+
+H.E. Emmanuel Macron
+
+H.E. António Guterres (UN SG)
+
+H.E. Mahmoud Ali Youssouf (AU Commission Chairperson)
+
+10:00 - 10:15
+
+Family Photo
+
+Heads of State, Government and Representatives of Delegations
+
+10:30 - 12:30
+
+Plenary: African and French CEOs on Green Industrialisation and Energy Transition
+
+Tsavo B
+
+Moderator: Ms. Nachouat Meghouar (French-African Foundation)
+
+Co-Moderator: Ms. Vivian Onano
+
+-  Presidential Panel:  Ruto, Macron, Kagame, Abiy Ahmed Ali, John Dramani Mahama, Mamady Doumbouya
+
+-  Joint CEOs Pitch:  James Mwangi (Equity Bank)
+
+Christel Heydemann (Orange)
+
+-  Open Moderated Discussion:  Green Industrialisation and Agriculture
+
+Infrastructure, Energy and Digital
+
+Human Capital, Skills and Creative Industries
+
+-  Key Takeaways:  Ruto, Macron, Mahmoud Ali Youssouf
+
+-  AGII Signing:  Wamkele Mene (AfCFTA)
+
+Sidi Ould Tah (AfDB)
+
+Odile Renaud-Basso (EBRD)
+
+12:30 - 14:30
+
+Plenary Working Lunch: Reform of the International Financial Architecture
+
+Tsavo C
+
+Moderator: Mary Lokossou (Caisse des Dépôts et Consignations du Bénin)
+
+Speakers:  Macron (opening)
+
+Kristalina Georgieva (IMF)
+
+Tinubu
+
+Makhtar Diop (IFC)
+
+Hichilema (Zambia)
+
+Odile Renaud-Basso (EBRD)
+
+Al-Sisi
+
+Moussa Faki (4P Special Envoy)
+
+Akhannouch (Morocco)
+
+Sidi Ould Tah (AfDB)
+
+Obiang (Equatorial Guinea VP)
+
+Manuel Moses (ATIDI)
+
+Ouattara (Côte d'Ivoire)
+
+Serge Ekue (BOAD)
+
+Mafalda Duarte (Global Climate Fund)
+
+Ruto (closing)
+
+14:30 - 15:00
+
+Health Break
+
+15:00 - 16:30
+
+Plenary: Peace and Security
+
+Tsavo B
+
+Moderator: Dr. Solomon Dersso (African Commission on Human and Peoples' Rights)
+
+-  Opening:  Ruto, Macron
+
+-  Impact of the International Situation:  Guterres, Mahmoud Ali Youssouf
+
+-  Migration:  Tinubu, Idriss Déby (Chad), Sarra Zaafrani Zenzri (Tunisia)
+
+-  African Mediations:  Gnassingbé (Togo), Guelleh (Djibouti), Cheikh Ould Ghazouani (Mauritania)
+
+-  Financing Peace Operations:  Daniel Chapo (Mozambique), John Mahama (Ghana)
+
+-  Security Council Reform:  J.N. Barrot (FR FM)
+
+Musalia Mudavadi (KE Prime CS and CS Foreign Affairs)
+
+Maada Bio (Sierra Leone, AU Chair C-10)
+
+Félix Tshisekedi (DRC)
+
+17:00 - 18:00
+
+Parallel Round Tables
+
+AI and Digital Technologies
+
+Taifa Hall
+
+Co-Moderators: Amb. Clara Chappaz and Amb. Philip Thigo
+
+-  Co-Chairs / Welcome:  Duma Boko (Botswana)
+
+Paul Kagame (Rwanda)
+
+-  Pillar I – Infrastructure:  Strive Masiyiwa (Econet Global), Jean-François Fallacher (Eutelsat)
+
+Announcement: Cassava AI Factory
+
+-  Pillar II – Talent:  Benin (digitalization policy), Karim Beguir (InstaDeep), Frédéric Pascal (Univ. Paris-Saclay / DataIA)
+
+Launch: Africa Forward AI Clusters
+
+-  Pillar III – Governance:  H.E. Juan Manuel Santos (The Elders), Jade Abbott (Masakhane)
+
+Announcement: €1.9M AI funding for open linguistic models
+
+Blue Economy
+
+Lenana Hall
+
+Moderators: Amb. Olivier Poivre and Amb. Nancy Karigithu
+
+-  Opening:  Bassirou Diomaye Faye (Senegal)
+
+-  Maritime Sovereignty:  Tinubu, Patrick Herminie (Seychelles), Azali Assoumani (Comoros)
+
+-  Industrial Transformation:  Lucia Witbooi (Namibia VP), Daniel Chapo (Mozambique)
+
+-  Financing:  Inger Andersen (UNEP), Anacláudia Rossbach (UN-Habitat), Sidi Ould Tah (AfDB), Aliko Dangote, Keith Svendsen (APM Terminals), George Elombi (Afreximbank), Serge Ekue (BOAD), Christel Heydemann (Orange)
+
+-  Ministerial:  Hon. Hassan Joho (KE Mining, Blue Economy and Maritime), Hon. Catherine Chabaud (FR Delegate Minister of the Sea)
+
+-  Closing:  Navinchandra Ramgoolam (Mauritius PM)
+
+Resilient Health Systems
+
+Aberdares Hall
+
+Moderator: Dr. Githinji Gitahi (CEO, AMREF)
+
+-  Opening:  John Mahama (Ghana), Aziz Akhannouch (Morocco), Government of France representative
+
+-  Setting the Stage:  Dr. Jean Kaseya (Africa CDC)
+
+-  Financing and Investment:  Makhtar Diop (IFC), Amb. Christophe Lecourtier (AFD), Hon. Aden Duale (KE Health), Sarra Zaafrani Zenzri (Tunisia PM)
+
+-  Tech Transfer and PPP:  Dr. Jerome H. Kim (IVI), Dr. Philippe Duneton (UNITAID), Félix Tshisekedi (DRC)
+
+-  Human Capital, Regulatory and Market:  Dr. Tedros Adhanom Ghebreyesus (WHO), Dr. Delese Mimi Darko (Africa Medicine Agency), Dr. Sania Nishtar (Gavi), Amb. Amma Twum-Amoah (AU Health Commissioner)
+
+-  Closing:  Dr. Githinji Gitahi, H.E. Eleonore Caroit (FR Minister Delegate, Francophonie)
+
+Sustainable Agriculture
+
+Taifa Hall
+
+Moderator: Mr. Jean-Michel Severino (Odi Global Advisory)
+
+-  Co-Chairs:  H.M. King Letsie III (Lesotho), Mohamed Ould Ghazouani (Mauritania)
+
+-  High-Level Sequence I:  Abiy Ahmed Ali (Ethiopia), Brice Oligui Nguema (Gabon), Michael Randrianirina (Madagascar), Mwigulu Nchemba (Tanzania PM), Prosper Bazombanza (Burundi VP)
+
+-  Market Access:  Dr. James Mwangi (Equity), Dr. Kamau Thugge (CBK Governor)
+
+-  High-Level Sequence II:  Joseph Boakai (Liberia), Julius Maada Bio (Sierra Leone), Omar Alieu Touray (ECOWAS), Antoine de Saint-Affrique (Danone), Alvario Lario (IFAD), Hon. José de Lima Massano (Angola)
+
+-  France:  Nicolas Forissier (FR Minister Delegate, Foreign Trade)
+
+-  Capacity Development:  Alice Ruhweza (AGRA), INRAE/CIRAD, Siny Samba (Le Lionceau)
+
+-  Closing:  Hon. Mutahi Kagwe (KE Agriculture), Hon. Moses Vilakati (AU Agriculture)
+
+Special Segment on the Congo Basin Climate Commission
+
+Tsavo C
+
+18:30 - 19:00
+
+Closing Ceremony
+
+Tsavo A
+
+Summary of all thematic sessions
+
+Conclusion and formal announcement of the outcome of the summit
+
+Press Conference
+
+Speakers:  H.E. William Ruto, H.E. Emmanuel Macron
+
+21:00
+
+Africa Forward Closing Concert
+
+Moi International Sports Centre, Kasarani Arena
+
+All invited guests
+
+Source: Official Summit Programme, Ministry of Foreign and Diaspora Affairs.
+
+Explore the Summit
+
+Side Event
+
+# H3: First Ladies' Programme
+
+Building Safer Digital Spaces for Children in Africa in an AI-Driven World
+
+Hosted by H.E. Mrs. Rachel Ruto, E.G.H., in collaboration with the Office of the Special Envoy on Technology and World Vision International. A structured roundtable on child online safety, sustainable financing, and meaningful child participation.
+
+Read more
+
+Side Event
+
+# H3: Nova Garage - The High-Level Launch
+
+11 May 2026 · 3:00 PM · Kenya National Theatre, Nairobi
+
+Under the High Patronage of H.E. William Ruto. A pan-African innovation platform spotlighting 15 of Africa's most disruptive founders alongside investors, CEOs, policymakers and Heads of State.
+
+Read more
+
+The detailed programme with specific session timings and room assignments will be published closer to the event.
+
+About the Summit
+
+# H3: Africa Forward 2026
+
+An Africa-France Summit for Innovation and Growth. 11-12 May 2026, Nairobi, Kenya. Driving trade, technology, and sustainable partnerships.
+
+Event
+
+-  The Summit
+
+-  Business Forum
+
+-  Speakers
+
+-  Programme
+
+-  Resources
+
+Attend
+
+-  Register
+
+-  Accreditation
+
+-  Travel
+
+-  Nairobi
+
+Support
+
+-  Updates
+
+-  FAQ
+
+-  Contact
+
+-  Media Centre
+
+2026 Africa Forward 2026. All rights reserved.
+
+Twitter
+
+LinkedIn
+
+========== PAGE: SPEAKERS ==========
+
+Skip to main content
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+Africa Forward 2026
+
+### H1: The voices shaping Africa's future.
+
+Distinguished Heads of State, ministers, CEOs, innovators, and thought leaders from across Africa and France.
+
+12 May 2026
+
+KICC, Nairobi
+
+## H2: The Summit
+
+Heads of State, Government and senior officials convening for the Africa Forward Summit.
+
+# H3: H.E. William Ruto
+
+President
+
+Republic of Kenya
+
+# H3: H.E. Emmanuel Macron
+
+President
+
+French Republic
+
+# H3: António Guterres
+
+Secretary-General of the United Nations
+
+United Nations
+
+# H3: H.E. Évariste Ndayishimiye
+
+President
+
+Republic of Burundi
+
+# H3: H.E. Ismaïl Omar Guelleh
+
+President
+
+Republic of Djibouti
+
+# H3: H.E. Abdel Fattah Al-Sisi
+
+President
+
+Arab Republic of Egypt
+
+# H3: H.E. John Dramani Mahama
+
+President
+
+Republic of Ghana
+
+# H3: Dr the Hon Navinchandra RAMGOOLAM, G.C.S.K., F.R.C.P.,
+
+Prime Minister of The Republic of Mauritius
+
+Republic of Mauritius
+
+# H3: His Majesty King Mohammed VI
+
+King
+
+Kingdom of Morocco
+
+# H3: H.E. Daniel Francisco Chapo
+
+President
+
+Republic of Mozambique
+
+# H3: H.E. Bola Ahmed Tinubu
+
+President
+
+Federal Republic of Nigeria
+
+# H3: H.E. Paul Kagame
+
+President
+
+Republic of Rwanda
+
+# H3: H.E. Bassirou Diomaye Faye
+
+President
+
+Republic of Senegal
+
+# H3: H.E. Aziz Akhannouch
+
+Prime Minister
+
+Kingdom of Morocco
+
+# H3: H.E. Juan Manuel Santos
+
+Former President
+
+Republic of Colombia
+
+# H3: Amb. Philip Thigo, MBS
+
+Special Envoy on Technology
+
+Republic of Kenya
+
+# H3: H.E. Lerato Mataboge
+
+Commissioner for Infrastructure and Energy
+
+African Union
+
+# H3: Sidi Ould Tah
+
+President
+
+African Development Bank (AfDB)
+
+# H3: Ngozi Okonjo-Iweala
+
+Director-General
+
+World Trade Organization (WTO)
+
+# H3: Makhtar Diop
+
+Managing Director
+
+International Finance Corporation (IFC)
+
+# H3: George Elombi
+
+President and Chairman of the Board
+
+Afreximbank
+
+# H3: Sanda Ojiambo
+
+Executive Director
+
+United Nations Global Compact
+
+# H3: Ahunna Eziakonwa
+
+Assistant Administrator and Regional Director for Africa
+
+United Nations Development Programme (UNDP)
+
+# H3: Christophe Lecourtier
+
+Chief Executive Officer
+
+Agence Française de Développement (AFD)
+
+# H3: Carla Montesi
+
+Director
+
+European Commission, DG International Partnerships
+
+# H3: Dr. Tedros Adhanom Ghebreyesus
+
+Director-General
+
+World Health Organization (WHO)
+
+# H3: H.E. Wamkele Mene
+
+Secretary-General
+
+African Continental Free Trade Area (AfCFTA) Secretariat
+
+# H3: H.E. Dr. Jean Kaseya
+
+Director-General
+
+Africa Centres for Disease Control and Prevention (Africa CDC)
+
+# H3: Dr. Sania Nishtar
+
+Chief Executive Officer
+
+Gavi, the Vaccine Alliance
+
+# H3: Dr. Philippe Duneton
+
+Executive Director
+
+Unitaid
+
+# H3: Peter Sands
+
+Executive Director
+
+The Global Fund
+
+# H3: Dr. Jerome H. Kim
+
+Director-General
+
+International Vaccine Institute
+
+# H3: Dr. Amandeep Singh Gill
+
+UN Special Envoy for Digital and Emerging Technologies
+
+United Nations
+
+# H3: Sally Radwan
+
+Chief Digital Officer
+
+United Nations Environment Programme (UNEP)
+
+# H3: Strive Masiyiwa
+
+Founder and Executive Chairman
+
+Cassava Technologies
+
+# H3: Snehar Shah
+
+Chief Executive Officer
+
+IX Africa Data Centre
+
+# H3: Jean-François Fallacher
+
+Chief Executive Officer
+
+Eutelsat Group
+
+# H3: Xavier Niel
+
+Chairman and Chief Strategy Officer
+
+Iliad
+
+# H3: Christel Heydemann
+
+Chief Executive Officer
+
+Orange S.A.
+
+# H3: Ory Okolloh
+
+Partner
+
+Verod-Kepple Africa Ventures
+
+# H3: Grégoire de Padirac
+
+Investment Manager
+
+Orange Digital Ventures
+
+# H3: Aliko Dangote
+
+Founder and CEO
+
+Dangote Group
+
+# H3: Rodolphe Saadé
+
+Chairman and CEO
+
+CMA CGM
+
+# H3: Keith Svendsen
+
+Chief Executive Officer
+
+APM Terminals
+
+# H3: Dr. Githinji Gitahi
+
+Group Chief Executive Officer
+
+Amref Health Africa
+
+# H3: Melanie Hui
+
+Chief Executive Officer
+
+Luminate
+
+# H3: Yann LeCun
+
+Executive Chairman, Advanced Machine Intelligence
+
+Meta
+
+# H3: Kate Kallot
+
+Founder and CEO
+
+Amini
+
+# H3: Jade Abbott
+
+Chief Technology Officer
+
+Lelapa AI
+
+# H3: Dr. Vukosi Marivate
+
+Professor of Computer Science · ABSA UP Chair of Data Science
+
+University of Pretoria
+
+# H3: Karim Beguir
+
+Co-Founder and CEO
+
+InstaDeep
+
+# H3: Frédéric Pascal
+
+Professor, AI and Applied Statistics
+
+CentraleSupélec (L2S Laboratory)
+
+# H3: Dr. Seydina Moussa Ndiaye
+
+Senior Lecturer
+
+Cheikh Hamidou Kane Digital University, Senegal
+
+# H3: Vilas Dhar
+
+Global Expert on Artificial Intelligence Policy
+
+# H3: Hugo Micheron
+
+Postdoctoral Research Associate, Institute for Transregional Studies
+
+Princeton University
+
+# H3: Arthur Mensch
+
+Co-Founder and CEO
+
+Mistral AI
+
+# H3: Ayah Bdeir
+
+Inventor of littleBits
+
+# H3: Dr. Rachel Adams
+
+Founder and CEO
+
+Global Centre on AI Governance (GCG)
+
+# H3: Dr. Abeba Birhane
+
+Founder and Principal Investigator
+
+AI Accountability Lab (AIAL)
+
+# H3: Chrystal Rugege
+
+Managing Director
+
+Rwanda Centre for the Fourth Industrial Revolution
+
+# H3: H.E. Amb. Josefa Leonel Correia Sacko
+
+Commissioner for Agriculture, Rural Development, Blue Economy and Sustainable Environment (Moderator)
+
+African Union Commission
+
+# H3: H.E. Olivier Poivre d’Arvor
+
+French Ambassador for Poles and Maritime Issues (Moderator)
+
+Republic of France
+
+# H3: Amb. Nancy Karigithu, CBS
+
+Principal Secretary, State Department for Shipping and Maritime (Moderator)
+
+Ministry of Transport, Infrastructure, Housing, Urban Development and Public Works, Republic of Kenya
+
+11 May 2026
+
+University of Nairobi
+
+## H2: Business Forum
+
+Business leaders, investors, SMEs and innovators convening at  Africa Forward: Inspire and Connect .
+
+# H3: Ahmed El Alfi
+
+Founder and Chairman
+
+Sawari Ventures
+
+# H3: Alexandre Merieux
+
+Executive President
+
+Biomérieux
+
+# H3: Antoine de Saint-Affrique
+
+CEO
+
+Danone
+
+# H3: Arnaud Lagesse
+
+Group CEO
+
+IBL Ltd
+
+# H3: Aziz Mebarek
+
+Founding and Co-Managing Partner
+
+Africinvest
+
+# H3: Bagoré Bathily
+
+CEO
+
+La Laiterie du Berger
+
+# H3: Baidy Agne
+
+President
+
+National Employers&#x27; Council of Senegal
+
+# H3: Béatrice Buffon
+
+Executive Vice President, EDF Group · CEO, EDF Power Solutions
+
+EDF Group
+
+# H3: Carole Kariuki
+
+CEO
+
+KEPSA
+
+# H3: Charles Goemaere
+
+CEO
+
+Comité Champagne
+
+# H3: Dr. Stavros Nicolaou
+
+Group Senior Executive
+
+Aspen Pharmacare Holdings
+
+# H3: Dr. James Mworia
+
+Chief Executive Officer and Managing Director
+
+Centum Investment Company Plc
+
+# H3: Fatoumata Bâ
+
+Founder and Executive Chair
+
+Janngo Capital
+
+# H3: Françoise Lombard
+
+CEO
+
+Proparco
+
+# H3: Gbenga Oyebode
+
+Co-Founder
+
+ALN Nigeria · Aluko and Oyebode
+
+# H3: Hassanein Hiridjee
+
+CEO
+
+Axian Group
+
+# H3: Hon. Dhaneshwar Damry
+
+Junior Minister of Finance
+
+Republic of Mauritius
+
+# H3: James Mwangi
+
+Managing Director and Group CEO
+
+Equity Bank
+
+# H3: Jean-Pascal Tricoire
+
+Chairman
+
+Schneider Electric
+
+# H3: Jeremy Awori
+
+CEO
+
+Ecobank Group
+
+# H3: John Mwendwa
+
+CEO
+
+Kenya Investment Authority
+
+# H3: Létondji Beheton
+
+Managing Director
+
+Société d’Investissement et de Promotion de l’Industrie (SIPI-Bénin S.A.)
+
+# H3: Louis Margueritte
+
+CEO
+
+Business France
+
+# H3: Maryse Lokossou
+
+Managing Director
+
+Caisse des Dépôts et Consignations du Bénin
+
+# H3: Morena Makhoana
+
+CEO
+
+Biovac
+
+# H3: Moroesi Mokhabi
+
+CEO
+
+Brane Afrika
+
+# H3: Mustafa Rawji
+
+CEO
+
+Rawbank
+
+# H3: Nicolas Dufourcq
+
+CEO
+
+Bpifrance
+
+# H3: Odile Renaud-Basso
+
+President
+
+European Bank for Reconstruction and Development (EBRD)
+
+# H3: Paul Russo
+
+Group CEO
+
+KCB Group
+
+# H3: Philippe Gautier
+
+CEO
+
+MEDEF International
+
+# H3: Philippe Piron
+
+President Electrification and CEO Grid Solutions, Power Conversion and Storage
+
+GE Vernova
+
+# H3: Sophie Sidos
+
+Présidente
+
+Comité National des Conseillers du Commerce Extérieur (CCE)
+
+# H3: Thierry Déau
+
+CEO and Founder
+
+Meridiam
+
+# H3: Thierry Hébraud
+
+CEO
+
+MCB Group
+
+# H3: Tidjane Dème
+
+General Partner
+
+Partech
+
+# H3: Yedau Ogoundele
+
+CEO
+
+CRRH-UEMOA
+
+# H3: Contact the Programme Team
+
+Have a speaker suggestion or enquiry?
+
+We welcome nominations for speakers, panellists, and moderators who can contribute to the Africa Forward agenda.
+
+Get in Touch
+
+# H3: Africa Forward 2026
+
+An Africa-France Summit for Innovation and Growth. 11-12 May 2026, Nairobi, Kenya. Driving trade, technology, and sustainable partnerships.
+
+Event
+
+-  The Summit
+
+-  Business Forum
+
+-  Speakers
+
+-  Programme
+
+-  Resources
+
+Attend
+
+-  Register
+
+-  Accreditation
+
+-  Travel
+
+-  Nairobi
+
+Support
+
+-  Updates
+
+-  FAQ
+
+-  Contact
+
+-  Media Centre
+
+2026 Africa Forward 2026. All rights reserved.
+
+Twitter
+
+LinkedIn
+
+========== PAGE: ATTEND ==========
+
+Skip to main content
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+### H1: Be part of Africa Forward 2026.
+
+Africa Forward 2026 is open to participants across government, business, civil society, media, and academia. Find your participation pathway below.
+
+Delegate Accreditation
+
+Media Accreditation
+
+## H2: How to Participate
+
+Participation Type
+
+Who It's For
+
+How to Register
+
+Official Delegation and Summit Accreditation
+
+Heads of State, Government Ministers, Official delegations, AU/EU/IFI representatives
+
+Through official channels - Contact the Summit Secretariat
+
+Business Forum Registration
+
+CEOs, investors, business leaders, SMEs, young entrepreneurs, development finance professionals
+
+Register online
+
+Media and Press Accreditation
+
+Journalists, photographers, broadcast media from Africa, France, and internationally. Press will be accredited for both days of the summit; a briefing note will provide details on the sessions open to the press.
+
+Apply via media accreditation portal
+
+Youth and Civil Society
+
+Youth delegates, civil society organisations, think tanks, academic institutions
+
+Upon invitation
+
+## H2: Travel and Logistics
+
+# H3: Getting to KICC
+
+The Kenyatta International Convention Centre (KICC) is located in the heart of Nairobi's CBD, 18km from Jomo Kenyatta International Airport (JKIA). Transfer options: taxi (30-45 min), ride-hail apps (Bolt/Uber), and official event shuttle services.
+
+# H3: Visa and Entry Requirements
+
+Kenya operates an Electronic Travel Authorisation (eTA) system. Most nationalities can obtain an eTA online before travel. Citizens of 43 countries are exempt.
+
+Required: valid passport (6+ months), return ticket, yellow fever certificate (where applicable), proof of accommodation.
+
+Apply for eTA
+
+# H3: Currency and Payments
+
+Kenya's currency is the Kenyan Shilling (KES). Major credit and debit cards are widely accepted in Nairobi. M-PESA mobile money is the dominant payment system. ATMs are available at JKIA and throughout Nairobi's CBD.
+
+# H3: Accommodation
+
+Nairobi offers a wide range of accommodation options within minutes of KICC. Recommended partner hotels and official event rates will be published 8 weeks before the event.
+
+EAT (UTC+3)
+
+18-25 C
+
+Afternoon showers
+
+English and Swahili
+
+## H2: Frequently Asked Questions
+
+When and where is the Summit?
+
+The Africa Forward Summit takes place on 11-12 May 2026 in Nairobi, Kenya. The Business Forum is on 11 May at the University of Nairobi. The Summit of Heads of State is on 12 May at the Kenyatta International Convention Centre (KICC).
+
+How do I register to attend?
+
+Business Forum participants can register via the official accreditation portal. Official delegations participate through diplomatic channels. Media representatives should apply via the media accreditation portal. See the participation pathways above for details.
+
+Do I need a visa to enter Kenya?
+
+Most nationalities require an electronic Travel Authorisation (eTA), which can be obtained online at  etakenya.go.ke . Apply at least 7-14 days before travel. East African Community citizens are exempt.
+
+What are the thematic areas of the Summit?
+
+The Summit covers seven thematic areas: Health; Blue Economy; Green Industrialisation and Energy Transition; Peace and Security; Agriculture; Artificial Intelligence; and Reform of the International Financial Architecture.
+
+What is the expected outcome of the Summit?
+
+The Summit is expected to culminate in the adoption of the Nairobi Declaration, along with concrete, action-oriented deliverables including private sector deals and commitments from both African and French parties.
+
+## H2: Ready to attend?
+
+Secure your place at Africa Forward 2026.
+
+Register Now
+
+# H3: Africa Forward 2026
+
+An Africa-France Summit for Innovation and Growth. 11-12 May 2026, Nairobi, Kenya. Driving trade, technology, and sustainable partnerships.
+
+Event
+
+-  The Summit
+
+-  Business Forum
+
+-  Speakers
+
+-  Programme
+
+-  Resources
+
+Attend
+
+-  Register
+
+-  Accreditation
+
+-  Travel
+
+-  Nairobi
+
+Support
+
+-  Updates
+
+-  FAQ
+
+-  Contact
+
+-  Media Centre
+
+2026 Africa Forward 2026. All rights reserved.
+
+Twitter
+
+LinkedIn
+
+========== PAGE: NAIROBI ==========
+
+Skip to main content
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+Host Country
+
+### H1:
+
+Kenya: Origin of Wonder.
+
+From the Great Rift Valley - where the earliest chapters of human history were written - to the innovation hubs of Nairobi, Kenya stands as a living testament to where we began and a bold vision of where we are going.
+
+The Host City
+
+## H2: Why Nairobi
+
+# H3: Silicon Savannah
+
+Kenya's thriving tech and startup ecosystem has earned Nairobi its reputation as Africa's Silicon Savannah. Home to M-Pesa - the mobile money revolution that transformed global fintech - and backed by strong government support for innovation, Kenya leads the continent in digital technology and entrepreneurship.
+
+# H3: Gateway to East Africa
+
+Nairobi is the region's undisputed financial hub, home to the Nairobi Securities Exchange - one of Africa's leading stock exchanges - and a base for major international banks and financial institutions. The city serves as the primary gateway to the dynamic East African market of over 300 million people.
+
+# H3: Diplomatic Hub
+
+Nairobi hosts the global headquarters of the UN Environment Programme (UNEP) and UN-Habitat, making it one of only four UN headquarters cities worldwide. With its increasing geopolitical leadership and world-class conference infrastructure, Kenya is a natural convening ground for multilateral dialogue.
+
+KICC - Kenyatta International Convention Centre
+
+The Venue
+
+## H2: Kenyatta International Convention Centre
+
+The Africa Forward Summit 2026 takes place at the iconic  Kenyatta International Convention Centre (KICC) , Kenya's premier conference facility and a landmark of Nairobi's skyline. Rising 28 storeys above the Central Business District, KICC has hosted generations of landmark gatherings since 1973.
+
+Address
+
+Harambee Avenue, Nairobi CBD, Kenya
+
+Distance from Airport
+
+Approximately 16 km from Jomo Kenyatta International Airport (JKIA)
+
+Contact
+
++254 20 3261000
+
+Beyond the Summit
+
+## H2: Discover Kenya
+
+Kenya is home to  eight UNESCO World Heritage Sites , from the ancient Swahili trading towns of Lamu to the flamingo-lined shores of Lake Turkana. Its landscapes span equatorial glaciers, arid savannahs, lush highlands, and pristine coastline - a rich tapestry of natural heritage unmatched in its diversity.
+
+Nairobi itself is the only capital city in the world with a  national park within its borders  - Nairobi National Park, where lions, giraffes, and rhinos roam against a backdrop of skyscrapers. Beyond the city, the legendary  Maasai Mara  hosts the Great Migration, while the  Great Rift Valley  stretches through the heart of the country, its lakes and escarpments a reminder of the tectonic forces that shaped this land - and our species.
+
+Karibu Kenya!
+
+Kenya says to you all 'Welcome Home!'
+
+Discover more of Kenya beyond your stay by exploring  Magical Kenya , the official tourism guide to Kenya. This helpful website showcases beautiful destinations, wildlife safaris, beaches, cultural experiences, adventure activities, and hidden gems across the country. Click the link to plan day trips, find inspiration, and learn about other amazing places to visit during your time in Kenya.
+
+Visit Magical Kenya
+
+Wildlife Experience
+
+## H2: Nairobi National Park
+
+Nairobi National Park is a unique wildlife destination located just outside Kenya's capital city, offering guests the rare chance to experience an authentic safari without travelling far from Nairobi.
+
+The park is home to lions, rhinos, giraffes, buffaloes, zebras, antelopes, and many bird species, all set against the striking backdrop of the city skyline. It is an ideal place for a half-day or full-day visit, perfect for guests who want to enjoy Kenya's wildlife and natural beauty close to the city.
+
+30% off Park Entry Fees with your Summit Badge / ID
+
+Available at Nairobi National Park, Nairobi Animal Orphanage, and Nairobi Safari Walk.
+
+Plan your visit
+
+0800 597 000
+
+Toll-free hotline ·  MICE@kws.go.ke  · Operated by Kenya Wildlife Service (KWS).
+
+Timezone
+
+EAT - UTC+3
+
+No daylight saving time
+
+Climate in May
+
+18-26 C
+
+Occasional afternoon showers
+
+Languages
+
+English and Swahili
+
+Both are official languages
+
+## H2: Experience Nairobi
+
+Join world leaders, innovators, and changemakers in one of Africa's most vibrant cities. The stage is set - and Nairobi is ready to welcome you.
+
+Plan Your Visit
+
+Discover Kenya
+
+# H3: Africa Forward 2026
+
+An Africa-France Summit for Innovation and Growth. 11-12 May 2026, Nairobi, Kenya. Driving trade, technology, and sustainable partnerships.
+
+Event
+
+-  The Summit
+
+-  Business Forum
+
+-  Speakers
+
+-  Programme
+
+-  Resources
+
+Attend
+
+-  Register
+
+-  Accreditation
+
+-  Travel
+
+-  Nairobi
+
+Support
+
+-  Updates
+
+-  FAQ
+
+-  Contact
+
+-  Media Centre
+
+2026 Africa Forward 2026. All rights reserved.
+
+Twitter
+
+LinkedIn
+
+========== PAGE: MEDIA ==========
+
+Skip to main content
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+Press and Newsroom
+
+### H1: Media Centre
+
+News coverage, press releases and official communications from the Africa Forward Summit 2026.
+
+Media Accreditation
+
+Latest Coverage
+
+Press Accreditation
+
+All media personnel covering the Summit must register via the press accreditation portal.
+
+Apply now →
+
+Badge Collection
+
+5–7 May 2026 , 07:30–21:00 at Charter Hall, Nairobi.
+
+Lead Press Liaison
+
+Ms. Winnie Aluoch
+
+Winnie.aluoch@mfa.go.ke  +254 727 857 916
+
+Featured
+
+Press Release
+
+21 Apr 2026
+
+## H2: Kenya and France pave the way for future-oriented partnerships ahead of the Africa Forward Summit 2026
+
+April 21, 2026 — Following a high-level engagement with the Kenya Editors Guild, Kenya and France signalled a new wave of strategic partnerships across AI and digital innovation, nuclear and renewable energy, health manufacturing, infrastructure, transport, agriculture, and the creative economy. Between 1,500 and 2,000 global CEOs and business leaders are anticipated — making Africa Forward 2026 one of the largest Africa–Europe investment convenings in recent years.
+
+Africa Forward Summit Secretariat
+
+Read the full story
+
+Newsroom
+
+## H2: In the News
+
+Latest coverage, mentions and social media posts about Africa Forward 2026.
+
+News Article
+
+12 May 2026 · president.go.ke
+
+# H3: KENYA, FRANCE SIGN 11 AGREEMENTS TO STRENGTHEN BILATERAL COOPERATION
+
+Kenya and France have signed 11 agreements aimed at deepening cooperation across strategic sectors.
+
+The agreements were signed at State House Nairobi following bilateral talks between President William Ruto and President Emmanuel Macron of France.
+
+Read on president.go.ke
+
+YouTube
+
+08 May 2026 · NTV : Fixing The Nation
+
+# H3: France-Africa Summit: Addressing the past and the future
+
+The Africa Forward Summit, taking place in Nairobi on 11–12 May, brings together African and French leaders, investors, innovators, civil society, youth, and private sector actors to advance a new partnership focused on innovation, investment, and inclusive growth. Co-hosted by Kenya and France, the summit will spotlight African-led priorities including green industrialization, energy transition, health and pharmaceutical manufacturing, AI and digital technologies, sustainable agriculture, the blue economy, financial architecture reform, peace and security, and economic opportunities for youth and women. The discussions aim to unlock capital, deepen trade and investment linkages, scale African innovation, strengthen regional markets, and build practical partnerships that support a more sovereign, resilient, and prosperous Africa.
+
+Read on NTV : Fixing The Nation
+
+Instagram
+
+08 May 2026 · franceinkenya
+
+# H3: 🏃🏾‍♂️ From the track to the classroom, sport continues to shape futures beyond competition. 📖🌍
+
+At the #AfricaForward Summit, marathon legend, @kipchogeeliud Kipchoge will reflect on how sports can become a powerful driver for education, employability, and youth empowerment. Through his foundation and long-standing commitment to environmental responsibility 🪴🌱, Kipchoge continues to inspire a new generation both on and off the track.
+
+On May 11 at the @universityofnairobi , sports will take centre stage as a pillar of the renewed partnership between Africa and France, creating opportunities, building connections and empowering young people through sports. 🤝✨
+
+Read on franceinkenya
+
+YouTube
+
+01 May 2026 · CNBC Africa
+
+# H3: Focus On: Africa Forward Summit 2026
+
+As global dynamics continue to evolve, Africa&#x27;s relations with global partners remain central to shaping strategic partnerships, investment flows, and shared growth across the continent.
+
+Our Permanent Secretary for Foreign Affairs, Dr Korir SingOei, offers insights into these shifting priorities ahead of the #AfricaForward2026.
+
+This CNBC Africa interview provides exclusive insights on the #AfricaForward Summit that will take place at the KICC in Nairobi, Kenya, from the 11th to the 12th of May 2026.
+
+Read on CNBC Africa
+
+YouTube
+
+24 Apr 2026 · Radio Generation&#x27;s The People&#x27;s Breakfast
+
+# H3: Discussing Kenya&#x27;s Health Sovereignty Agenda at the Africa Forward Summit
+
+Dr Nicholas Muraguri, Advisor on Global Health Diplomacy at the Ministry of Foreign Affairs, spoke on Radio Generation&#x27;s The People&#x27;s Breakfast on the transformative agenda that the Africa Forward Summit brings to Kenya&#x27;s health and development priorities.
+
+Dr Muraguri centred the conversation on a clear shift in how Africa approaches its partnerships - away from aspirational dialogue and toward concrete, time-bound commitments. Anchoring his remarks in Kenya&#x27;s Vision 2030, he highlighted pharmaceutical production as a cornerstone of the country&#x27;s national development agenda and called for accelerated action at both the national and regional levels before the 2030 deadline.
+
+On accountability, he was direct:  This is moving away from just &#x27;story&#x27; to action. We are demanding action on both ends; from our partners, whether it&#x27;s government, the private sector, or investment banks, but also on the end of the government. It is a shared responsibility.
+
+Looking ahead to the #AfricaForward Summit on 11–12 May 2026, Dr Muraguri signalled that delegates can expect specific, actionable announcements, spanning Health and AI, the Blue Economy, and green energy investments, with clear deliverables, timelines and country-level impact.
+
+Read on Radio Generation&#x27;s The People&#x27;s Breakfast
+
+Facebook
+
+22 Apr 2026 · Facebook
+
+# H3: Africa Forward Summit 2026 — official announcement
+
+Facebook post announcing the Africa Forward Summit 2026 — 11–12 May, Nairobi. Co-hosted by the Republic of Kenya and the Republic of France.
+
+Read on Facebook
+
+X / Twitter
+
+22 Apr 2026 · @ForeignOfficeKE on X
+
+# H3: Update on the Africa Forward Summit 2026 preparations
+
+Ministry of Foreign and Diaspora Affairs (Kenya) shares an update on preparations for the Africa Forward Summit 2026 co-hosted by Kenya and France in Nairobi.
+
+Read on @ForeignOfficeKE on X
+
+News Article
+
+22 Apr 2026 · Kenyan Wall Street
+
+# H3: Africa Forward Summit 2026 to position Kenya as continental convenor of Africa–France investment
+
+Business and financial coverage of the upcoming Africa Forward Summit 2026, the first Africa–France Summit hosted in Anglophone Africa, convened in Nairobi on 11–12 May with a focus on investment, innovation and mutually beneficial partnerships.
+
+Read on Kenyan Wall Street
+
+Resources
+
+## H2: For Journalists
+
+# H3: Accreditation and Attendance
+
+Press accreditation details, access gates and practical information for journalists covering the Summit.
+
+How to attend →
+
+# H3: Official Press Release
+
+Download the latest press release from the Africa Forward Summit Secretariat.
+
+Download PDF →
+
+# H3: Media Contact
+
+For press enquiries and interview requests:
+
+Ms. Winnie Aluoch  Winnie.aluoch@mfa.go.ke  +254 727 857 916
+
+# H3: Summit Secretariat
+
+General conference enquiries:
+
+Lilian A. Obonyo  africafrancesummit@mfa.go.ke  +254 722 271 321
+
+# H3: Africa Forward 2026
+
+An Africa-France Summit for Innovation and Growth. 11-12 May 2026, Nairobi, Kenya. Driving trade, technology, and sustainable partnerships.
+
+Event
+
+-  The Summit
+
+-  Business Forum
+
+-  Speakers
+
+-  Programme
+
+-  Resources
+
+Attend
+
+-  Register
+
+-  Accreditation
+
+-  Travel
+
+-  Nairobi
+
+Support
+
+-  Updates
+
+-  FAQ
+
+-  Contact
+
+-  Media Centre
+
+2026 Africa Forward 2026. All rights reserved.
+
+Twitter
+
+LinkedIn
+
+========== PAGE: RESOURCES ==========
+
+Skip to main content
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+Home
+
+Business Forum
+
+The Summit
+
+Programme
+
+Speakers
+
+Attend
+
+Nairobi
+
+Media
+
+Resources
+
+Register
+
+EN
+
+|
+
+FR
+
+Africa Forward 2026
+
+### H1: Resources
+
+The official summit declaration, programme and thematic concept notes, published by the Ministry of Foreign and Diaspora Affairs of the Republic of Kenya.
+
+Official Outcome Document
+
+## H2: The Africa Forward 2026 Summit Declaration
+
+Adopted in Nairobi on 12 May 2026 — the framework for a strengthened Africa-France partnership across peace and security, finance, green industrialisation, AI, blue economy, health and agriculture.
+
+Download PDF · 21 pages
+
+Summit Programme
+
+## H2: Africa Forward 2026 — Official Programme Booklet
+
+16 pages · Heads of State and Government, themes, full 12 May agenda with venues and session line-ups.
+
+Download PDF · 1.8 MB
+
+Concept Notes
+
+## H2: Overall and Thematic Briefs
+
+Background reading prepared by the Ministry of Foreign and Diaspora Affairs for delegates, press and partners.
+
+PDF
+
+Overview
+
+# H3: Africa–France Partnerships for Innovation and Growth
+
+Overall summit concept note — the rationale, themes, expected outcomes and participation framework.
+
+Download
+
+Seven Thematic Concept Notes
+
+PDF
+
+1
+
+# H3: Green Industrialisation and Energy Transition
+
+Green industrialisation · bankable projects · human capital
+
+PDF
+
+2
+
+# H3: International Financial Architecture
+
+Equity, sustainability and the African voice in global finance
+
+PDF
+
+3
+
+# H3: Peace and Security
+
+African mediations, peace operations, Security Council reform
+
+PDF
+
+4
+
+# H3: AI and Digital Technologies
+
+Infrastructure · talent · governance
+
+PDF
+
+5
+
+# H3: Blue Economy
+
+Maritime governance · blue jobs · decarbonisation
+
+PDF
+
+6
+
+# H3: Resilient Health Systems
+
+Local production · investment · tech transfer
+
+PDF
+
+7
+
+# H3: Sustainable Agriculture
+
+Agroecological intensification · value chains · nutrition and food security
+
+Scan to Access
+
+# H3: Summit Document Folder
+
+Scan to open the official Ministry of Foreign and Diaspora Affairs document folder containing the full programme, concept notes and supporting materials for Africa Forward Summit 2026.
+
+Hosted by the Ministry of Foreign and Diaspora Affairs
+
+Republic of Kenya
+
+# H3: Africa Forward 2026
+
+An Africa-France Summit for Innovation and Growth. 11-12 May 2026, Nairobi, Kenya. Driving trade, technology, and sustainable partnerships.
+
+Event
+
+-  The Summit
+
+-  Business Forum
+
+-  Speakers
+
+-  Programme
+
+-  Resources
+
+Attend
+
+-  Register
+
+-  Accreditation
+
+-  Travel
+
+-  Nairobi
+
+Support
+
+-  Updates
+
+-  FAQ
+
+-  Contact
+
+-  Media Centre
+
+2026 Africa Forward 2026. All rights reserved.
+
+Twitter
+
+LinkedIn
+

@@ -1,0 +1,72 @@
+.kpiCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 3.5rem var(--space-lg);
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  text-align: center;
+  background: transparent;
+  transition: all var(--transition-normal);
+}
+
+.kpiCard:hover {
+  transform: translateY(-8px);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
+  background: rgba(196, 146, 62, 0.1);
+  border: 1px solid rgba(196, 146, 62, 0.25);
+  color: var(--color-accent-gold);
+  position: relative;
+  z-index: 2;
+  margin-bottom: var(--space-xs);
+  transition: all var(--transition-normal);
+}
+
+.kpiCard:hover .iconWrapper {
+  background: var(--color-accent-gold);
+  color: #121212;
+  transform: scale(1.1);
+  box-shadow: var(--shadow-glow-gold);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: var(--space-xs);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.title {
+  color: var(--color-text-muted);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  max-width: 80%;
+  line-height: 1.4;
+}
+

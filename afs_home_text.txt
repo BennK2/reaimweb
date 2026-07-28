@@ -1,0 +1,241 @@
+show = true, 100)"
+
+:class="show ? 'opacity-100 tracking-[0.35em]' : 'opacity-0 tracking-[0.15em]'"
+
+class="text-sm md:text-base uppercase text-gray-300 font-medium mb-6 transition-all duration-1000 ease-out">
+
+11 - 12 May 2026 - Nairobi, Kenya
+
+Summit Concluded
+
+Africa is not waiting. It is building.
+
+Africa Forward: Africa-France Partnerships for Innovation and Growth
+
+The Africa Forward Summit 2026, hosted jointly by Kenya and France, brought together Heads of State, business leaders, and innovators - concluding with the adoption of the Nairobi Declaration, a framework for a new partnership built on equal ground.
+
+Read the Nairobi Declaration
+
+View Programme
+
+Official Outcome Document
+
+The Africa Forward 2026 Summit Declaration
+
+Read the official outcome document
+
+Two Days. Two Tracks.
+
+One shared agenda.
+
+DAY 1
+
+11 May 2026
+
+Business Forum
+
+1,500+ business leaders, entrepreneurs, and investors. B2B matchmaking, workshops, and networking at the University of Nairobi.
+
+Learn More
+
+DAY 2
+
+12 May 2026
+
+The Summit
+
+Heads of state, the African Union, and 30+ CEOs. Plenaries, roundtables, and a closing communique at KICC, Nairobi.
+
+Learn More
+
+1,500+
+
+Business Forum participants
+
+Including major African and French corporate leaders, SMEs, and young entrepreneurs
+
+30+
+
+Heads of State
+
+African Heads of State and the President of France attending the Summit
+
+7
+
+Themes
+
+Roundtables spanning energy, finance, agriculture, AI, the blue economy, health, and industrialisation
+
+Nairobi, Kenya - Home of Africa Forward 2026
+
+A new chapter in Africa-France partnership
+
+Historic. Inclusive. Action-Oriented.
+
+The Africa Forward Summit "Africa-France Partnerships for Innovation and Growth" is a Summit of Heads of State and Government to be held on 11-12 May 2026 in Nairobi, Kenya. The Summit is co-hosted by H.E. William Samoei Ruto, C.G.H., President of the Republic of Kenya, and H.E. Emmanuel Macron, President of the French Republic.
+
+The Summit aims to demonstrate the African continent's innovation capacity and affirm a shared commitment to developing common, mutually beneficial solutions based on effective multilateralism and a spirit of transformative partnership.
+
+This Summit represents a significant opportunity for a paradigm shift to a more balanced, equitable, and mutually respectful partnership anchored on shared aspirations of effective multilateralism, transformative partnership, sustainable development and Africa's agency in addressing pressing emerging regional and global challenges.
+
+From the Heads of State
+
+Welcome Messages
+
+H.E. Dr. William Samoei Ruto, C.G.H.
+
+President, Republic of Kenya
+
+It is my distinct honour to warmly welcome you to Nairobi, Kenya, for the inaugural Africa Forward Summit, co-hosted by Kenya and France at the Kenyatta International Convention Centre (KICC) and the University of Nairobi on the 11th and 12th of May 2026.
+
+Kenya, the cradle of humankind, is proud to host you once again on African soil, a place where history began, and where the future is being actively shaped.
+
+Karibuni Nyumbani  - Welcome home.
+
+Africa stands at a defining inflection point. Ours is a continent powered by a youthful, rapidly growing population - creative, ambitious, and determined to transform ideas into enterprises, and enterprises into opportunity.
+
+Across our nations, innovation is not a distant aspiration, it is already driving progress. From fintech and artificial intelligence to climate-smart agriculture and renewable energy, African solutions are shaping global conversations.
+
+Yet, alongside this immense potential lies an equally urgent responsibility - to unlock the investments, partnerships, and financing frameworks required to scale these opportunities sustainably and inclusively.
+
+It is within this context of momentum, ambition, and purpose that the Africa Forward Summit convenes. This high-level gathering reflects a renewed and forward-looking partnership between Africa and France, grounded in mutual respect, shared responsibility, and a clear commitment to delivering tangible outcomes.
+
+Together, we are deliberately moving beyond legacy narratives and toward a relationship defined by co-creation, co-investment, and measurable impact. One that recognizes Africa not as a frontier, but as a partner and a driver of global growth.
+
+Africa is no longer content with aspiration alone. We are advancing with clarity and resolve, shifting from dialogue to delivery, from commitments to implementation, and from potential to performance. The true measure of this Summit will not be the conversations we hold, but the outcomes we deliver for our people.
+
+The inaugural Africa Forward Summit brings together leaders from government, business, finance, innovation, youth, and civil society to accelerate actionable solutions across key priority areas, including:
+
+Peace and security
+
+Energy transition and green industrialisation
+
+Reform of international financial architecture
+
+Sustainable and value-added agriculture
+
+Artificial intelligence and digital transformation
+
+Blue economy
+
+Health systems and sovereignty
+
+Across these sectors, the Summit will prioritize bankable projects, investment pipelines, technology transfer, and skills development, ensuring that partnerships translate into real economic opportunities, jobs, and improved livelihoods for citizens across the continent.
+
+Our shared objective is clear: to unlock capital, scale innovation, deepen trade and investment linkages, and create inclusive growth pathways that are resilient, sustainable, and African-led.
+
+As co-hosts of this Summit, Kenya and France are committed to providing a platform that enables alignment between policy, capital, and innovation. We aim to catalyze partnerships that are not only ambitious in vision, but practical in execution to deliver results that endure beyond the Summit.
+
+We look forward to welcoming you to Nairobi for what promises to be a defining moment in Africa-France cooperation as we set a new standard for partnership, progress, and shared prosperity.
+
+Welcome to Nairobi. Welcome to Africa Forward.
+
+H.E. Emmanuel Macron
+
+President of the French Republic
+
+Since 2017, we have been working on overhauling the Africa-France relationship. We wish to build partnerships on an equal footing, founded on shared interests and tangible results.
+
+The Africa Forward Summit will be a significant milestone in that endeavour. For the first time, France and an English-speaking African country will co-chair this event, symbolizing an open and future-focused relationship.
+
+This summit will bring together States, businesses, young people, artists and diasporas. Because the relationship between France and Africa cannot merely be declared, it must be built on the ground by innovators, entrepreneurs and creatives.
+
+Our priority is clear: to step up investments and strengthen our cooperation programmes in healthcare, education, food, digital technology, energy and infrastructures. In Nairobi, some 1,500 economic stakeholders will be mobilized to transform ambitions into projects and projects into results.
+
+We are making a strategic choice in ensuring the private sector is the driving force behind this new momentum.
+
+But beyond the economy, there is an essential political message: Africa must be fully involved in global decisions. Peace, climate, technology and prosperity: none of these challenges can be addressed without it. That is why we are spearheading an ambitious reform of international governance, for a fairer, more representative and more effective multilateralism.
+
+The Nairobi summit will be a moment of truth in the lead-up to the G7 Summit in Evian. A moment to welcome a renewed relationship between Africa and France, one that is clear, of a high standard and firmly action-oriented.
+
+Seven Themes
+
+Structuring the Summit's agenda
+
+visible = true, 0)"
+
+:class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+
+class="group hover:-translate-y-1 transition-all duration-500 ease-out">
+
+Energy Transition & Green Industrialisation
+
+A joint plenary structured around facilitating trade and investment, promoting bankable projects, and strengthening skills and talent development.
+
+visible = true, 80)"
+
+:class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+
+class="group hover:-translate-y-1 transition-all duration-500 ease-out">
+
+Reform of the International Financial Architecture
+
+Reforming the financial architecture to better mobilize private capital (both local and international) for the development of the African continent.
+
+visible = true, 160)"
+
+:class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+
+class="group hover:-translate-y-1 transition-all duration-500 ease-out">
+
+Blue Economy
+
+Three axes: strategic priorities in maritime governance and environmental security; creation of blue jobs; and decarbonisation of maritime transport.
+
+visible = true, 240)"
+
+:class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+
+class="group hover:-translate-y-1 transition-all duration-500 ease-out">
+
+Sustainable Agriculture
+
+Strengthen multi-stakeholder partnerships to support the transition toward productive, sustainable, and resilient food systems in Africa.
+
+visible = true, 320)"
+
+:class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+
+class="group hover:-translate-y-1 transition-all duration-500 ease-out">
+
+AI & Digital Technologies
+
+Investment in digital infrastructure, partnerships for open AI, growth of start-ups and talent training, and financing the high-tech sector.
+
+visible = true, 400)"
+
+:class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+
+class="group hover:-translate-y-1 transition-all duration-500 ease-out">
+
+Resilient Health Systems
+
+Health cooperation through partnership and co-construction, strengthened local production of vaccines and medicines, and continental capacity in health.
+
+visible = true, 480)"
+
+:class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+
+class="group hover:-translate-y-1 transition-all duration-500 ease-out md:col-span-2 lg:col-span-1">
+
+Peace & Security
+
+Plenary session on peace and security issues in support of African mediation efforts and the actions of the African Union.
+
+Explore the Summit
+
+Programme & Concept Notes
+
+Scan or browse the full document set
+
+Official Summit Programme booklet, overall concept note, and seven thematic concept notes covering Green Industrialisation, IFA Reform, Peace & Security, AI & Digital, Blue Economy, Health and Agriculture.
+
+Open Resources
+
+Host Country
+
+Discover Nairobi
+
+Kenya - the cradle of mankind, Africa's Silicon Savannah, and gateway to East Africa. Experience the warmth, innovation, and natural beauty of the host country.
+
+Discover Nairobi
