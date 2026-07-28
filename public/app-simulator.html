@@ -54,6 +54,10 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
+    html, body {
+      min-height: 100%;
+    }
+
     body {
       background: var(--page-bg);
       background-image:
@@ -63,8 +67,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px 16px;
+      padding: 40px 16px;
       font-family: var(--font-b);
+      overflow-x: hidden;
     }
 
     /* ========================
@@ -72,8 +77,9 @@
     ======================== */
     .scene {
       display: flex;
-      gap: 52px;
+      gap: 48px;
       align-items: center;
+      justify-content: center;
       max-width: 1080px;
       width: 100%;
     }
@@ -132,7 +138,7 @@
     ======================== */
     .phone-shell {
       width: 375px;
-      min-height: 810px;
+      height: 810px;
       background: #18181B;
       border-radius: 52px;
       padding: 13px;
@@ -144,8 +150,9 @@
         0 0 50px rgba(197,155,39,0.15);
       position: relative;
       flex-shrink: 0;
-      /* Make sure clicks pass through shell to screen */
       cursor: default;
+      display: flex;
+      flex-direction: column;
     }
 
     /* Side volume buttons */
@@ -177,12 +184,12 @@
 
     .phone-screen {
       width: 100%;
+      flex: 1;             /* fills the phone-shell height */
       background: var(--app-bg);
       border-radius: 40px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      min-height: 784px;
       position: relative;
     }
 
@@ -444,6 +451,8 @@
       overflow-y: auto;
       overflow-x: hidden;
       position: relative;
+      /* Critical: must have a bounded height to scroll within the phone, not outside */
+      min-height: 0;
     }
 
     .app-scroll::-webkit-scrollbar { display: none; }
