@@ -28,7 +28,8 @@ export default function Summit() {
               </h2>
               <div className="glass-panel" style={{padding: '2rem', marginBottom: '2.5rem'}}>
                 <p className="text-muted" style={{fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '1.5rem'}}>
-                  Jointly launched in 2023 by the Netherlands and South Korea, the Responsible Artificial Intelligence in the Military Domain (REAIM) initiative promotes international dialogue, transparency, and cooperation in the responsible development, deployment, and use of AI technologies in defence.
+                  Jointly launched in 2023 by the Netherlands and South Korea, the Responsible Artificial Intelligence in the Military Domain (REAIM) initiative promotes international dialogue, transparency, and cooperation in the responsible development, deployment, and use of AI technologies in defence. 
+                  The initiative encourages multistakeholder engagement including states, industry, academia, and civil society, seeking to enhance transparency and promote international norms regarding the responsible development and application of AI in the military.
                 </p>
                 <p className="text-muted" style={{fontSize: '1rem', lineHeight: '1.7'}}>
                   Kenya joined REAIM in 2024 to champion African representation, global equity, and inclusive governance norms in military AI safety and international security.
