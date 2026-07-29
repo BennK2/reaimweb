@@ -13,7 +13,7 @@ The Nairobi summit, scheduled for April 2027, is expected to pivot towards the p
 
 "Hosting REAIM 2027 in Nairobi ensures that the vital perspectives of developing nations and emerging economies are actively integrated into the global discourse on military AI," the Ministry of Defence noted.
     `,
-    image: '/news-geneva.webp',
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/news-geneva.webp`,
   },
   {
     slug: 'third-reaim-summit-a-coruna',
@@ -27,7 +27,7 @@ A major focus of the discussions in A Coruña was the "Pathways to Action" frame
 
 The dialogues in Spain set a critical baseline for the upcoming 2027 summit in Nairobi, where the international community will be tasked with moving beyond declarations and towards verifiable, capacity-building frameworks.
     `,
-    image: '/news-spain.webp',
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/news-spain.webp`,
   },
   {
     slug: 'seoul-blueprint-for-action',
@@ -43,7 +43,7 @@ Seoul's summit also expanded the multi-stakeholder approach pioneered at the ina
 
 The progress made in Seoul continues to guide the agenda for the upcoming summit in Nairobi, Kenya.
     `,
-    image: '/news-seoul.webp',
+    image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/news-seoul.webp`,
   }
 ];
 

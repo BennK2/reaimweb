@@ -6,7 +6,7 @@ import styles from './page.module.css';
 export default function Attend() {
   return (
     <div>
-      <header className={styles.pageHeader}>
+      <header className={styles.pageHeader} style={{ backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.95)), url(\$\{process.env.NEXT_PUBLIC_BASE_PATH || ''\}/african-print.webp)`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container">
           <h1 className="text-primary">Be part of RE<span className="text-accent">AI</span>M 2027.</h1>
           <p className="text-accent font-display" style={{fontSize: '1.25rem', marginTop: '0.5rem'}}>Registration, Accreditation, and Travel Information</p>
@@ -62,10 +62,10 @@ export default function Attend() {
               </h3>
               <div className="glass-panel" style={{padding: '2rem'}}>
                 <p className="text-muted" style={{marginBottom: '1rem'}}>
-                  The primary summit venue is the <strong>Bomas of Kenya</strong>, located on Forest Edge Road off Lang'ata Road, approximately 18km from Jomo Kenyatta International Airport (JKIA).
+                  The primary summit venue is the <strong><a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Bomas of Kenya</a></strong>, located on Forest Edge Road off Lang'ata Road, approximately 18km from Jomo Kenyatta International Airport (JKIA).
                 </p>
                 <p className="text-muted" style={{marginBottom: '1rem'}}>
-                  The Ministerial Roundtable will be hosted at <strong>Hemingways Nairobi</strong> in Karen.
+                  The Ministerial Roundtable will be hosted at <strong><a href="https://maps.app.goo.gl/3A5T7j9Z2QYw2JqK9" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Hemingways Nairobi</a></strong> in Karen.
                 </p>
                 <p className="text-muted">
                   Transfer options include ride-hail apps (Uber/Bolt) and official event shuttle services from recommended hotels. VIP transportation is provided for Ministers.
@@ -100,7 +100,7 @@ export default function Attend() {
           <div className="glass-panel" style={{padding: '3rem', maxWidth: '800px', margin: '0 auto', marginBottom: '5rem'}}>
             <div style={{marginBottom: '2rem'}}>
               <h3 className="text-primary" style={{marginBottom: '0.5rem', fontSize: '1.2rem'}}>When and where is the Summit?</h3>
-              <p className="text-muted">The REAIM Summit takes place on 7–8 April 2027 in Nairobi, Kenya. The main plenary sessions are hosted at the Bomas of Kenya, and the Ministerial Roundtable is at Hemingways Nairobi. Pre-summit regional consultations occur on 6 April 2027.</p>
+              <p className="text-muted">The REAIM Summit takes place on 7–8 April 2027 in Nairobi, Kenya. The main plenary sessions are hosted at the <a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Bomas of Kenya</a>, and the Ministerial Roundtable is at <a href="https://maps.app.goo.gl/3A5T7j9Z2QYw2JqK9" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Hemingways Nairobi</a>. Pre-summit regional consultations occur on 6 April 2027.</p>
             </div>
             
             <div style={{marginBottom: '2rem'}}>

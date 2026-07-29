@@ -7,9 +7,9 @@ import styles from './page.module.css';
 // Placeholder data since we don't have confirmed speakers yet
 const highLevelSpeakers = [
   { name: 'H.E. William Ruto', title: 'President', org: 'Republic of Kenya', image: '/placeholder-speaker.webp' },
-  { name: 'Hon. Minister of Defence', title: 'Cabinet Secretary', org: 'Ministry of Defence, Kenya', image: '/placeholder-speaker.webp' },
-  { name: 'To Be Announced', title: 'Minister of Defence', org: 'Republic of Korea', image: '/placeholder-speaker.webp' },
-  { name: 'To Be Announced', title: 'Minister of Defence', org: 'The Netherlands', image: '/placeholder-speaker.webp' },
+  { name: 'Hon. Cabinet Secretary for Defence', title: 'Cabinet Secretary', org: 'Ministry of Defence, Kenya', image: '/placeholder-speaker.webp' },
+  { name: 'To Be Announced', title: 'Cabinet Secretary for Defence', org: 'Republic of Korea', image: '/placeholder-speaker.webp' },
+  { name: 'To Be Announced', title: 'Cabinet Secretary for Defence', org: 'The Netherlands', image: '/placeholder-speaker.webp' },
 ];
 
 const plenarySpeakers = [
@@ -24,7 +24,7 @@ const plenarySpeakers = [
 export default function Speakers() {
   return (
     <div className={styles.speakersPage}>
-      <header className={styles.pageHeader}>
+      <header className={styles.pageHeader} style={{ backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.95)), url(\$\{process.env.NEXT_PUBLIC_BASE_PATH || ''\}/african-print.webp)`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container">
           <h1 className="text-primary">Speakers</h1>
           <p className="text-accent" style={{fontSize: '1.25rem', marginTop: '0.5rem'}}>The voices shaping responsible AI governance</p>

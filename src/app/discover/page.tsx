@@ -6,7 +6,7 @@ import styles from './page.module.css';
 export default function DiscoverNairobi() {
   return (
     <div className={styles.discoverPage}>
-      <header className={styles.pageHeader}>
+      <header className={styles.pageHeader} style={{ backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.95)), url(\$\{process.env.NEXT_PUBLIC_BASE_PATH || ''\}/african-print.webp)`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container">
           <h1 className="text-primary">Kenya: Origin of Wonder.</h1>
           <p className="text-accent" style={{fontSize: '1.25rem', marginTop: '0.5rem'}}>From the Great Rift Valley to the innovation hubs of Nairobi.</p>
@@ -45,10 +45,10 @@ export default function DiscoverNairobi() {
           <div className="grid-2" style={{marginBottom: '5rem'}}>
             <div>
               <div className="badge" style={{marginBottom: '1rem'}}>The Venue</div>
-              <h2 className="text-primary" style={{marginBottom: '1.5rem'}}>Bomas of Kenya</h2>
+              <h2 className="text-primary" style={{marginBottom: '1.5rem'}}><a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Bomas of Kenya</a></h2>
               <div className="glass-panel" style={{padding: '2rem'}}>
                 <p className="text-muted" style={{marginBottom: '1.5rem'}}>
-                  The REAIM 2027 Summit takes place at the iconic Bomas of Kenya, a premier cultural and conference facility celebrating Kenya's diverse heritage. Located in a lush setting just outside the city center, it provides an inspiring backdrop for global dialogue.
+                  The REAIM 2027 Summit takes place at the iconic <a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Bomas of Kenya</a>, a premier cultural and conference facility celebrating Kenya's diverse heritage. Located in a lush setting just outside the city center, it provides an inspiring backdrop for global dialogue.
                 </p>
                 <div style={{display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem'}}>
                   <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-graphite)'}}>
@@ -73,7 +73,7 @@ export default function DiscoverNairobi() {
                 Kenya is home to eight UNESCO World Heritage Sites, from the ancient Swahili trading towns of Lamu to the flamingo-lined shores of Lake Turkana. Its landscapes span equatorial glaciers, arid savannahs, lush highlands, and pristine coastline - a rich tapestry of natural heritage unmatched in its diversity.
               </p>
               <p className="text-muted" style={{fontSize: '1.1rem', marginBottom: '2rem', lineHeight: '1.8'}}>
-                Nairobi itself is the only capital city in the world with a national park within its borders - Nairobi National Park, where lions, giraffes, and rhinos roam against a backdrop of skyscrapers.
+                Nairobi itself is the only capital city in the world with a national park within its borders - <a href="https://maps.app.goo.gl/P2D7N4x4M9w2KqM2A" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Nairobi National Park</a>, where lions, giraffes, and rhinos roam against a backdrop of skyscrapers.
               </p>
               <div style={{padding: '2rem', background: 'rgba(212, 175, 55, 0.05)', borderRadius: 'var(--radius-md)', borderLeft: '4px solid var(--color-accent-gold)'}}>
                 <h3 className="text-kenya-green" style={{marginBottom: '0.5rem'}}>Karibu Kenya!</h3>

@@ -7,7 +7,7 @@ import styles from './page.module.css';
 export default function Programme() {
   return (
     <div className={styles.programmePage}>
-      <header className={styles.pageHeader}>
+      <header className={styles.pageHeader} style={{ backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.95)), url(\$\{process.env.NEXT_PUBLIC_BASE_PATH || ''\}/african-print.webp)`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container">
           <h1 className="text-primary">Summit Programme</h1>
           <p className="text-accent font-display" style={{fontSize: '1.25rem'}}>Nairobi, Republic of Kenya</p>
@@ -26,7 +26,7 @@ export default function Programme() {
                     time="09:00 - 17:00" 
                     title="African Regional Consultation & Academic Forum" 
                     description="A pre-summit consultation bringing together regional delegates, civil society, researchers, and Moran AI Center advisors."
-                    location="Bomas of Kenya (Pavilion)"
+                    location={<><a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}><a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Bomas of Kenya</a></a> (Pavilion)</>}
                     type="breakout"
                     icon={BookOpen}
                     delay={0.1}
@@ -50,7 +50,7 @@ export default function Programme() {
                     time="09:00 - 09:30" 
                     title="Opening Ceremony & Welcome Address" 
                     speaker="H.E. William Ruto, President of the Republic of Kenya"
-                    location="Main Auditorium, Bomas of Kenya"
+                    location={<>Main Auditorium, <a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}><a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Bomas of Kenya</a></a></>}
                     type="plenary"
                     icon={Mic}
                     delay={0.1}
@@ -102,7 +102,7 @@ export default function Programme() {
                     time="09:00 - 12:00" 
                     title="Ministerial Roundtable (Closed Session)" 
                     speaker="Ministers of Defence and Foreign Affairs"
-                    location="Hemingways Ballroom, Karen"
+                    location={<><a href="https://maps.app.goo.gl/3A5T7j9Z2QYw2JqK9" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}><a href="https://maps.app.goo.gl/3A5T7j9Z2QYw2JqK9" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Hemingways Ballroom</a></a>, Karen</>}
                     type="plenary"
                     icon={Users}
                     delay={0.1}
@@ -119,7 +119,7 @@ export default function Programme() {
                     time="15:30 - 16:30" 
                     title="Closing Session & Blueprint Adoption" 
                     description="Formal adoption of the REAIM 2027 outcomes."
-                    location="Main Auditorium, Bomas of Kenya"
+                    location={<>Main Auditorium, <a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}><a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Bomas of Kenya</a></a></>}
                     type="plenary"
                     icon={Mic}
                     delay={0.3}

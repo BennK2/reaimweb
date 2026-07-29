@@ -8,7 +8,7 @@ import styles from './page.module.css';
 export default function MediaCenter() {
   return (
     <div className={styles.newsPage}>
-      <header className={styles.pageHeader}>
+      <header className={styles.pageHeader} style={{ backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.95)), url(\$\{process.env.NEXT_PUBLIC_BASE_PATH || ''\}/african-print.webp)`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container">
           <h1 className="text-primary">Media Center</h1>
           <p className="text-accent" style={{fontSize: '1.25rem', marginTop: '0.5rem'}}>
@@ -26,7 +26,7 @@ export default function MediaCenter() {
                 <ShieldAlert className="text-accent" /> Media Accreditation
               </h2>
               <p className="text-muted" style={{marginBottom: '1.5rem', lineHeight: '1.8'}}>
-                Accreditation for REAIM 2027 is now open for local and international journalists, photographers, and broadcast media. All media personnel must be accredited to access the Bomas of Kenya summit venue.
+                Accreditation for REAIM 2027 is now open for local and international journalists, photographers, and broadcast media. All media personnel must be accredited to access the <a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Bomas of Kenya</a> summit venue.
               </p>
               <ul className="text-muted" style={{paddingLeft: '1.5rem', marginBottom: '2rem', lineHeight: '1.8'}}>
                 <li>Valid national press card or assignment letter required.</li>
@@ -42,7 +42,7 @@ export default function MediaCenter() {
                   <Video className="text-kenya-green" /> Broadcast & Facilities
                 </h3>
                 <p className="text-muted" style={{margin: 0, fontSize: '0.95rem'}}>
-                  A fully equipped International Broadcasting Center (IBC) will be available at the Bomas of Kenya, providing high-speed internet, workstation desks, and live feeds of all plenary sessions.
+                  A fully equipped International Broadcasting Center (IBC) will be available at the <a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Bomas of Kenya</a>, providing high-speed internet, workstation desks, and live feeds of all plenary sessions.
                 </p>
               </div>
               <div className="glass-panel" style={{padding: '2rem', flex: 1}}>

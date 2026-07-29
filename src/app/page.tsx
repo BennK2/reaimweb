@@ -80,7 +80,7 @@ export default function Home() {
                 </p>
                 <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem', color: 'var(--color-graphite)'}}>
                   <MapPin size={18} className="text-accent" />
-                  <strong>Venue:</strong> Bomas of Kenya, Nairobi
+                  <strong>Venue:</strong> <a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Bomas of Kenya</a>, Nairobi
                 </div>
                 <Link href="/programme" className="btn btn-outline" style={{width: '100%', justifyContent: 'center'}}>
                   View Plenary Schedule
@@ -99,7 +99,7 @@ export default function Home() {
                 </p>
                 <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem', color: 'var(--color-graphite)'}}>
                   <MapPin size={18} className="text-accent" />
-                  <strong>Venue:</strong> Hemingways Ballroom, Karen (TBC)
+                  <strong>Venue:</strong> <a href="https://maps.app.goo.gl/3A5T7j9Z2QYw2JqK9" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Hemingways Ballroom</a>, Karen (TBC)
                 </div>
                 <Link href="/programme" className="btn btn-outline" style={{width: '100%', justifyContent: 'center'}}>
                   View Ministerial Agenda
@@ -165,12 +165,12 @@ export default function Home() {
             <div className={styles.welcomeCard}>
               <div style={{flex: '0 0 250px'}}>
                 <div style={{width: '100%', aspectRatio: '1/1', position: 'relative', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '2px solid var(--color-accent-gold)'}}>
-                  <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/placeholder-speaker.webp`} alt="Minister of Defence" fill style={{objectFit: 'cover'}} />
+                  <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/placeholder-speaker.webp`} alt="Cabinet Secretary for Defence" fill style={{objectFit: 'cover'}} />
                 </div>
               </div>
               <div>
                 <h3 className="text-primary" style={{marginBottom: '0.5rem'}}>Welcome to REAIM 2027</h3>
-                <p className="text-accent" style={{fontWeight: '600', marginBottom: '1.5rem'}}>Hon. Minister of Defence, Republic of Kenya</p>
+                <p className="text-accent" style={{fontWeight: '600', marginBottom: '1.5rem'}}>Hon. Cabinet Secretary for Defence, Republic of Kenya</p>
                 <div style={{fontSize: '1.1rem', color: 'var(--color-graphite)', fontStyle: 'italic', lineHeight: '1.8', borderLeft: '3px solid var(--color-accent-gold)', paddingLeft: '1.5rem', marginBottom: '1.5rem'}}>
                   "Kenya is deeply honored to host the REAIM 2027 Summit in Nairobi. As technology advances at an unprecedented pace, it is our shared responsibility to ensure that artificial intelligence in the military domain is governed by ethical frameworks, human oversight, and international law. We welcome the global community to Nairobi to forge actionable pathways for peace, security, and responsible innovation."
                 </div>
@@ -223,7 +223,7 @@ export default function Home() {
             <div className={`${styles.galleryItem} ${styles.large}`}>
               <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/bomas.webp`} alt="Bomas of Kenya" fill sizes="(max-width: 768px) 100vw, 50vw" className={styles.galleryImage} />
               <div className={styles.galleryCaption}>
-                <h3>Main Venue: Bomas of Kenya</h3>
+                <h3>Main Venue: <a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Bomas of Kenya</a></h3>
               </div>
             </div>
             <div className={styles.galleryItem}>

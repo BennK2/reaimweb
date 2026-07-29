@@ -4,7 +4,7 @@ import styles from '../attend/page.module.css';
 export default function Contact() {
   return (
     <div>
-      <header className={styles.pageHeader}>
+      <header className={styles.pageHeader} style={{ backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.95)), url(\$\{process.env.NEXT_PUBLIC_BASE_PATH || ''\}/african-print.webp)`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container">
           <h1 className="text-primary">Contact Us</h1>
           <p className="text-accent" style={{fontSize: '1.25rem', marginTop: '0.5rem'}}>REAIM 2027 Secretariat — Ministry of Defence, Republic of Kenya</p>

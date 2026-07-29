@@ -8,7 +8,7 @@ import styles from '../attend/page.module.css';
 export default function Summit() {
   return (
     <div>
-      <header className={styles.pageHeader}>
+      <header className={styles.pageHeader} style={{ backgroundImage: `linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.95)), url(\$\{process.env.NEXT_PUBLIC_BASE_PATH || ''\}/african-print.webp)`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container">
           <h1 className="text-primary">RE<span className="text-accent">AI</span>M 2027 — The Summit</h1>
           <p className="text-accent" style={{fontSize: '1.25rem', marginTop: '0.5rem'}}>
@@ -118,7 +118,7 @@ export default function Summit() {
                   title="REAIM 2027 Global Summit"
                   type="history"
                   description="Nairobi hosts the 4th REAIM Global Summit, consolidating African leadership and global accountable AI governance."
-                  location="Bomas of Kenya, Nairobi"
+                  location={<><a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}><a href="https://maps.app.goo.gl/uX3L3Y7WqY2q6W4a8" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline", color: "inherit"}}>Bomas of Kenya</a></a>, Nairobi</>}
                   icon={Flag}
                   delay={0.4}
                 />
@@ -177,6 +177,25 @@ export default function Summit() {
                 <p className="text-muted" style={{fontSize: '0.95rem', margin: 0}}>
                   Leveraging the <strong>Moran AI Center</strong> as a sovereign national and regional platform for elite human capital development, mission-driven research, testing, doctrinal development, and strategic advisory for the Kenya Defence Forces and regional partners.
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Previous Summits */}
+          <div style={{marginTop: '5rem', marginBottom: '5rem'}}>
+            <div className="text-center" style={{marginBottom: '3rem'}}>
+              <h2 className="text-primary">Moments from Previous REAIM Summits</h2>
+              <p className="text-muted">A look back at The Hague (2023), Seoul (2024), and A Coruña (2026).</p>
+            </div>
+            <div className="grid-3">
+              <div style={{position: 'relative', height: '250px', borderRadius: 'var(--radius-md)', overflow: 'hidden'}}>
+                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/news-geneva.webp`} alt="REAIM Inaugural Meetings" fill style={{objectFit: 'cover'}} />
+              </div>
+              <div style={{position: 'relative', height: '250px', borderRadius: 'var(--radius-md)', overflow: 'hidden'}}>
+                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/news-seoul.webp`} alt="REAIM Seoul Summit" fill style={{objectFit: 'cover'}} />
+              </div>
+              <div style={{position: 'relative', height: '250px', borderRadius: 'var(--radius-md)', overflow: 'hidden'}}>
+                <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/news-spain.webp`} alt="REAIM Spain Summit" fill style={{objectFit: 'cover'}} />
               </div>
             </div>
           </div>

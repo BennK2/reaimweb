@@ -80,7 +80,7 @@ export default function Header() {
             <span>Resources</span>
           </Link>
           <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/app-simulator.html`} target="_blank" rel="noopener noreferrer" className={styles.navLink} onClick={() => setMobileMenuOpen(false)} style={{color: 'var(--color-accent-gold)', fontWeight: 700}}>
-            <span>📱 Event App</span>
+            <Smartphone size={16} /> <span>Event App</span>
           </a>
 
           <div className={styles.mobileActions}>
