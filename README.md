@@ -1,34 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# REAIM 2027 – Official Summit Website
+
+This is the official Next.js web application for the 4th Summit on Responsible Artificial Intelligence in the Military Domain (REAIM), scheduled to be held in Nairobi, Republic of Kenya, on 14–15 April 2027.
+
+## Overview
+
+The REAIM 2027 summit website serves as the primary digital touchpoint for global delegates, state representatives, researchers, and civil society. It provides information about the summit programme, speakers, venues, news, and registration. 
+
+The site is built as a static export using Next.js, and is designed with a modern, performant, and responsive interface reflecting Kenyan heritage (Deep Navy, Gold, Republic Green, Maasai Red).
+
+## Key Features
+
+- **Responsive Modern UI:** Glassmorphism panels, CSS animations, and highly optimized layouts using CSS Modules.
+- **Static Site Generation (SSG):** Fully exported static HTML/CSS/JS via `output: 'export'` for highly performant hosting on GitHub Pages.
+- **Event App Simulator:** An interactive mobile app preview built directly into the site for delegates to explore features before downloading.
+- **Asset Path Injection:** Custom build configurations to support sub-directory deployments on GitHub Pages (`/reaimweb`) without breaking asset links.
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Building for Production
 
-## Learn More
+This project is configured for static export. To build the project:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The output will be placed in the `out` directory, which can be deployed to any static hosting provider (e.g., GitHub Pages, AWS S3, Vercel).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment (GitHub Pages)
 
-## Deploy on Vercel
+The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically builds and deploys the `main` branch to GitHub Pages.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Due to GitHub Pages deploying to a subdirectory (`/reaimweb`), the project utilizes `NEXT_PUBLIC_BASE_PATH` to resolve all absolute paths dynamically.
