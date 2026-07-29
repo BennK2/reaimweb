@@ -61,7 +61,7 @@ export default function DiscoverNairobi() {
               </div>
             </div>
             <div style={{position: 'relative', borderRadius: 'var(--radius-lg)', overflow: 'hidden'}}>
-              <Image src={`\${process.env.NEXT_PUBLIC_BASE_PATH || ''}/bomas.webp`} alt="Bomas of Kenya" fill style={{objectFit: 'cover'}} />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/bomas.webp`} alt="Bomas of Kenya" fill style={{objectFit: 'cover'}} />
             </div>
           </div>
 
@@ -87,7 +87,7 @@ export default function DiscoverNairobi() {
 
           <div className="grid-2">
             <div style={{position: 'relative', borderRadius: 'var(--radius-lg)', overflow: 'hidden', minHeight: '340px', border: '1px solid var(--color-border)'}}>
-              <Image src={`\${process.env.NEXT_PUBLIC_BASE_PATH || ''}/nairobi-park.webp`} alt="Kenya Wildlife Experience Poster" fill style={{objectFit: 'cover'}} />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/nairobi-park.webp`} alt="Kenya Wildlife Experience Poster" fill style={{objectFit: 'cover'}} />
               <div style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(11,27,61,0.85) 0%, transparent 60%)', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '2rem'}}>
                 <span className="badge badge-green" style={{alignSelf: 'flex-start', marginBottom: '0.5rem'}}>Magical Kenya Official</span>
                 <h3 style={{color: '#fff', fontSize: '1.5rem', margin: 0}}>Wildlife Experience & Safari Guide</h3>

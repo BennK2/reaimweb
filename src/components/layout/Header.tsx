@@ -47,11 +47,11 @@ export default function Header() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.headerContainer}`}>
         <Link href="/" className={styles.logo} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-          <Image src={`\${process.env.NEXT_PUBLIC_BASE_PATH || ''}/coat-of-arms.webp`} alt="Kenya Coat of Arms" width={32} height={32} className={styles.logoImage} />
+          <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/coat-of-arms.webp`} alt="Kenya Coat of Arms" width={32} height={32} className={styles.logoImage} />
           <div className={styles.logoDivider}></div>
-          <Image src={`\${process.env.NEXT_PUBLIC_BASE_PATH || ''}/kdf-logo.webp`} alt="KDF Logo" width={28} height={34} style={{ objectFit: 'contain' }} />
+          <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/kdf-logo.webp`} alt="KDF Logo" width={28} height={34} style={{ objectFit: 'contain' }} />
           <div className={styles.logoDivider}></div>
-          <Image src={`\${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.png`} alt="REAIM 2027 Summit Logo" width={125} height={40} style={{ objectFit: 'contain' }} />
+          <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.png`} alt="REAIM 2027 Summit Logo" width={125} height={40} style={{ objectFit: 'contain' }} />
         </Link>
 
         <nav className={`${styles.nav} ${mobileMenuOpen ? styles.navOpen : ''}`}>
@@ -79,7 +79,7 @@ export default function Header() {
           <Link href="/resources" className={styles.navLink} onClick={() => setMobileMenuOpen(false)}>
             <span>Resources</span>
           </Link>
-          <a href={`\${process.env.NEXT_PUBLIC_BASE_PATH || ''}/app-simulator.html`} target="_blank" rel="noopener noreferrer" className={styles.navLink} onClick={() => setMobileMenuOpen(false)} style={{color: 'var(--color-accent-gold)', fontWeight: 700}}>
+          <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/app-simulator.html`} target="_blank" rel="noopener noreferrer" className={styles.navLink} onClick={() => setMobileMenuOpen(false)} style={{color: 'var(--color-accent-gold)', fontWeight: 700}}>
             <span>📱 Event App</span>
           </a>
 
