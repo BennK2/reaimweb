@@ -36,7 +36,7 @@ export default function Home() {
               <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.png`} alt="REAIM 2027 Responsible AI in the Military Domain Summit Logo" width={420} height={180} style={{ objectFit: 'contain', maxWidth: '100%', height: 'auto', filter: 'drop-shadow(0 4px 15px rgba(0,0,0,0.15))' }} priority />
             </div>
             <p className={styles.subtitle}>
-              Nairobi, Republic of Kenya • 7–8 April 2027<br/>
+              Nairobi, Republic of Kenya • 14–15 April 2027<br/>
               <span style={{fontSize: '1rem', color: 'var(--color-primary)', marginTop: '0.5rem', display: 'block', fontWeight: 600}}>
                 Hosted by the Ministry of Defence, Republic of Kenya
               </span>

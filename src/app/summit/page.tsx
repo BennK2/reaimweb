@@ -12,7 +12,7 @@ export default function Summit() {
         <div className="container">
           <h1 className="text-primary">RE<span className="text-accent">AI</span>M 2027 — The Summit</h1>
           <p className="text-accent" style={{fontSize: '1.25rem', marginTop: '0.5rem'}}>
-            7–8 April 2027 • Nairobi, Republic of Kenya
+            14–15 April 2027 • Nairobi, Republic of Kenya
           </p>
         </div>
       </header>
@@ -114,7 +114,7 @@ export default function Summit() {
                   delay={0.3}
                 />
                 <TimelineItem 
-                  time="7–8 April 2027"
+                  time="14–15 April 2027"
                   title="REAIM 2027 Global Summit"
                   type="history"
                   description="Nairobi hosts the 4th REAIM Global Summit, consolidating African leadership and global accountable AI governance."
@@ -248,7 +248,7 @@ export default function Summit() {
           <div style={{marginTop: '4rem', textAlign: 'center'}}>
             <div className="glass-panel" style={{display: 'inline-block', padding: '2rem 4rem'}}>
                <h3 className="text-primary" style={{marginBottom: '1rem'}}>Explore the Summit Schedule</h3>
-               <p className="text-muted" style={{marginBottom: '1.5rem'}}>View the complete agenda for 6, 7 & 8 April 2027 in Nairobi.</p>
+               <p className="text-muted" style={{marginBottom: '1.5rem'}}>View the complete agenda for 13, 14 & 15 April 2027 in Nairobi.</p>
                <Link href="/programme" className="btn btn-primary">
                  View Official Programme <ArrowRight size={18} style={{marginLeft: '0.5rem'}}/>
                </Link>

@@ -19,7 +19,7 @@ export default function Programme() {
           <div className="grid-2">
             <div>
               <div style={{marginBottom: '3rem'}}>
-                <h2 className="text-primary" style={{marginBottom: '1rem'}}>6 April 2027 (Pre-Summit)</h2>
+                <h2 className="text-primary" style={{marginBottom: '1rem'}}>13 April 2027 (Pre-Summit)</h2>
                 <div className="badge" style={{marginBottom: '2rem'}}>Side Events & Regional Consultations</div>
                 <Timeline>
                   <TimelineItem 
@@ -43,7 +43,7 @@ export default function Programme() {
               </div>
 
               <div>
-                <h2 className="text-primary" style={{marginBottom: '1rem'}}>7 April 2027 (Day 1)</h2>
+                <h2 className="text-primary" style={{marginBottom: '1rem'}}>14 April 2027 (Day 1)</h2>
                 <div className="badge" style={{marginBottom: '2rem'}}>Plenary Sessions</div>
                 <Timeline>
                   <TimelineItem 
@@ -95,7 +95,7 @@ export default function Programme() {
             
             <div>
               <div style={{marginBottom: '3rem'}}>
-                <h2 className="text-primary" style={{marginBottom: '1rem'}}>8 April 2027 (Day 2)</h2>
+                <h2 className="text-primary" style={{marginBottom: '1rem'}}>15 April 2027 (Day 2)</h2>
                 <div className="badge" style={{marginBottom: '2rem'}}>Ministerial & High-Level</div>
                 <Timeline>
                   <TimelineItem 
