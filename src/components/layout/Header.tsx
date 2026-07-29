@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { Menu, X, Globe, User } from 'lucide-react';
+import { Menu, X, Globe, User, Smartphone } from 'lucide-react';
 import styles from './Header.module.css';
 
 export default function Header() {
